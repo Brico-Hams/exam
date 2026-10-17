@@ -1,0 +1,44 @@
+{
+  "name": "ham-exam-prep",
+  "private": true,
+  "version": "1.0.0",
+  "description": "FCC amateur radio exam prep (Technician, General, Extra) in Spanish and English — web + Android",
+  "author": "Anatol EA5KAO",
+  "homepage": "https://github.com/anatolbricoham/exam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anatolbricoham/exam.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "import-pools": "node scripts/import-pools.mjs",
+    "android:sync": "npm run build && cap sync android",
+    "android:open": "cap open android",
+    "android:run": "npm run build && cap run android",
+    "import-glaarg": "node scripts/import-glaarg.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "pdfjs-dist": "^6.4.299",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.5"
+  }
+}

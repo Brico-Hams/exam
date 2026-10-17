@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">EA5KAO Ham Exam</string>
+    <string name="title_activity_main">EA5KAO Ham Exam</string>
+    <string name="package_name">com.hamexamprep.app</string>
+    <string name="custom_url_scheme">com.hamexamprep.app</string>
+</resources>

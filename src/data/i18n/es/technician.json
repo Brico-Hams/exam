@@ -1,0 +1,3683 @@
+{
+ "T1A01": {
+  "question": "¿Cuál de las siguientes opciones forma parte de los fundamentos y propósitos del Servicio de Radioaficionados?",
+  "answers": [
+   "Proporcionar comunicaciones personales por radio al mayor número posible de ciudadanos",
+   "Proporcionar comunicaciones para concursos internacionales",
+   "Desarrollar habilidades en los aspectos técnicos y de comunicación de la radiocomunicación",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1A02": {
+  "question": "¿Qué organismo regula y hace cumplir las reglas del Servicio de Radioaficionados en Estados Unidos?",
+  "answers": [
+   "ARRL",
+   "Seguridad Nacional",
+   "La FCC",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1A03": {
+  "question": "¿Qué establecen las reglas de la FCC sobre el uso de un alfabeto fonético para identificar estaciones en el Servicio de Radioaficionados?",
+  "answers": [
+   "Es obligatorio al transmitir mensajes de emergencia",
+   "Se recomienda al usar emisiones de voz",
+   "Es obligatorio al comunicarse con estaciones extranjeras",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1A04": {
+  "question": "¿Cómo recibe la notificación oficial de su nueva licencia e indicativo después de aprobar el examen?",
+  "answers": [
+   "Un correo electrónico de la FCC con un enlace para descargar la concesión de licencia",
+   "Correo de primera clase del USPS enviado por la FCC",
+   "Un correo electrónico del examinador voluntario principal",
+   "Correo de primera clase del USPS enviado por el examinador voluntario principal"
+  ]
+ },
+ "T1A05": {
+  "question": "¿Qué demuestra que la FCC ha emitido una concesión de licencia de operador/principal?",
+  "answers": [
+   "Una copia impresa del certificado de aprobación del examen",
+   "Una notificación por correo electrónico de la NCVEC que concede la licencia",
+   "La licencia aparece en la base de datos ULS de la FCC",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1A06": {
+  "question": "¿En cuáles de las siguientes frecuencias de HF pueden encontrarse balizas de propagación de radioaficionados controladas automáticamente?",
+  "answers": [
+   "En cualquier parte de la porción de 10 metros asignada a la clase Técnico",
+   "En cualquier parte, si están registradas ante la FCC",
+   "En una porción específica de cada banda de HF de la clase Técnico",
+   "En 10 metros, entre 28.200 MHz y 28.300 MHz"
+  ]
+ },
+ "T1A07": {
+  "question": "¿Cuál es la definición de estación espacial según la Parte 97 de la FCC?",
+  "answers": [
+   "Cualquier satélite que orbite la Tierra",
+   "Un satélite tripulado que orbite la Tierra",
+   "Una estación de radioaficionado situada a más de 50 km sobre la superficie de la Tierra",
+   "Una estación de radioaficionado que usa satélites de radioaficionados para retransmitir señales"
+  ]
+ },
+ "T1A08": {
+  "question": "¿Quién recomienda los canales de transmisión y recepción para estaciones repetidoras y auxiliares?",
+  "answers": [
+   "Un administrador del espectro de frecuencias designado por la FCC",
+   "Un coordinador voluntario de frecuencias reconocido por los radioaficionados locales",
+   "Una oficina regional de campo de la FCC",
+   "La Unión Internacional de Telecomunicaciones"
+  ]
+ },
+ "T1A09": {
+  "question": "¿Quién selecciona a un coordinador de frecuencias?",
+  "answers": [
+   "La Oficina de Gestión y Coordinación del Espectro de la FCC",
+   "El capítulo local de la Oficina del Consejo Nacional de Coordinadores Independientes de Frecuencias",
+   "Los operadores radioaficionados de una zona local o regional cuyas estaciones pueden ser repetidoras o estaciones auxiliares",
+   "La oficina regional de campo de la FCC"
+  ]
+ },
+ "T1A10": {
+  "question": "Además de una licencia de operador radioaficionado emitida por la FCC, ¿qu? se requiere para ser operador de control de una estación del Servicio de Radioaficionados Civiles de Emergencia (RACES)¿?",
+  "answers": [
+   "Una recomendación escrita del coordinador local de emergencias de ARRL",
+   "Ser miembro del Servicio de Emergencia de Radioaficionados (ARES)",
+   "Certificación de inscripción vigente por parte de una organización de defensa civil",
+   "Nada"
+  ]
+ },
+ "T1A11": {
+  "question": "¿Cuál de las siguientes opciones está prohibida?",
+  "answers": [
+   "Comunicaciones internacionales en bandas VHF y frecuencias superiores",
+   "Interferencia deliberada o maliciosa",
+   "Tráfico de terceros mediante modos digitales",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1B01": {
+  "question": "¿Cuáles de los siguientes rangos de frecuencia están disponibles para operar en voz a los titulares de licencia de clase Técnico?",
+  "answers": [
+   "28.050 MHz a 28.150 MHz",
+   "28.100 MHz a 28.300 MHz",
+   "28.300 MHz a 28.500 MHz",
+   "28.500 MHz a 28.600 MHz"
+  ]
+ },
+ "T1B02": {
+  "question": "¿Cuáles de los siguientes operadores de radioafición de Estados Unidos pueden comunicarse con la Estación Espacial Internacional (ISS) en bandas VHF?",
+  "answers": [
+   "Solo radioaficionados con licencia de clase General o superior",
+   "Cualquier radioaficionado con licencia de clase Técnico o superior",
+   "Solo radioaficionados con licencia de clase General o superior y aprobación de la NASA",
+   "Cualquier radioaficionado con licencia de clase Técnico o superior y aprobación de la NASA"
+  ]
+ },
+ "T1B03": {
+  "question": "¿Cuál frecuencia pertenece a la banda de radioaficionados de 6 metros?",
+  "answers": [
+   "49.00 MHz",
+   "52.525 MHz",
+   "28.50 MHz",
+   "222.15 MHz"
+  ]
+ },
+ "T1B04": {
+  "question": "¿Qué banda de radioaficionados incluye 146.52 MHz?",
+  "answers": [
+   "6 metros",
+   "20 metros",
+   "70 centímetros",
+   "2 metros"
+  ]
+ },
+ "T1B05": {
+  "question": "¿Cuáles de las siguientes bandas incluyen frecuencias en las que los titulares de licencia de clase Técnico están autorizados a usar modos digitales como FT8¿?",
+  "answers": [
+   "10 metros",
+   "6 metros",
+   "2 metros",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1B06": {
+  "question": "¿En cuáles bandas de HF tiene privilegios para operar en voz un operador de clase Técnico?",
+  "answers": [
+   "Ninguna",
+   "Solo la banda de 10 metros",
+   "Las bandas de 80 metros, 40 metros, 15 metros y 10 metros",
+   "Solo la banda de 30 metros"
+  ]
+ },
+ "T1B07": {
+  "question": "¿Cuáles de los siguientes segmentos de bandas VHF/UHF están limitados ¿nicamente a CW?",
+  "answers": [
+   "50.0 MHz a 50.1 MHz y 144.0 MHz a 144.1 MHz",
+   "219 MHz a 220 MHz y 420.0 MHz a 420.1 MHz",
+   "902.0 MHz a 902.1 MHz",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1B08": {
+  "question": "¿Qué restricciones tienen los radioaficionados de Estados Unidos en segmentos de bandas donde el Servicio de Radioaficionados tiene carácter secundario?",
+  "answers": [
+   "Puede haber estaciones que no sean de radioaficionados en esos segmentos y los radioaficionados de Estados Unidos deben evitar interferir con ellas",
+   "Los radioaficionados de Estados Unidos deben dar prioridad a las estaciones de radioaficionados extranjeras en esos segmentos",
+   "No se permiten comunicaciones internacionales en esos segmentos",
+   "No se permiten transmisiones digitales en esos segmentos"
+  ]
+ },
+ "T1B09": {
+  "question": "¿Por qué no debe ajustar la frecuencia de transmisión exactamente en el límite de una banda o subbanda de radioaficionados?",
+  "answers": [
+   "Para permitir errores de calibración en la pantalla de frecuencia del transmisor",
+   "Para que las bandas laterales de modulación no se extiendan más allí del límite de la banda",
+   "Para permitir la deriva de frecuencia del transmisor",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1B10": {
+  "question": "¿Dónde se puede usar SSB en voz en las bandas de radioaficionados por encima de 50 MHz?",
+  "answers": [
+   "Solo en subbandas asignadas a titulares de licencia de clase General o superior",
+   "Solo en repetidores",
+   "En al menos algún segmento de todas estas bandas",
+   "En cualquier banda si la potencia está limitada a 25 watts"
+  ]
+ },
+ "T1B11": {
+  "question": "¿Cuál es la potencia de salida máxima de envolvente de pico para operadores de clase Técnico en sus segmentos de bandas HF?",
+  "answers": [
+   "200 watts",
+   "100 watts",
+   "50 watts",
+   "10 watts"
+  ]
+ },
+ "T1B12": {
+  "question": "Salvo algunas restricciones específicas, ¿cuál es la potencia de salida máxima de envolvente de pico para operadores de clase Técnico que usan frecuencias por encima de 30 MHz?",
+  "answers": [
+   "50 watts",
+   "100 watts",
+   "500 watts",
+   "1500 watts"
+  ]
+ },
+ "T1C01": {
+  "question": "¿Para cuáles clases de licencia de radioaficionado emite actualmente la FCC licencias nuevas?",
+  "answers": [
+   "Novicio, Técnico, General, Amateur Extra",
+   "Técnico, Técnico Plus, General, Amateur Extra",
+   "Novicio, Técnico Plus, General, Avanzada",
+   "Técnico, General, Amateur Extra"
+  ]
+ },
+ "T1C02": {
+  "question": "¿Quién puede elegir el indicativo que desea conforme a las reglas de indicativos vanity?",
+  "answers": [
+   "Solo un radioaficionado con licencia de clase General o Amateur Extra",
+   "Solo un radioaficionado con licencia de clase Amateur Extra",
+   "Solo un radioaficionado que haya tenido licencia ininterrumpidamente durante más de 10 años",
+   "Cualquier radioaficionado con licencia"
+  ]
+ },
+ "T1C03": {
+  "question": "¿Qué tipos de comunicaciones internacionales pueden realizar las estaciones de radioaficionado con licencia de la FCC?",
+  "answers": [
+   "Comunicaciones relacionadas con los propósitos del Servicio de Radioaficionados y comentarios de carácter personal",
+   "Comunicaciones relacionadas con la conducción de negocios o comentarios de carácter personal",
+   "Solo comunicaciones relacionadas con intercambios de concursos; todas las demás están prohibidas",
+   "Cualquier comunicación que estaría permitida a una estación internacional de radiodifusión"
+  ]
+ },
+ "T1C04": {
+  "question": "¿Qué puede ocurrir si la FCC no logra comunicarse con usted por correo electrónico?",
+  "answers": [
+   "Multa y suspensión de la licencia de operador",
+   "Revocación de la licencia de estación o suspensión de la licencia de operador",
+   "Revocación del acceso al registro de licencia en el sistema de la FCC",
+   "Nada; no existe tal requisito"
+  ]
+ },
+ "T1C05": {
+  "question": "¿Cuál de los siguientes es un formato válido de indicativo del Grupo D para la clase Técnico?",
+  "answers": [
+   "KF1XXX",
+   "KA1X",
+   "W1XX",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1C06": {
+  "question": "¿Cuál de las siguientes afirmaciones es verdadera sobre el uso de su licencia de radioaficionado al operar a bordo de una embarcación en aguas internacionales?",
+  "answers": [
+   "La operación de radioaficionado está prohibida en aguas internacionales",
+   "Solo puede operar durante emergencias marítimas",
+   "Necesita una autorización especial de la FCC para operar como estación móvil marítima",
+   "Puede operar desde una embarcación documentada en Estados Unidos con el permiso del capitán"
+  ]
+ },
+ "T1C07": {
+  "question": "¿Con cuánta anticipación a la fecha de vencimiento se puede solicitar la renovación de una licencia de radioaficionado?",
+  "answers": [
+   "30 días",
+   "90 días",
+   "6 meses",
+   "1 año"
+  ]
+ },
+ "T1C08": {
+  "question": "¿Cuál es el plazo normal de una licencia de radioaficionado emitida por la FCC?",
+  "answers": [
+   "Cinco años",
+   "Ocho años",
+   "Diez años",
+   "De por vida"
+  ]
+ },
+ "T1C09": {
+  "question": "¿Cuál es el período de gracia para renovar una licencia de radioaficionado vencida?",
+  "answers": [
+   "Dos años",
+   "Tres años",
+   "Cinco años",
+   "Diez años"
+  ]
+ },
+ "T1C10": {
+  "question": "¿Cuánto tiempo después de aprobar el examen para su primera licencia de radioaficionado puede transmitir en las bandas de radioaficionados?",
+  "answers": [
+   "Inmediatamente después de recibir su Certificado de Aprobación del Examen (CSCE)",
+   "En cuanto la concesión de su licencia de operador/estación aparezca en el sitio web de ARRL",
+   "En cuanto la concesión de su licencia de operador/estación aparezca en la base de datos de licencias de la FCC",
+   "En cuanto reciba por correo su licencia de la FCC"
+  ]
+ },
+ "T1C11": {
+  "question": "Si su licencia venció y todavía está dentro del período de gracia permitido, ¿puede seguir transmitiendo en las bandas de radioaficionados?",
+  "answers": [
+   "Sí, hasta por dos años",
+   "Sí, tan pronto como solicite la renovación",
+   "Sí, hasta por un año",
+   "No, debe esperar hasta que se renueve la licencia"
+  ]
+ },
+ "T1D01": {
+  "question": "¿Con cuáles países tienen prohibido intercambiar comunicaciones las estaciones de radioaficionado con licencia de la FCC?",
+  "answers": [
+   "Cualquier país cuya administración haya notificado a la Unión Internacional de Telecomunicaciones (ITU) que se opone a dichas comunicaciones",
+   "Cualquier país cuya administración haya notificado a la American Radio Relay League (ARRL) que se opone a dichas comunicaciones",
+   "Cualquier país al que la Unión Internacional de Radioaficionados (IARU) haya prohibido dichas comunicaciones",
+   "Cualquier país al que la American Radio Relay League (ARRL) haya prohibido realizar dichas comunicaciones"
+  ]
+ },
+ "T1D02": {
+  "question": "¿En cuáles de las siguientes circunstancias están prohibidas las transmisiones unidireccionales de una estación de radioaficionado?",
+  "answers": [
+   "Anuncios de próximos eventos de operación de radioaficionados",
+   "Radiodifusión",
+   "Práctica de código Morse internacional",
+   "Telemando o transmisiones de telemetría"
+  ]
+ },
+ "T1D03": {
+  "question": "¿Cuándo está permitido transmitir mensajes codificados para ocultar su significado?",
+  "answers": [
+   "Solo al usar una estación remota durante un concurso",
+   "Solo al transmitir ciertos códigos digitales aprobados",
+   "Solo al transmitir comandos de control a estaciones espaciales o modelos a escala",
+   "Nunca"
+  ]
+ },
+ "T1D04": {
+  "question": "¿En qué condiciones está autorizada una estación de radioaficionado a transmitir música mediante una emisión de voz?",
+  "answers": [
+   "Cuando sea incidental a una retransmisión autorizada de comunicaciones de una nave espacial tripulada",
+   "Cuando la música no produzca emisiones espurias",
+   "Cuando las transmisiones se limiten a menos de tres minutos por hora",
+   "Cuando la música se transmita por encima de 1280 MHz"
+  ]
+ },
+ "T1D05": {
+  "question": "¿Cuándo pueden los radioaficionados usar sus estaciones para informar a otros radioaficionados que hay equipos disponibles para la venta o el intercambio?",
+  "answers": [
+   "Nunca",
+   "Cuando el equipo no sea propiedad personal del titular de la licencia de estación, del operador de control ni de sus familiares cercanos",
+   "Cuando no se obtenga ninguna ganancia de la venta",
+   "Al vender equipos de radioaficionado, siempre que no se haga con regularidad"
+  ]
+ },
+ "T1D06": {
+  "question": "¿Qué restricciones existen, si las hay, sobre la transmisión de lenguaje que pueda considerarse indecente u obsceno?",
+  "answers": [
+   "La FCC mantiene una lista de palabras cuyo uso no está permitido en frecuencias de radioaficionados",
+   "Se prohíbe cualquier lenguaje de ese tipo",
+   "La Unión Internacional de Telecomunicaciones (ITU) mantiene una lista de palabras cuyo uso no está permitido en frecuencias de radioaficionados",
+   "No existe tal prohibición"
+  ]
+ },
+ "T1D07": {
+  "question": "¿Cuál de las siguientes opciones es un ejemplo de estación auxiliar?",
+  "answers": [
+   "Una estación que envía transmisiones unidireccionales entre un receptor remoto de repetidor y el transmisor principal del repetidor",
+   "Un radio de respaldo para uso de emergencia si falla el radio de la estación principal",
+   "Una estación usada en el Sistema Auxiliar Militar de Radio para enlazar estaciones gubernamentales y de radioaficionados en una red digital",
+   "Una segunda estación utilizada en estaciones de concurso con varios operadores"
+  ]
+ },
+ "T1D08": {
+  "question": "¿En cuál de las siguientes circunstancias puede recibir compensación el operador de control de una estación de radioaficionado por operarla?",
+  "answers": [
+   "Cuando la comunicación está relacionada con la venta de equipos de radioaficionado por parte del empleador del operador de control",
+   "Cuando la comunicación forme parte de la enseñanza en el aula de una institución educativa",
+   "Cuando la comunicación se realice para obtener información de emergencia para una estación local de radiodifusión",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1D09": {
+  "question": "¿Cuándo pueden las estaciones de radioaficionado transmitir información para apoyar la radiodifusión, la producción de programas o la recopilación de noticias, suponiendo que no haya otros medios disponibles?",
+  "answers": [
+   "Cuando dichas comunicaciones están directamente relacionadas con la seguridad inmediata de la vida humana o la protección de bienes",
+   "Al transmitir comunicaciones hacia o desde el transbordador espacial",
+   "Cuando se recopilen programas no comerciales y se suministren exclusivamente a la red National Public Radio",
+   "Nunca"
+  ]
+ },
+ "T1D10": {
+  "question": "¿Cómo define la FCC la radiodifusión para el Servicio de Radioaficionados?",
+  "answers": [
+   "Transmisiones bidireccionales de estaciones de radioaficionado",
+   "Cualquier transmisión realizada por la estación con licencia",
+   "Transmisión de mensajes dirigidos ¿nicamente a operadores radioaficionados",
+   "Transmisiones destinadas a ser recibidas por el público en general"
+  ]
+ },
+ "T1D11": {
+  "question": "¿Cuándo puede transmitir una estación de radioaficionado sin identificarse al aire?",
+  "answers": [
+   "Cuando las transmisiones sean breves y se realicen para ajustar la estación",
+   "Cuando las transmisiones no están moduladas",
+   "Cuando el nivel de potencia transmitida sea inferior a 0.1 watt",
+   "Al transmitir señales para controlar modelos a escala"
+  ]
+ },
+ "T1D12": {
+  "question": "¿Qué se requiere al realizar transmisiones de prueba por radio?",
+  "answers": [
+   "Identificar la estación transmisora",
+   "Realizar pruebas ¿nicamente entre las 10 p.m. y las 6 a.m., hora local",
+   "Notificar las transmisiones a la FCC",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1E01": {
+  "question": "¿Cuándo puede transmitir una estación de radioaficionado sin un operador de control?",
+  "answers": [
+   "Cuando usa control automático, como en el caso de un repetidor",
+   "Cuando el titular de la licencia de estación está ausente y otro radioaficionado con licencia usa la estación",
+   "Cuando la estación transmisora es una estación auxiliar",
+   "Nunca"
+  ]
+ },
+ "T1E02": {
+  "question": "¿Quién puede ser el operador de control de una estación que se comunica mediante un satélite o una estación espacial de radioaficionado?",
+  "answers": [
+   "Solo un operador de clase Amateur Extra",
+   "Un titular de licencia de clase General o superior con certificación de operador de satélite",
+   "Solo un operador de clase Amateur Extra que también sea miembro de AMSAT",
+   "Cualquier radioaficionado autorizado a transmitir en la frecuencia de enlace ascendente del satélite"
+  ]
+ },
+ "T1E03": {
+  "question": "¿Quién debe designar al operador de control de la estación?",
+  "answers": [
+   "El titular de la licencia de estación",
+   "La FCC",
+   "El coordinador de frecuencias",
+   "Cualquier operador con licencia"
+  ]
+ },
+ "T1E04": {
+  "question": "¿Qué determina los privilegios de frecuencia de transmisión de una estación de radioaficionado?",
+  "answers": [
+   "La frecuencia autorizada por el coordinador de frecuencias",
+   "Las frecuencias impresas en la concesión de licencia",
+   "La clase más alta de licencia de operador que tenga cualquier persona presente en el lugar",
+   "La clase de licencia de operador que tenga el operador de control"
+  ]
+ },
+ "T1E05": {
+  "question": "¿Qué es el punto de control de una estación de radioaficionado?",
+  "answers": [
+   "El lugar donde se encuentra la antena transmisora de la estación",
+   "El lugar donde se encuentra el equipo transmisor de la estación",
+   "El lugar donde se realiza la función de operador de control",
+   "La dirección postal del titular de la licencia de estación"
+  ]
+ },
+ "T1E06": {
+  "question": "¿Cuándo puede un titular de licencia de clase Técnico ser operador de control de una estación que opera en un segmento de banda de clase Amateur Extra, fuera de una emergencia?",
+  "answers": [
+   "En ningún momento",
+   "Cuando un titular de licencia de clase Amateur Extra lo designe operador de control",
+   "Como parte de un equipo de concurso con varios operadores",
+   "Al usar una estación de club cuyo fiduciario tenga una licencia de clase Amateur Extra"
+  ]
+ },
+ "T1E07": {
+  "question": "Cuando el operador de control no es el titular de la licencia de estación, ¿quién es responsable del funcionamiento correcto de la estación?",
+  "answers": [
+   "Todos los radioaficionados con licencia presentes durante la operación",
+   "Solo el titular de la licencia de estación",
+   "Solo el operador de control",
+   "El operador de control y el titular de la licencia de estación"
+  ]
+ },
+ "T1E08": {
+  "question": "¿Cuál de las siguientes opciones es un ejemplo de control automático?",
+  "answers": [
+   "Operación de un repetidor",
+   "Controlar una estación por Internet",
+   "Usar una computadora u otro dispositivo para enviar CW automáticamente",
+   "Usar una computadora u otro dispositivo para identificarse automáticamente"
+  ]
+ },
+ "T1E09": {
+  "question": "¿Qué estaciones de radioaficionado pueden controlarse de forma remota?",
+  "answers": [
+   "Solo estaciones repetidoras",
+   "Solo estaciones controladas automáticamente",
+   "Solo estaciones digitales",
+   "Cualquier estación"
+  ]
+ },
+ "T1E10": {
+  "question": "¿Cuál de las siguientes opciones es un ejemplo de control remoto según la definición de la Parte 97¿?",
+  "answers": [
+   "Radio definida por software (SDR)",
+   "Operar la estación por Internet",
+   "Controlar un avión, barco o automóvil a escala por radioafición",
+   "Comunicación Tierra-Luna-Tierra (EME)"
+  ]
+ },
+ "T1E11": {
+  "question": "¿Qué es un operador de control según la definición de la Parte 97¿?",
+  "answers": [
+   "La persona que habla o comunica mensajes de otro modo mediante una estación de radioaficionado",
+   "La persona titular de la licencia de una estación de radioaficionado",
+   "Un operador radioaficionado identificado en la base de datos de la FCC como responsable de las transmisiones y del cumplimiento de las reglas de la FCC en una ubicación de estación autorizada",
+   "Un operador radioaficionado designado por el titular de la licencia de una estación para ser responsable de las transmisiones y del cumplimiento de las reglas de la FCC en esa estación"
+  ]
+ },
+ "T1F01": {
+  "question": "¿Cuándo debe el titular de la licencia de estación poner la estación y sus registros a disposición para inspección?",
+  "answers": [
+   "En cualquier momento, diez días después de que la FCC notifique dicha inspección",
+   "En cualquier momento, cuando lo solicite un representante de la FCC",
+   "En cualquier momento después de recibir una notificación escrita de la FCC sobre dicha inspección",
+   "Solo cuando un funcionario de la FCC o agente gubernamental presente una orden válida"
+  ]
+ },
+ "T1F02": {
+  "question": "¿Con qué frecuencia debe identificarse con el indicativo asignado por la FCC al usar indicativos tácticos como ¿Race Headquarters??",
+  "answers": [
+   "Nunca; el indicativo táctico es suficiente",
+   "Una vez cada hora",
+   "Al menos cada 10 minutos durante una comunicación y al final de esta",
+   "Al final de cada transmisión"
+  ]
+ },
+ "T1F03": {
+  "question": "¿Cuándo debe transmitir el indicativo que se le asignó?",
+  "answers": [
+   "Al comienzo de cada contacto y cada 10 minutos después",
+   "Al menos una vez durante cada transmisión",
+   "Al menos cada 15 minutos durante una comunicación y al final de esta",
+   "Al menos cada 10 minutos durante una comunicación y al final de esta"
+  ]
+ },
+ "T1F04": {
+  "question": "¿Qué idioma debe usar para identificarse al utilizar una emisión de voz?",
+  "answers": [
+   "Cualquier idioma reconocido por las Naciones Unidas",
+   "Cualquier idioma reconocido por la ITU",
+   "Inglés",
+   "Inglés, francés o español"
+  ]
+ },
+ "T1F05": {
+  "question": "¿Qué método de identificación mediante indicativo se requiere para una estación que transmite señales de voz?",
+  "answers": [
+   "Transmitir el indicativo seguido del indicador RPT",
+   "Transmitir el indicativo mediante una emisión CW o de voz",
+   "Transmitir el indicativo seguido del indicador R",
+   "Transmitir el indicativo ¿nicamente mediante una emisión de voz"
+  ]
+ },
+ "T1F06": {
+  "question": "¿Cuáles de los siguientes indicadores asignados por el propio operador son aceptables al usar una transmisión de voz?",
+  "answers": [
+   "KL7CC stroke W3",
+   "KL7CC slant W3",
+   "KL7CC slash W3",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1F07": {
+  "question": "¿Cuál de las siguientes restricciones se aplica cuando una persona sin licencia habla con una estación extranjera de radioaficionado mediante una estación bajo el control de un operador radioaficionado con licencia de la FCC?",
+  "answers": [
+   "La persona debe ser ciudadana de Estados Unidos",
+   "La estación extranjera debe estar en un país con el que Estados Unidos tenga un acuerdo de comunicaciones de terceros",
+   "El operador de control con licencia debe identificar la estación",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T1F08": {
+  "question": "¿Cuál es la definición de comunicaciones de terceros?",
+  "answers": [
+   "Un mensaje de un operador de control a otro operador de control de una estación de radioaficionado en nombre de otra persona",
+   "Comunicaciones de radioaficionados en las que tres estaciones se comunican entre s?",
+   "Operación en la que el equipo transmisor está autorizado a nombre de una persona distinta del operador de control",
+   "Autorización temporal para que una persona sin licencia transmita en bandas de radioaficionados con fines de experimentación técnica"
+  ]
+ },
+ "T1F09": {
+  "question": "¿Qué tipo de estación de radioaficionado retransmite simultáneamente la señal de otra estación en uno o varios canales diferentes?",
+  "answers": [
+   "Estación baliza",
+   "Estación de control remoto",
+   "Estación repetidora",
+   "Estación de retransmisión de mensajes"
+  ]
+ },
+ "T1F10": {
+  "question": "¿Quién es responsable si un repetidor retransmite inadvertidamente comunicaciones que infringen las reglas de la FCC?",
+  "answers": [
+   "El operador de control de la estación que originó la transmisión",
+   "El operador de control del repetidor",
+   "El propietario del repetidor",
+   "Tanto la estación que originó la transmisión como el propietario del repetidor"
+  ]
+ },
+ "T1F11": {
+  "question": "¿Cuál de los siguientes es un requisito para emitir una concesión de licencia para una estación de club?",
+  "answers": [
+   "El fiduciario debe tener una concesión de licencia de operador de clase Amateur Extra",
+   "El club debe tener al menos cuatro miembros",
+   "El club debe estar registrado en la American Radio Relay League (ARRL)",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T2A01": {
+  "question": "¿Cuál es un desplazamiento de frecuencia común para repetidores en la banda de 2 metros?",
+  "answers": [
+   "Más o menos 5 MHz",
+   "Más o menos 600 kHz",
+   "Más o menos 500 kHz",
+   "Más o menos 1 MHz"
+  ]
+ },
+ "T2A02": {
+  "question": "¿Cuál es la frecuencia nacional de llamada para operaciones simplex en FM en la banda de 2 metros?",
+  "answers": [
+   "146.520 MHz",
+   "145.000 MHz",
+   "432.100 MHz",
+   "446.000 MHz"
+  ]
+ },
+ "T2A03": {
+  "question": "¿Cuál es un desplazamiento de frecuencia común para repetidores en la banda de 70 centímetros?",
+  "answers": [
+   "Más o menos 5 MHz",
+   "Más o menos 600 kHz",
+   "Más o menos 500 kHz",
+   "Más o menos 1 MHz"
+  ]
+ },
+ "T2A04": {
+  "question": "¿Cuál es una forma apropiada de llamar a otra estación por un repetidor si conoce el indicativo de esa estación?",
+  "answers": [
+   "Diga «interrupci»n, interrupci«n», luego el indicativo de la otra estación y, después, su propio indicativo",
+   "Diga el indicativo de la estación y luego identifíquese con su indicativo",
+   "Diga «CQ» tres veces, luego el indicativo de la otra estación y, después, su propio indicativo",
+   "Espere a que la estación llame CQ y luego responda con su indicativo"
+  ]
+ },
+ "T2A05": {
+  "question": "¿Cómo debe responder a una estación que llama CQ?",
+  "answers": [
+   "Transmita «CQ» seguido del indicativo de la otra estación",
+   "Transmita su indicativo seguido del indicativo de la otra estación",
+   "Transmita el indicativo de la otra estación seguido de su indicativo",
+   "Transmita un reporte de señal seguido de su indicativo"
+  ]
+ },
+ "T2A06": {
+  "question": "¿Cuál es una forma eficaz de buscar una respuesta de cualquier estación de fonía cuando no se usa un repetidor?",
+  "answers": [
+   "Diga su indicativo una vez, seguido de las palabras «a la escucha de una llamada»; si nadie responde, cambie de frecuencia y repita",
+   "Diga «QTC», seguido de «esta es» y su indicativo; si nadie responde, cambie de frecuencia y repita",
+   "Transmita una portadora sin modular durante aproximadamente 10 segundos, seguida de «esta es» y su indicativo, y haga una pausa para escuchar; repita según sea necesario",
+   "Repita «CQ» unas cuantas veces, seguido de «esta es» y su indicativo; luego haga una pausa para escuchar y repita según sea necesario"
+  ]
+ },
+ "T2A07": {
+  "question": "¿Qué significa el término «desplazamiento del repetidor»?",
+  "answers": [
+   "La diferencia entre las frecuencias de transmisión y recepción de un repetidor",
+   "Que el repetidor tiene un retardo para evitar interferencias",
+   "El retardo de aproximadamente medio segundo que permite eliminar la «cola de silenciamiento»",
+   "La cuota que cobra el propietario del repetidor o el club para cubrir el mantenimiento"
+  ]
+ },
+ "T2A08": {
+  "question": "¿Qué significa la señal de procedimiento «CQ»?",
+  "answers": [
+   "Una forma abreviada del término «QSO de concurso»",
+   "«Calidad de comunicación», que se usa para indicar la claridad del audio transmitido",
+   "Que solo la estación llamada debe transmitir",
+   "Llamada general a cualquier estación"
+  ]
+ },
+ "T2A09": {
+  "question": "¿Cuál de las siguientes es una forma habitual de indicar que una estación está a la escucha en un repetidor y busca establecer contacto?",
+  "answers": [
+   "«CQ CQ» seguido del indicativo del repetidor",
+   "El indicativo de la estación seguido de la palabra «escuchando»",
+   "El indicativo del repetidor seguido del indicativo de la estación",
+   "«QSY» seguido de su indicativo"
+  ]
+ },
+ "T2A10": {
+  "question": "¿Qué es un plan de banda, además de los privilegios establecidos por la FCC?",
+  "answers": [
+   "Una guía voluntaria para usar diferentes modos o actividades dentro de una banda de radioaficionados",
+   "Una lista de horarios de operación",
+   "Una lista de frecuencias disponibles para redes",
+   "Un plan elaborado por un club para indicar el uso de las bandas de frecuencia"
+  ]
+ },
+ "T2A11": {
+  "question": "¿Qué término describe una estación de radioaficionado que transmite y recibe en la misma frecuencia?",
+  "answers": [
+   "Dúplex completo",
+   "Dúplex",
+   "Simplex",
+   "Multiplex"
+  ]
+ },
+ "T2B01": {
+  "question": "¿Cuál es el propósito de la función de inversi«n (reverse) en un transceptor VHF/UHF»",
+  "answers": [
+   "Reducir la potencia de salida",
+   "Aumentar la potencia de salida",
+   "Escuchar en la frecuencia de entrada del repetidor",
+   "Escuchar en la frecuencia de salida del repetidor"
+  ]
+ },
+ "T2B02": {
+  "question": "¿Qué término describe el uso de un tono subaudible transmitido junto con el audio de voz normal para abrir el silenciamiento de un receptor?",
+  "answers": [
+   "Silenciamiento por portadora",
+   "Ráfaga de tonos",
+   "DTMF",
+   "CTCSS"
+  ]
+ },
+ "T2B03": {
+  "question": "¿Cuál de las siguientes opciones describe una red de repetidores enlazados?",
+  "answers": [
+   "Una red de repetidores en la que las señales recibidas por un repetidor son retransmitidas por todos los repetidores de la red",
+   "Un solo repetidor con más de un receptor",
+   "Varios repetidores con el mismo operador de control",
+   "Un sistema de repetidores enlazados mediante APRS"
+  ]
+ },
+ "T2B04": {
+  "question": "¿Cuál de las siguientes podría ser la razón por la que no puede acceder a un repetidor cuya salida puede escuchar?",
+  "answers": [
+   "El desplazamiento del transceptor está configurado incorrectamente",
+   "Está usando el tono CTCSS incorrecto",
+   "Está usando el código DCS incorrecto",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T2B05": {
+  "question": "¿Cuál de las siguientes opciones har«a que el audio de su transmisión FM se interrumpiera en los picos de voz»",
+  "answers": [
+   "El desplazamiento de su repetidor está invertido",
+   "La desviación de su FM es demasiado baja",
+   "Está hablando demasiado fuerte",
+   "La potencia de transmisión es demasiado alta"
+  ]
+ },
+ "T2B06": {
+  "question": "¿Qué tipo de señalizaci«n a un repetidor utiliza dos tonos de audio simultáneos»",
+  "answers": [
+   "DTMF",
+   "CTCSS",
+   "GMRS",
+   "D-STAR"
+  ]
+ },
+ "T2B07": {
+  "question": "¿Cómo puede unirse a un «grupo de conversación» (talkgroup) de un repetidor digital?",
+  "answers": [
+   "Registrándose con el coordinador local de frecuencias",
+   "Registrándose con el operador de control del repetidor digital",
+   "Programando en su radio el identificador o código del grupo",
+   "Programando en su radio el tono DTMF que usa el grupo de conversación"
+  ]
+ },
+ "T2B08": {
+  "question": "¿Cuál de las siguientes opciones corresponde cuando dos estaciones que transmiten en la misma frecuencia interfieren entre sí?",
+  "answers": [
+   "Las estaciones deben negociar el uso continuado de la frecuencia",
+   "Ambas estaciones deben elegir otra frecuencia para evitar el conflicto",
+   "La estación que ocupaba primero la frecuencia tiene derecho prioritario a ella",
+   "Usen tonos subaudibles para que ambas estaciones puedan compartir la frecuencia"
+  ]
+ },
+ "T2B09": {
+  "question": "¿Por qué se designan canales simplex en los planes de banda VHF/UHF?",
+  "answers": [
+   "Para que las estaciones dentro del alcance mutuo puedan comunicarse sin ocupar un repetidor",
+   "Para operar en concursos",
+   "únicamente para comunicarse a larga distancia (DX)",
+   "Para que las estaciones con transmisores sencillos puedan acceder al repetidor sin desplazamiento automático"
+  ]
+ },
+ "T2B10": {
+  "question": "¿Qué señal Q indica que está recibiendo interferencia de otras estaciones?",
+  "answers": [
+   "QRM",
+   "QRN",
+   "QTH",
+   "QSB"
+  ]
+ },
+ "T2B11": {
+  "question": "¿Qué señal Q indica que está cambiando de frecuencia?",
+  "answers": [
+   "QRU",
+   "QSY",
+   "QSL",
+   "QRZ"
+  ]
+ },
+ "T2B12": {
+  "question": "¿Cuál es el código de color digital que se usa en los sistemas de repetidores DMR?",
+  "answers": [
+   "Un código de acceso que debe programarse en un transmisor DMR para acceder a un repetidor específico",
+   "Un código que programa automáticamente el desplazamiento del repetidor a una frecuencia elegida por el usuario",
+   "Un código que identifica el códec específico utilizado para que el repetidor pueda decodificar correctamente el audio",
+   "Un código transmitido por el repetidor para indicar el estado y funcionamiento del equipo"
+  ]
+ },
+ "T2B13": {
+  "question": "¿Cuál es el propósito de la función de silenciamiento (squelch)?",
+  "answers": [
+   "Reducir los chasquidos de manipulación de un transmisor CW",
+   "Silenciar el audio del receptor cuando no hay señal",
+   "Eliminar oscilaciones parásitas en un amplificador de RF",
+   "Reducir la interferencia causada por ruido impulsivo"
+  ]
+ },
+ "T2B14": {
+  "question": "¿Cuál de las siguientes opciones es un «grupo de conversación» (talkgroup)?",
+  "answers": [
+   "Un grupo de radioaficionados que comparten correo electrónico sobre un tema específico de radioafición",
+   "Un identificador que DMR usa para organizar el tráfico de radio, de modo que quienes desean escuchar al grupo no sean molestados por otro tráfico de radio",
+   "Los integrantes de una red organizada para radioaficionados con un interés común específico",
+   "Un método para alertar automáticamente a todos los integrantes del grupo sobre la frecuencia en la que transmite cualquiera de ellos"
+  ]
+ },
+ "T2C01": {
+  "question": "¿Cuándo NO se aplican las reglas de la FCC Parte 97 del Servicio de Radioaficionados a la operación de una estación de radioaficionado?",
+  "answers": [
+   "Al operar conforme a las reglas de RACES",
+   "Al operar conforme a las reglas de FEMA",
+   "Al operar conforme a las reglas de ARES",
+   "Las reglas de la FCC siempre se aplican"
+  ]
+ },
+ "T2C02": {
+  "question": "¿Cuáles de las siguientes son tareas habituales de una estación de control de red?",
+  "answers": [
+   "Elegir el horario y la frecuencia habituales de reunión de la red",
+   "Asegurarse de que todas las estaciones que se anuncian en la red tengan licencia válida para operar en su frecuencia",
+   "Iniciar la red y dirigir las comunicaciones entre las estaciones que se anuncian",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T2C03": {
+  "question": "¿Qué técnica se utiliza para asegurarse de que se reciban correctamente mensajes de voz que contienen palabras poco comunes?",
+  "answers": [
+   "Transmitir las palabras por voz y código Morse",
+   "Usar el código Q «QSR» para pedir a la estación receptora que repita las palabras",
+   "Deletrear las palabras usando un alfabeto fonético estándar",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T2C04": {
+  "question": "¿Qué es RACES?",
+  "answers": [
+   "Una organización de emergencia que combina operadores y frecuencias de radioaficionados y de banda ciudadana",
+   "Una sociedad internacional de experimentación radioeléctrica",
+   "Un concurso de radio que se realiza en un periodo corto, a veces llamado «sprint»",
+   "Un servicio de radioaficionados de la FCC Parte 97 para comunicaciones de defensa civil durante emergencias nacionales"
+  ]
+ },
+ "T2C05": {
+  "question": "¿A qué se refiere el término «tráfico» en la operación de una red?",
+  "answers": [
+   "Mensajes formales intercambiados por las estaciones de la red",
+   "La cantidad de estaciones que se anuncian y se retiran de una red",
+   "La operación de estaciones móviles o portátiles",
+   "Un recuento de las veces que se activa la red cada mes"
+  ]
+ },
+ "T2C06": {
+  "question": "¿Qué es el Servicio de Emergencia de Radioaficionados (ARES)?",
+  "answers": [
+   "Un grupo de radioaficionados con licencia que han registrado voluntariamente sus aptitudes y equipos para prestar servicios de comunicaciones al público",
+   "Un grupo de radioaficionados con licencia que son miembros de las fuerzas armadas y aceptaron voluntariamente prestar servicios de manejo de mensajes en caso de emergencia",
+   "Un programa de capacitación que ofrece cursos para obtener una licencia de radioaficionado destinada a usarse durante emergencias",
+   "Un programa de capacitación que certifica a operadores de radioaficionado para integrar el Servicio de Radioaficionados para Emergencias Civiles"
+  ]
+ },
+ "T2C07": {
+  "question": "¿Cuál de las siguientes es una práctica estándar al participar en una red?",
+  "answers": [
+   "Al responder por primera vez a la estación de control de red, transmita su indicativo, nombre y dirección tal como aparecen en la base de datos de la FCC",
+   "Anote la hora de cada una de sus transmisiones",
+   "A menos que esté informando de una emergencia, transmita solo cuando se lo indique la estación de control de red",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T2C08": {
+  "question": "¿Cuál de los siguientes retransmite mensajes usando direcciones de correo electrónico basadas en indicativos de radioaficionado?",
+  "answers": [
+   "Winlink",
+   "FT8",
+   "PSK31",
+   "AMTOR"
+  ]
+ },
+ "T2C09": {
+  "question": "¿Se permite alguna vez a los operadores de control de estaciones de radioaficionado operar fuera de los privilegios de frecuencia de su clase de licencia?",
+  "answers": [
+   "No",
+   "S?, pero solo cuando forman parte de un plan de emergencia de FEMA",
+   "S?, pero solo cuando forman parte de un plan de emergencia de RACES",
+   "S«, pero solo en situaciones que impliquen la seguridad inmediata de vidas humanas o la protecci»n de bienes"
+  ]
+ },
+ "T2C10": {
+  "question": "¿Qué información contiene el preámbulo de un mensaje formal de tráfico?",
+  "answers": [
+   "La dirección de correo electrónico de la estación de origen",
+   "La dirección del destinatario previsto",
+   "El número de teléfono del destinatario",
+   "La información necesaria para dar seguimiento al mensaje"
+  ]
+ },
+ "T2C11": {
+  "question": "¿Qué significa «check» (recuento) en el encabezado de un radiograma?",
+  "answers": [
+   "La cantidad de palabras o equivalentes de palabras en el texto del mensaje",
+   "El indicativo de la estación de origen",
+   "Una lista de las estaciones que retransmitieron el mensaje",
+   "Una casilla del formulario del mensaje que indica que este fue recibido o retransmitido"
+  ]
+ },
+ "T2C12": {
+  "question": "¿Cuál de los siguientes requiere certificación de una agencia de defensa civil?",
+  "answers": [
+   "ARES",
+   "RACES",
+   "MARS",
+   "SKYWARN"
+  ]
+ },
+ "T3A01": {
+  "question": "¿Por qué la intensidad de las señales VHF a veces varía considerablemente cuando la antena se mueve solo unos pocos pies?",
+  "answers": [
+   "La trayectoria de la señal encuentra distintas concentraciones de vapor de agua",
+   "La propagación ionosférica VHF es muy sensible a la longitud de la trayectoria",
+   "La propagación por trayectorias múltiples cancela o refuerza las señales",
+   "El efecto Doppler causa pequeños desplazamientos de frecuencia que producen cambios en la intensidad de la señal"
+  ]
+ },
+ "T3A02": {
+  "question": "¿Cómo afecta la vegetación a las señales UHF y de microondas?",
+  "answers": [
+   "Causa difracción de borde de cuchillo, distorsionando los picos de voz",
+   "Absorbe las señales y provoca una recepción deficiente de las señales débiles",
+   "Amplifica las señales y mejora la recepción de las señales débiles",
+   "No tiene ningún efecto"
+  ]
+ },
+ "T3A03": {
+  "question": "¿Qué polarización de antena se usa normalmente para contactos CW y SSB de larga distancia en las bandas VHF y UHF?",
+  "answers": [
+   "Circular hacia la derecha",
+   "Circular hacia la izquierda",
+   "Horizontal",
+   "Vertical"
+  ]
+ },
+ "T3A04": {
+  "question": "¿Cuál es el efecto de la polarización cruzada de antenas en una trayectoria VHF o UHF con línea de vista?",
+  "answers": [
+   "Las bandas laterales de modulación podrían invertirse",
+   "La intensidad de la señal recibida se reduce",
+   "Las señales producen un efecto de eco",
+   "No ocurrirá nada significativo"
+  ]
+ },
+ "T3A05": {
+  "question": "Al usar una antena direccional, ¿cómo podría su estación comunicarse con un repetidor distante si edificios u obstáculos bloquean la trayectoria directa con línea de vista?",
+  "answers": [
+   "Cambiar de polarización vertical a horizontal",
+   "Intentar encontrar una trayectoria que refleje las señales hacia el repetidor",
+   "Intentar la trayectoria larga",
+   "Aumentar la ROE (SWR) de la antena"
+  ]
+ },
+ "T3A06": {
+  "question": "¿Qué significa el término picket fencing (desvanecimiento rápido tipo valla)?",
+  "answers": [
+   "Transmisiones alternadas durante la operación de una red",
+   "Fluctuación rápida de las señales móviles debido a la propagación por trayectorias múltiples",
+   "Un tipo de sistema de tierra usado con antenas verticales",
+   "Interferencia de TV por cable en forma de portadoras a intervalos fijos a lo largo de la banda"
+  ]
+ },
+ "T3A07": {
+  "question": "¿Qué condición meteorológica podría reducir el alcance en las frecuencias de microondas?",
+  "answers": [
+   "Vientos fuertes",
+   "Presión barométrica baja",
+   "Precipitación",
+   "Temperaturas más frías"
+  ]
+ },
+ "T3A08": {
+  "question": "¿Cuál es una causa probable del desvanecimiento irregular de las señales propagadas por la ionosfera?",
+  "answers": [
+   "Desplazamiento de frecuencia debido a la rotación de Faraday",
+   "Interferencia de tormentas eléctricas",
+   "Distorsión por intermodulación",
+   "Combinación aleatoria de señales que llegan por distintas trayectorias"
+  ]
+ },
+ "T3A09": {
+  "question": "¿Cuál de los siguientes fenómenos se debe a que las señales propagadas por la ionosfera tienen polarización elíptica?",
+  "answers": [
+   "Los modos digitales no se pueden usar",
+   "Se pueden usar antenas con polarización vertical u horizontal para transmitir o recibir",
+   "La voz FM no se puede usar",
+   "Las antenas transmisora y receptora deben tener la misma polarización"
+  ]
+ },
+ "T3A10": {
+  "question": "¿Qué efecto tiene la propagación por trayectorias múltiples en las transmisiones de datos?",
+  "answers": [
+   "Las tasas de transmisión deben aumentar por un factor igual al número de trayectorias distintas observadas",
+   "Las tasas de transmisión deben disminuir por un factor igual al número de trayectorias distintas observadas",
+   "No se producirán cambios significativos si las señales se transmiten mediante FM",
+   "Es probable que aumenten las tasas de error"
+  ]
+ },
+ "T3A11": {
+  "question": "¿Qué región de la atmósfera puede reflejar ondas de radio HF?",
+  "answers": [
+   "La estratosfera",
+   "La troposfera",
+   "La ionosfera",
+   "La electrosfera"
+  ]
+ },
+ "T3A12": {
+  "question": "¿Qué efecto tienen la niebla o la lluvia en las señales de las bandas de 10 metros y 6 metros?",
+  "answers": [
+   "Absorción",
+   "Poco efecto",
+   "Desviación",
+   "Mayor alcance"
+  ]
+ },
+ "T3B01": {
+  "question": "¿Cuál es la relación entre los campos eléctrico y magnético de una onda electromagnética?",
+  "answers": [
+   "Viajan a velocidades distintas",
+   "Son paralelos",
+   "Giran en direcciones opuestas",
+   "Son perpendiculares"
+  ]
+ },
+ "T3B02": {
+  "question": "¿Qué propiedad de una onda de radio define su polarización?",
+  "answers": [
+   "La orientación del campo eléctrico",
+   "La orientación del campo magnético",
+   "La relación entre la energía del campo magnético y la energía del campo eléctrico",
+   "La relación entre la velocidad y la longitud de onda"
+  ]
+ },
+ "T3B03": {
+  "question": "¿Cuáles son los dos componentes de una onda de radio?",
+  "answers": [
+   "Impedancia y reactancia",
+   "Voltaje y corriente",
+   "Campos eléctrico y magnético",
+   "Radiación ionizante y no ionizante"
+  ]
+ },
+ "T3B04": {
+  "question": "¿Cuál es la velocidad de una onda de radio que viaja por el espacio libre?",
+  "answers": [
+   "La velocidad de la luz",
+   "La velocidad del sonido",
+   "0.86 veces la velocidad de la luz",
+   "1.86 veces la velocidad del sonido"
+  ]
+ },
+ "T3B05": {
+  "question": "¿Cuál es la relación entre la longitud de onda y la frecuencia?",
+  "answers": [
+   "La longitud de onda aumenta a medida que aumenta la frecuencia",
+   "La longitud de onda disminuye a medida que aumenta la frecuencia",
+   "La longitud de onda es constante en todas las frecuencias",
+   "La longitud de onda y la frecuencia aumentan a medida que aumenta la longitud de la trayectoria"
+  ]
+ },
+ "T3B06": {
+  "question": "¿Cuál es la fórmula para convertir la frecuencia en una longitud de onda aproximada en metros?",
+  "answers": [
+   "La longitud de onda en metros es igual a la frecuencia en hertz multiplicada por 300",
+   "La longitud de onda en metros es igual a la frecuencia en hertz dividida entre 300",
+   "La longitud de onda en metros es igual a la frecuencia en megahertz dividida entre 300",
+   "La longitud de onda en metros es igual a 300 dividido entre la frecuencia en megahertz"
+  ]
+ },
+ "T3B07": {
+  "question": "Además de la frecuencia, ¿cuál de los siguientes se usa para identificar las bandas de radioaficionados?",
+  "answers": [
+   "La longitud de onda aproximada en metros",
+   "Designaciones tradicionales con letras y números",
+   "Números de canal",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T3B08": {
+  "question": "¿Qué intervalo de frecuencias se conoce como VHF?",
+  "answers": [
+   "30 kHz a 300 kHz",
+   "30 MHz a 300 MHz",
+   "300 kHz a 3000 kHz",
+   "300 MHz a 3000 MHz"
+  ]
+ },
+ "T3B09": {
+  "question": "¿Qué intervalo de frecuencias se conoce como UHF?",
+  "answers": [
+   "30 a 300 kHz",
+   "30 a 300 MHz",
+   "300 a 3000 kHz",
+   "300 a 3000 MHz"
+  ]
+ },
+ "T3B10": {
+  "question": "¿Qué intervalo de frecuencias se conoce como HF?",
+  "answers": [
+   "300 a 3000 MHz",
+   "30 a 300 MHz",
+   "3 a 30 MHz",
+   "300 a 3000 kHz"
+  ]
+ },
+ "T3B11": {
+  "question": "¿Cuál es la velocidad aproximada de una onda de radio en el espacio libre?",
+  "answers": [
+   "150,000,000 metros por segundo",
+   "300,000,000 metros por segundo",
+   "300,000,000 millas por hora",
+   "150,000,000 millas por hora"
+  ]
+ },
+ "T3B12": {
+  "question": "¿Cuál de estas frecuencias viaja a la mayor velocidad en el espacio libre?",
+  "answers": [
+   "Las microondas",
+   "UHF",
+   "VHF",
+   "Todas las frecuencias de radio viajan a la misma velocidad"
+  ]
+ },
+ "T3C01": {
+  "question": "¿Por qué rara vez se escuchan señales UHF simplex más allá de su horizonte de radio?",
+  "answers": [
+   "Son demasiado débiles para llegar muy lejos",
+   "Las regulaciones de la FCC prohíben que lleguen a más de 50 millas",
+   "Las señales UHF normalmente no se propagan por la ionosfera",
+   "Las señales UHF son absorbidas por la región D de la ionosfera"
+  ]
+ },
+ "T3C02": {
+  "question": "¿Cuál es una característica de la comunicación HF en comparación con las comunicaciones en VHF y frecuencias superiores?",
+  "answers": [
+   "Las antenas HF suelen ser más pequeñas",
+   "HF admite señales de mayor ancho de banda",
+   "La propagación ionosférica de larga distancia es mucho más común en HF",
+   "En HF hay menos interferencia atmosférica (estática)"
+  ]
+ },
+ "T3C03": {
+  "question": "¿Cuál es una característica de las señales VHF recibidas mediante dispersión auroral hacia atrás (auroral backscatter)?",
+  "answers": [
+   "A menudo se reciben desde una distancia de 10,000 millas o más",
+   "Se distorsionan y tienen un sonido áspero característico",
+   "Solo ocurren durante las horas nocturnas de invierno",
+   "Por lo general, son más fuertes cuando la antena apunta hacia el oeste"
+  ]
+ },
+ "T3C04": {
+  "question": "¿Cuál de los siguientes tipos de propagación se asocia más comúnmente con señales ocasionalmente fuertes en las bandas de 10, 6 y 2 metros, provenientes de más allá del horizonte de radio?",
+  "answers": [
+   "Dispersión hacia atrás (backscatter)",
+   "E esporádica",
+   "Absorción de la región D",
+   "Propagación por línea gris"
+  ]
+ },
+ "T3C05": {
+  "question": "¿Cuál de los siguientes efectos puede permitir que las señales de radio viajen más allá de obstáculos entre las estaciones transmisora y receptora?",
+  "answers": [
+   "Difracción de borde de cuchillo",
+   "Rotación de Faraday",
+   "Tunelamiento cuántico",
+   "Desplazamiento Doppler"
+  ]
+ },
+ "T3C06": {
+  "question": "¿Qué tipo de propagación permite regularmente comunicaciones VHF y UHF más allá del horizonte, a distancias de aproximadamente 300 millas?",
+  "answers": [
+   "Canalización troposférica",
+   "Refracción de la región D",
+   "Refracción de la región F2",
+   "Rotación de Faraday"
+  ]
+ },
+ "T3C07": {
+  "question": "¿Qué banda es la más adecuada para comunicarse mediante dispersión meteórica?",
+  "answers": [
+   "33 centímetros",
+   "6 metros",
+   "2 metros",
+   "70 centímetros"
+  ]
+ },
+ "T3C08": {
+  "question": "¿Qué causa la canalización troposférica?",
+  "answers": [
+   "Descargas de rayos durante tormentas eléctricas",
+   "Manchas solares y erupciones solares",
+   "Corrientes ascendentes de huracanes y tornados",
+   "Inversiones de temperatura en la atmósfera"
+  ]
+ },
+ "T3C09": {
+  "question": "¿Cuál suele ser el mejor momento para la propagación de larga distancia en la banda de 10 metros a través de la región F?",
+  "answers": [
+   "Desde el amanecer hasta poco después del atardecer durante periodos de alta actividad de manchas solares",
+   "Desde poco después del atardecer hasta el amanecer durante periodos de alta actividad de manchas solares",
+   "Desde el amanecer hasta poco después del atardecer durante periodos de baja actividad de manchas solares",
+   "Desde poco después del atardecer hasta el amanecer durante periodos de baja actividad de manchas solares"
+  ]
+ },
+ "T3C10": {
+  "question": "¿Cuál de las siguientes bandas puede proporcionar comunicaciones de larga distancia mediante la región F de la ionosfera durante el máximo del ciclo de manchas solares?",
+  "answers": [
+   "6 y 10 metros",
+   "23 centímetros",
+   "70 centímetros y 1.25 metros",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T3C11": {
+  "question": "¿Por qué el horizonte de radio para las señales VHF y UHF está más lejos que el horizonte visual?",
+  "answers": [
+   "Las señales de radio viajan algo más rápido que la velocidad de la luz",
+   "Las ondas de radio no son bloqueadas por partículas de polvo",
+   "La atmósfera refracta ligeramente las ondas de radio",
+   "Las ondas de radio son bloqueadas por partículas de polvo"
+  ]
+ },
+ "T4A01": {
+  "question": "¿Cuál de las siguientes es una clasificación adecuada para la fuente de alimentación de un transceptor móvil FM típico con una potencia de salida de 50-watt?",
+  "answers": [
+   "24.0 volts a 4 amperes",
+   "13.8 volts a 4 amperes",
+   "24.0 volts a 12 amperes",
+   "13.8 volts a 12 amperes"
+  ]
+ },
+ "T4A02": {
+  "question": "¿Qué debe tenerse en cuenta al seleccionar un medidor SWR (ROE) accesorio?",
+  "answers": [
+   "La frecuencia y el nivel de potencia con los que se harán las mediciones",
+   "La distancia entre el medidor y la antena",
+   "El valor máximo de SWR (ROE) previsto en la línea de transmisión",
+   "La capacidad del medidor para compensar una adaptación deficiente entre la línea de transmisión y la antena"
+  ]
+ },
+ "T4A03": {
+  "question": "¿Por qué se usan cables cortos y de calibre grueso para la conexión de alimentación de CC de un transceptor?",
+  "answers": [
+   "Para minimizar la caída de voltaje durante la transmisión",
+   "Para adaptar estrechamente la impedancia de salida de la fuente de alimentación",
+   "Para evitar la interferencia de RF",
+   "Para minimizar las pérdidas por radiación en el cable de alimentación"
+  ]
+ },
+ "T4A04": {
+  "question": "¿Cómo se conectan las entradas y salidas de audio de un transceptor en una estación configurada para operar con FT8?",
+  "answers": [
+   "A una computadora que ejecuta un programa de terminal y está conectada a una unidad controladora de nodo terminal",
+   "A las salidas y entradas de audio de una computadora que ejecuta software FT8",
+   "A una unidad de conversión FT8, un teclado y un monitor de computadora",
+   "A una computadora conectada al sitio web FT8converter.com"
+  ]
+ },
+ "T4A05": {
+  "question": "¿Dónde debe instalarse un medidor de potencia de RF?",
+  "answers": [
+   "En la línea de alimentación, entre el transmisor y la antena",
+   "En la salida de la fuente de alimentación",
+   "En paralelo con la línea de pulsar para hablar y la antena",
+   "En el cable de alimentación, lo más cerca posible de la radio"
+  ]
+ },
+ "T4A06": {
+  "question": "¿Qué señales se usan en una interfaz entre computadora y radio para operar en modos digitales?",
+  "answers": [
+   "Modo, estado y ubicación de recepción y transmisión",
+   "Antena y potencia de RF",
+   "Audio de recepción, audio de transmisión y activación del transmisor",
+   "Ubicación GPS NMEA y alimentación de CC"
+  ]
+ },
+ "T4A07": {
+  "question": "¿Cuál de las siguientes conexiones se requiere entre una computadora y un transceptor para operar en modos digitales?",
+  "answers": [
+   "“Line out” de la computadora a la conexión de pulsar para hablar del transceptor",
+   "“Line in” de la computadora a la conexión de pulsar para hablar del transceptor",
+   "“Line in” de la computadora a la conexión del altavoz del transceptor",
+   "“Line out” de la computadora a la conexión del altavoz del transceptor"
+  ]
+ },
+ "T4A08": {
+  "question": "¿Cuál de los siguientes conductores es preferible para una conexión equipotencial de RF?",
+  "answers": [
+   "Trenza de cobre retirada de un cable coaxial",
+   "Alambre de acero revestido de cobre",
+   "Cable de par trenzado",
+   "Cinta plana de cobre"
+  ]
+ },
+ "T4A09": {
+  "question": "¿Cómo se puede determinar cuánto tiempo puede alimentarse un equipo con una batería?",
+  "answers": [
+   "Dividir la capacidad de la batería en watt-hora por el consumo máximo de potencia del equipo",
+   "Dividir la capacidad de la batería en ampere-hora por el consumo promedio de corriente del equipo",
+   "Multiplicar los watts por hora que consume el equipo por la capacidad de potencia de la batería",
+   "Multiplicar el cuadrado de la corriente nominal de la batería por la resistencia de entrada del equipo"
+  ]
+ },
+ "T4A10": {
+  "question": "¿Qué función cumple un punto de acceso (hotspot) de modo digital para los transceptores cercanos?",
+  "answers": [
+   "Comunicación con una red de voz digital o de datos",
+   "Comunicaciones digitales FT8 mediante AFSK usando un teléfono inteligente conectado a Internet",
+   "Codificación y decodificación RTTY sin una computadora",
+   "Comunicaciones digitales de alta velocidad para dispersión meteórica"
+  ]
+ },
+ "T4A11": {
+  "question": "¿Dónde debe conectarse el retorno negativo de alimentación de un transceptor móvil en un vehículo?",
+  "answers": [
+   "Al punto de masa del chasis de la batería de 12-volt",
+   "A la carcasa del conector de alimentación",
+   "A cualquier parte metálica del vehículo",
+   "A través del soporte de montaje del transceptor"
+  ]
+ },
+ "T4A12": {
+  "question": "¿Qué es un manipulador electrónico?",
+  "answers": [
+   "Un dispositivo para cambiar las antenas de transmisión a recepción",
+   "Un dispositivo para cambiar de recepción a transmisión mediante activación por voz",
+   "Un dispositivo que facilita el envío manual de código Morse",
+   "Un enclavamiento para impedir el uso no autorizado de una radio"
+  ]
+ },
+ "T4B01": {
+  "question": "¿Cuál es el efecto de una ganancia excesiva del micrófono en las transmisiones SSB?",
+  "answers": [
+   "Inestabilidad de frecuencia",
+   "Audio transmitido distorsionado",
+   "Aumento de SWR (ROE)",
+   "Inversión de banda lateral"
+  ]
+ },
+ "T4B02": {
+  "question": "¿Cuál de los siguientes elementos se puede usar para introducir la frecuencia de operación de un transceptor?",
+  "answers": [
+   "El teclado o la perilla del VFO",
+   "El codificador CTCSS o DTMF",
+   "El control automático de frecuencia",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T4B03": {
+  "question": "¿Cómo se ajusta el silenciador (squelch) para poder escuchar una señal FM débil?",
+  "answers": [
+   "Ajuste el umbral del silenciador para que el audio de salida del receptor se escuche continuamente",
+   "Suba el nivel de audio hasta que supere el umbral del silenciador",
+   "Active la función antisilenciador",
+   "Active la mejora del silenciador"
+  ]
+ },
+ "T4B04": {
+  "question": "¿Cómo suena una señal FM cuando se recibe ligeramente fuera de frecuencia?",
+  "answers": [
+   "El tono del audio aumenta",
+   "El tono del audio disminuye",
+   "No hay ningún efecto, excepto una reducción de amplitud",
+   "El audio se distorsiona"
+  ]
+ },
+ "T4B05": {
+  "question": "¿Qué hace la función de exploración de un transceptor FM?",
+  "answers": [
+   "Comprueba la desviación de la señal entrante",
+   "Evita la interferencia a repetidores cercanos",
+   "Recorre un rango de frecuencias para comprobar si hay actividad",
+   "Recorre un rango de frecuencias para determinar la frecuencia de resonancia de la antena"
+  ]
+ },
+ "T4B06": {
+  "question": "¿Cuál de los siguientes controles podría usarse si el tono de voz de una señal de banda lateral única que responde a su llamada CQ parece demasiado alto o bajo?",
+  "answers": [
+   "El AGC o limitador",
+   "La selección de ancho de banda",
+   "El silenciador por tono",
+   "El RIT o clarificador"
+  ]
+ },
+ "T4B07": {
+  "question": "¿Qué es un “code plug” de DMR?",
+  "answers": [
+   "Un cable adaptador que se usa para conectar una radio DMR a una computadora para acceder a Internet",
+   "Datos de configuración cargados en la radio para acceder a repetidores y grupos de conversación",
+   "Una actualización del software de programación DMR proporcionada por el fabricante de la radio para admitir nuevos modelos",
+   "Un codificador-decodificador (CODEC) que convierte datos de voz analógica a datos digitales DMR y viceversa"
+  ]
+ },
+ "T4B08": {
+  "question": "¿Qué ventaja ofrece poder elegir entre distintos anchos de banda de los filtros del receptor en un transceptor multimodo?",
+  "answers": [
+   "Permite monitorear varios modos simultáneamente al seleccionar un filtro distinto para cada modo",
+   "Permite reducir el ruido o la interferencia al seleccionar un ancho de banda adecuado para el modo",
+   "Aumenta la cantidad de frecuencias que se pueden almacenar en la memoria",
+   "Aumenta el desplazamiento entre las frecuencias de recepción y transmisión"
+  ]
+ },
+ "T4B09": {
+  "question": "¿Cómo se selecciona un grupo específico de estaciones en un transceptor de voz digital DMR?",
+  "answers": [
+   "Recuperando las frecuencias de la memoria del transceptor",
+   "Activando el tono CTCSS del grupo",
+   "Introduciendo el código de identificación del grupo",
+   "Insertando un “code plug” de cinco pines preprogramado"
+  ]
+ },
+ "T4B10": {
+  "question": "¿Cuál de los siguientes anchos de banda del filtro del receptor proporciona la mejor relación señal-ruido para la recepción SSB?",
+  "answers": [
+   "500 Hz",
+   "1000 Hz",
+   "2400 Hz",
+   "5000 Hz"
+  ]
+ },
+ "T4B11": {
+  "question": "¿Cuál de los siguientes datos debe programarse en un transceptor digital D-STAR antes de transmitir?",
+  "answers": [
+   "Su indicativo",
+   "Su potencia de salida",
+   "El tipo de códec que se está usando",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T5A01": {
+  "question": "¿En cuáles de las siguientes unidades se mide la corriente eléctrica?",
+  "answers": [
+   "Volts",
+   "Watts",
+   "Ohms",
+   "Amperes"
+  ]
+ },
+ "T5A02": {
+  "question": "¿En cuáles de las siguientes unidades se mide la potencia eléctrica?",
+  "answers": [
+   "Volts",
+   "Watts",
+   "Watt-hours",
+   "Amperes"
+  ]
+ },
+ "T5A03": {
+  "question": "¿Cuál es el término para el flujo de electrones en un circuito eléctrico?",
+  "answers": [
+   "Voltaje",
+   "Amperes per second",
+   "Volts per second",
+   "Corriente"
+  ]
+ },
+ "T5A04": {
+  "question": "¿Qué término describe el número de veces por segundo que una corriente alterna completa un ciclo?",
+  "answers": [
+   "Tasa de pulsos",
+   "Número de onda",
+   "Frecuencia",
+   "Longitud de onda"
+  ]
+ },
+ "T5A05": {
+  "question": "¿Una diferencia en cuál de las siguientes magnitudes causa el flujo de electrones?",
+  "answers": [
+   "Voltaje",
+   "Ampere-hours",
+   "Capacitancia",
+   "Inductancia"
+  ]
+ },
+ "T5A06": {
+  "question": "¿Cuál es la unidad de frecuencia?",
+  "answers": [
+   "Hertz",
+   "Henry",
+   "Farad",
+   "Epicycles per second"
+  ]
+ },
+ "T5A07": {
+  "question": "¿Por qué los metales suelen ser buenos conductores de electricidad?",
+  "answers": [
+   "Tienen una densidad relativamente alta",
+   "Tienen muchos electrones libres",
+   "Tienen muchos protones libres",
+   "Tienen valores relativamente altos del módulo de Young"
+  ]
+ },
+ "T5A08": {
+  "question": "¿Cuál de los siguientes es un buen aislante eléctrico?",
+  "answers": [
+   "Agua de mar",
+   "Vidrio",
+   "Acero inoxidable",
+   "Grafito"
+  ]
+ },
+ "T5A09": {
+  "question": "¿Cuál de las siguientes opciones describe la corriente alterna?",
+  "answers": [
+   "Corriente que alterna entre una dirección positiva y cero",
+   "Corriente que alterna entre una dirección negativa y cero",
+   "Corriente que alterna entre direcciones positiva y negativa",
+   "Todas estas respuestas son correctas"
+  ]
+ },
+ "T5A10": {
+  "question": "¿Qué término describe la velocidad a la que se utiliza la energía eléctrica?",
+  "answers": [
+   "Resistencia",
+   "Corriente",
+   "Potencia",
+   "Voltaje"
+  ]
+ },
+ "T5A11": {
+  "question": "¿A qué tipo de flujo de corriente se opone la resistencia?",
+  "answers": [
+   "Corriente continua",
+   "Corriente alterna",
+   "Corriente de RF",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T5B01": {
+  "question": "¿Cuántos milliamperes equivalen a 1.5 amperes?",
+  "answers": [
+   "0.0000015 milliamperes",
+   "0.0015 milliamperes",
+   "1500 milliamperes",
+   "1,500,000 milliamperes"
+  ]
+ },
+ "T5B02": {
+  "question": "¿Cuál equivale a 1,500,000 hertz?",
+  "answers": [
+   "1500 kHz",
+   "1500 MHz",
+   "15 GHz",
+   "150 kHz"
+  ]
+ },
+ "T5B03": {
+  "question": "¿Cuál equivale a un kilovolt?",
+  "answers": [
+   "Una milésima de volt",
+   "Cien volts",
+   "Mil volts",
+   "Un millón de volts"
+  ]
+ },
+ "T5B04": {
+  "question": "¿Cuál equivale a un microvolt?",
+  "answers": [
+   "Una millonésima de volt",
+   "Un millón de volts",
+   "Mil kilovolts",
+   "Una milésima de volt"
+  ]
+ },
+ "T5B05": {
+  "question": "¿Cuál equivale a 500 milliwatts?",
+  "answers": [
+   "5 watts",
+   "0.5 watts",
+   "500,000 watts",
+   "500,000,000 watts"
+  ]
+ },
+ "T5B06": {
+  "question": "¿Cuál equivale a 3000 milliamperes?",
+  "answers": [
+   "0.003 amperes",
+   "0.3 amperes",
+   "3,000,000 amperes",
+   "3 amperes"
+  ]
+ },
+ "T5B07": {
+  "question": "¿Cuál equivale a 3.525 MHz?",
+  "answers": [
+   "0.003525 kHz",
+   "35.25 kHz",
+   "3525 kHz",
+   "3,525,000 kHz"
+  ]
+ },
+ "T5B08": {
+  "question": "¿Cuál equivale a 1,000,000 picofarads?",
+  "answers": [
+   "0.001 microfarads",
+   "1 microfarad",
+   "1000 microfarads",
+   "1,000,000,000 microfarads"
+  ]
+ },
+ "T5B09": {
+  "question": "¿Qué valor en decibeles representa más aproximadamente un aumento de potencia de 5 watts a 10 watts?",
+  "answers": [
+   "2 dB",
+   "3 dB",
+   "5 dB",
+   "10 dB"
+  ]
+ },
+ "T5B10": {
+  "question": "¿Qué valor en decibeles representa más aproximadamente una disminución de potencia de 12 watts a 3 watts?",
+  "answers": [
+   "-1 dB",
+   "-3 dB",
+   "-6 dB",
+   "-9 dB"
+  ]
+ },
+ "T5B11": {
+  "question": "¿Qué valor en decibeles representa un aumento de potencia de 20 watts a 200 watts?",
+  "answers": [
+   "10 dB",
+   "12 dB",
+   "18 dB",
+   "28 dB"
+  ]
+ },
+ "T5B12": {
+  "question": "¿Cuál equivale a 28400 kHz?",
+  "answers": [
+   "28.400 kHz",
+   "2.800 MHz",
+   "284.00 MHz",
+   "28.400 MHz"
+  ]
+ },
+ "T5B13": {
+  "question": "¿Cuál equivale a 2425 MHz?",
+  "answers": [
+   "0.002425 GHz",
+   "24.25 GHz",
+   "2.425 GHz",
+   "242.5 GHz"
+  ]
+ },
+ "T5C01": {
+  "question": "¿Qué describe la capacidad de almacenar energía en un campo eléctrico?",
+  "answers": [
+   "Inductancia",
+   "Resistencia",
+   "Frecuencia",
+   "Capacitancia"
+  ]
+ },
+ "T5C02": {
+  "question": "¿Cuál es la unidad de capacitancia?",
+  "answers": [
+   "Farad",
+   "Ohm",
+   "Volt",
+   "Henry"
+  ]
+ },
+ "T5C03": {
+  "question": "¿Qué describe la capacidad de almacenar energía en un campo magnético?",
+  "answers": [
+   "Admitancia",
+   "Capacitancia",
+   "Resistencia",
+   "Inductancia"
+  ]
+ },
+ "T5C04": {
+  "question": "¿Cuál es la unidad de inductancia?",
+  "answers": [
+   "Coulomb",
+   "Farad",
+   "Henry",
+   "Ohm"
+  ]
+ },
+ "T5C05": {
+  "question": "¿Cuál es la unidad de impedancia?",
+  "answers": [
+   "Volt",
+   "Ampere",
+   "Coulomb",
+   "Ohm"
+  ]
+ },
+ "T5C06": {
+  "question": "¿Cuál es la abreviatura de kilohertz?",
+  "answers": [
+   "kHz",
+   "khz",
+   "KHz",
+   "KHZ"
+  ]
+ },
+ "T5C07": {
+  "question": "¿Cuál es la abreviatura de megahertz?",
+  "answers": [
+   "mHz",
+   "mHZ",
+   "Mhz",
+   "MHz"
+  ]
+ },
+ "T5C08": {
+  "question": "¿Qué fórmula se usa para calcular la potencia eléctrica (P) en un circuito de DC?",
+  "answers": [
+   "P = I x E",
+   "P = E / I",
+   "P = I2 x E",
+   "P = I / E"
+  ]
+ },
+ "T5C09": {
+  "question": "¿Cuánta potencia entrega un voltaje de 13.8 volts DC y una corriente de 10 amperes?",
+  "answers": [
+   "138 watts",
+   "0.7 watts",
+   "23.8 watts",
+   "3.8 watts"
+  ]
+ },
+ "T5C10": {
+  "question": "¿Cuánta potencia entrega un voltaje de 12 volts DC y una corriente de 2.5 amperes?",
+  "answers": [
+   "4.8 watts",
+   "30 watts",
+   "14.5 watts",
+   "0.208 watts"
+  ]
+ },
+ "T5C11": {
+  "question": "¿Cuánta corriente se necesita para entregar 120 watts con un voltaje de 12 volts DC?",
+  "answers": [
+   "0.1 amperes",
+   "10 amperes",
+   "12 amperes",
+   "132 amperes"
+  ]
+ },
+ "T5C12": {
+  "question": "¿Qué es la impedancia?",
+  "answers": [
+   "La oposición al flujo de corriente AC",
+   "El inverso de la resistencia",
+   "El inverso de la reactancia",
+   "La capacidad de un componente para manejar potencia"
+  ]
+ },
+ "T5D01": {
+  "question": "¿Qué fórmula se usa para calcular la corriente en un circuito?",
+  "answers": [
+   "I = E x R",
+   "I = E / R",
+   "I = E2 x R",
+   "I = E2 / R"
+  ]
+ },
+ "T5D02": {
+  "question": "¿Qué fórmula se usa para calcular el voltaje en un circuito?",
+  "answers": [
+   "E = I x R",
+   "E = I / R",
+   "E = I2 x R",
+   "E = I2 / R"
+  ]
+ },
+ "T5D03": {
+  "question": "¿Qué fórmula se usa para calcular la resistencia en un circuito?",
+  "answers": [
+   "R = E x I",
+   "R = E / I",
+   "R = E + I",
+   "R = E - I"
+  ]
+ },
+ "T5D04": {
+  "question": "¿Cuál es la resistencia de un circuito en el que circula una corriente de 3 amperes cuando se conecta a 90 volts?",
+  "answers": [
+   "3 ohms",
+   "30 ohms",
+   "1/30 ohm",
+   "270 ohms"
+  ]
+ },
+ "T5D05": {
+  "question": "¿Cuál es la resistencia de un circuito cuyo voltaje aplicado es de 12 volts y por el que circula una corriente de 1.5 amperes?",
+  "answers": [
+   "18 ohms",
+   "0.125 ohms",
+   "8 ohms",
+   "13.5 ohms"
+  ]
+ },
+ "T5D06": {
+  "question": "¿Cuál es la resistencia de un circuito que consume 4 amperes de una fuente de 12 volts?",
+  "answers": [
+   "3 ohms",
+   "16 ohms",
+   "48 ohms",
+   "8 ohms"
+  ]
+ },
+ "T5D07": {
+  "question": "¿Cuál es la corriente en un circuito con un voltaje aplicado de 120 volts y una resistencia de 80 ohms?",
+  "answers": [
+   "9600 amperes",
+   "200 amperes",
+   "0.667 amperes",
+   "1.5 amperes"
+  ]
+ },
+ "T5D08": {
+  "question": "¿Cuál es la corriente que atraviesa una resistencia de 100-ohm conectada entre los extremos de 200 volts?",
+  "answers": [
+   "20,000 amperes",
+   "0.5 amperes",
+   "2 amperes",
+   "100 amperes"
+  ]
+ },
+ "T5D09": {
+  "question": "¿Cuál es la corriente que atraviesa una resistencia de 24-ohm conectada entre los extremos de 240 volts?",
+  "answers": [
+   "2400 amperes",
+   "0.1 amperes",
+   "10 amperes",
+   "5760 amperes"
+  ]
+ },
+ "T5D10": {
+  "question": "¿Cuál es el voltaje entre los extremos de una resistencia de 2-ohm si circula por ella una corriente de 0.5 amperes?",
+  "answers": [
+   "1 volt",
+   "0.25 volts",
+   "2.5 volts",
+   "1.5 volts"
+  ]
+ },
+ "T5D11": {
+  "question": "¿Cuál es el voltaje entre los extremos de una resistencia de 10-ohm si circula por ella una corriente de 1 ampere?",
+  "answers": [
+   "1 volt",
+   "10 volts",
+   "11 volts",
+   "9 volts"
+  ]
+ },
+ "T5D12": {
+  "question": "¿Cuál es el voltaje entre los extremos de una resistencia de 10-ohm si circula por ella una corriente de 2 amperes?",
+  "answers": [
+   "8 volts",
+   "0.2 volts",
+   "12 volts",
+   "20 volts"
+  ]
+ },
+ "T5D13": {
+  "question": "¿En qué tipo de circuito la corriente es siempre la misma a través de todos los componentes?",
+  "answers": [
+   "En serie",
+   "En paralelo",
+   "Resonante",
+   "De derivación"
+  ]
+ },
+ "T5D14": {
+  "question": "¿En qué tipo de circuito el voltaje es siempre el mismo entre todos los componentes?",
+  "answers": [
+   "En serie",
+   "En paralelo",
+   "Resonante",
+   "De derivación"
+  ]
+ },
+ "T6A01": {
+  "question": "¿Qué componente eléctrico se opone al flujo de corriente en un circuito de corriente continua (DC)?",
+  "answers": [
+   "Inductor",
+   "Resistor",
+   "Inversor",
+   "Transformador"
+  ]
+ },
+ "T6A02": {
+  "question": "¿Qué tipo de componente se usa a menudo como control de volumen ajustable?",
+  "answers": [
+   "Resistor fijo",
+   "Resistor de potencia",
+   "Potenciómetro",
+   "Transformador"
+  ]
+ },
+ "T6A03": {
+  "question": "¿Qué parámetro eléctrico controla un potenciómetro?",
+  "answers": [
+   "Inductancia",
+   "Resistencia",
+   "Capacitancia",
+   "Intensidad de campo"
+  ]
+ },
+ "T6A04": {
+  "question": "¿Qué componente eléctrico almacena energía en un campo eléctrico?",
+  "answers": [
+   "Resistor",
+   "Capacitor",
+   "Inductor",
+   "Diodo"
+  ]
+ },
+ "T6A05": {
+  "question": "¿Qué tipo de componente eléctrico consta de superficies conductoras separadas por un aislante?",
+  "answers": [
+   "Resistor",
+   "Potenciómetro",
+   "Oscilador",
+   "Capacitor"
+  ]
+ },
+ "T6A06": {
+  "question": "¿Qué tipo de componente eléctrico almacena energía en un campo magnético?",
+  "answers": [
+   "Resistor",
+   "Capacitor",
+   "Inductor",
+   "Diodo"
+  ]
+ },
+ "T6A07": {
+  "question": "¿Qué componente eléctrico suele construirse como una bobina de alambre?",
+  "answers": [
+   "Transistor",
+   "Capacitor",
+   "Diodo",
+   "Inductor"
+  ]
+ },
+ "T6A08": {
+  "question": "¿Cuál es la función de un interruptor SPDT?",
+  "answers": [
+   "Abrir o cerrar un solo circuito",
+   "Abrir o cerrar dos circuitos",
+   "Conmutar un solo circuito para conectarlo a uno de otros dos circuitos",
+   "Conmutar cada uno de dos circuitos para conectarlo a uno de otros dos circuitos"
+  ]
+ },
+ "T6A09": {
+  "question": "¿Qué tipo de interruptor representa el componente 3 en la Figura T-2?",
+  "answers": [
+   "Un polo, un tiro",
+   "Un polo, dos tiros",
+   "Dos polos, un tiro",
+   "Dos polos, dos tiros"
+  ]
+ },
+ "T6A10": {
+  "question": "¿Cuál de las siguientes químicas de batería es recargable?",
+  "answers": [
+   "Níquel-hidruro metálico",
+   "Ion de litio",
+   "Plomo-ácido",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T6A11": {
+  "question": "¿Cuál de las siguientes químicas de batería no es recargable?",
+  "answers": [
+   "Níquel-cadmio",
+   "Carbono-zinc",
+   "Plomo-ácido",
+   "Ion de litio"
+  ]
+ },
+ "T6B01": {
+  "question": "¿Cuál de estas afirmaciones sobre la caída de tensión directa en un diodo es verdadera?",
+  "answers": [
+   "Es menor en algunos tipos de diodos que en otros",
+   "Es proporcional a la tensión inversa de pico",
+   "Indica que el diodo está defectuoso",
+   "No afecta la tensión suministrada a la carga"
+  ]
+ },
+ "T6B02": {
+  "question": "¿Qué componente electrónico permite que la corriente fluya en una sola dirección?",
+  "answers": [
+   "Resistor",
+   "Fusible",
+   "Diodo",
+   "Elemento excitado"
+  ]
+ },
+ "T6B03": {
+  "question": "¿Cuál de estos componentes puede usarse como interruptor electrónico?",
+  "answers": [
+   "Varistor",
+   "Potenciómetro",
+   "Transistor",
+   "Termistor"
+  ]
+ },
+ "T6B04": {
+  "question": "¿Cuál de los siguientes componentes puede constar de tres regiones de material semiconductor?",
+  "answers": [
+   "Alternador",
+   "Transistor",
+   "Triodo",
+   "Pentodo"
+  ]
+ },
+ "T6B05": {
+  "question": "¿Qué tipo de transistor tiene una compuerta, un drenador y una fuente?",
+  "answers": [
+   "Varistor",
+   "De efecto de campo",
+   "De efecto Hall",
+   "De unión bipolar"
+  ]
+ },
+ "T6B06": {
+  "question": "¿Cómo suele marcarse el terminal del cátodo de un diodo semiconductor en el encapsulado?",
+  "answers": [
+   "Con la palabra \"cathode\"",
+   "Con una franja",
+   "Con la letra C",
+   "Con la letra K"
+  ]
+ },
+ "T6B07": {
+  "question": "¿Qué hace que un diodo emisor de luz (LED) emita luz?",
+  "answers": [
+   "Corriente directa",
+   "Corriente inversa",
+   "Señal de RF acoplada capacitivamente",
+   "Señal de RF acoplada inductivamente"
+  ]
+ },
+ "T6B08": {
+  "question": "¿Qué significa la abreviatura FET?",
+  "answers": [
+   "Transmisor de emisión de frecuencia",
+   "Transistor de electrones rápidos",
+   "Transmisor de electrones libres",
+   "Transistor de efecto de campo"
+  ]
+ },
+ "T6B09": {
+  "question": "¿Cuáles son los nombres de los electrodos de un diodo?",
+  "answers": [
+   "Positivo y negativo",
+   "Fuente y drenador",
+   "Ánodo y cátodo",
+   "Compuerta y base"
+  ]
+ },
+ "T6B10": {
+  "question": "¿Cuál de los siguientes puede proporcionar ganancia de potencia?",
+  "answers": [
+   "Transformador",
+   "Transistor",
+   "Reactor",
+   "Resistor"
+  ]
+ },
+ "T6B11": {
+  "question": "¿Qué significa el término ganancia en los amplificadores?",
+  "answers": [
+   "La tensión de la señal de salida en relación con la tensión de la señal de entrada",
+   "La corriente de la señal de salida en relación con la corriente de la señal de entrada",
+   "La potencia de la señal de salida en relación con la potencia de la señal de entrada",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T6B12": {
+  "question": "¿Cuáles son los nombres de los electrodos de un transistor de unión bipolar?",
+  "answers": [
+   "Señal, polarización, potencia",
+   "Emisor, base, colector",
+   "Entrada, salida, alimentación",
+   "Polo uno, polo dos, salida"
+  ]
+ },
+ "T6C01": {
+  "question": "¿Cómo se llama un diagrama eléctrico que utiliza símbolos normalizados de componentes?",
+  "answers": [
+   "Diagrama de conexiones",
+   "Sistema de instrumentación",
+   "Esquema",
+   "Diagrama de flujo"
+  ]
+ },
+ "T6C02": {
+  "question": "¿Qué es el componente 1 en la Figura T-1?",
+  "answers": [
+   "Resistor",
+   "Transistor",
+   "Batería",
+   "Conector"
+  ]
+ },
+ "T6C03": {
+  "question": "¿Qué es el componente 2 en la Figura T-1?",
+  "answers": [
+   "Resistor",
+   "Transistor",
+   "Lámpara indicadora",
+   "Conector"
+  ]
+ },
+ "T6C04": {
+  "question": "¿Qué es el componente 3 en la Figura T-1?",
+  "answers": [
+   "Resistor",
+   "Transistor",
+   "Lámpara",
+   "Símbolo de tierra"
+  ]
+ },
+ "T6C05": {
+  "question": "¿Qué es el componente 4 en la Figura T-1?",
+  "answers": [
+   "Resistor",
+   "Transistor",
+   "Símbolo de tierra",
+   "Batería"
+  ]
+ },
+ "T6C06": {
+  "question": "¿Qué es el componente 6 en la Figura T-2?",
+  "answers": [
+   "Resistor",
+   "Capacitor",
+   "Circuito integrado regulador",
+   "Transistor"
+  ]
+ },
+ "T6C07": {
+  "question": "¿Qué es el componente 8 en la Figura T-2?",
+  "answers": [
+   "Resistor",
+   "Inductor",
+   "Circuito integrado regulador",
+   "Diodo emisor de luz"
+  ]
+ },
+ "T6C08": {
+  "question": "¿Qué es el componente 9 en la Figura T-2?",
+  "answers": [
+   "Capacitor variable",
+   "Inductor variable",
+   "Resistor variable",
+   "Transformador variable"
+  ]
+ },
+ "T6C09": {
+  "question": "¿Qué es el componente 4 en la Figura T-2?",
+  "answers": [
+   "Inductor variable",
+   "Interruptor de dos polos",
+   "Potenciómetro",
+   "Transformador"
+  ]
+ },
+ "T6C10": {
+  "question": "¿Qué es el componente 3 en la Figura T-3?",
+  "answers": [
+   "Conector",
+   "Medidor",
+   "Capacitor variable",
+   "Inductor variable"
+  ]
+ },
+ "T6C11": {
+  "question": "¿Qué es el componente 4 en la Figura T-3?",
+  "answers": [
+   "Antena",
+   "Transmisor",
+   "Carga ficticia",
+   "Tierra"
+  ]
+ },
+ "T6C12": {
+  "question": "¿Cuál de los siguientes elementos se representa con precisión en los esquemas eléctricos?",
+  "answers": [
+   "La longitud de los alambres",
+   "La apariencia física de los componentes",
+   "Las conexiones entre componentes",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T6D01": {
+  "question": "¿Cuál de los siguientes dispositivos o circuitos convierte una corriente alterna en una señal de corriente continua variable?",
+  "answers": [
+   "Transformador",
+   "Rectificador",
+   "Amplificador",
+   "Reflector"
+  ]
+ },
+ "T6D02": {
+  "question": "¿Qué es un relé?",
+  "answers": [
+   "Un interruptor controlado eléctricamente",
+   "Un amplificador controlado por corriente",
+   "Un amplificador inversor",
+   "Un transistor de paso"
+  ]
+ },
+ "T6D03": {
+  "question": "¿Cuál de las siguientes es una razón para usar alambre blindado?",
+  "answers": [
+   "Disminuir la resistencia de las conexiones de alimentación de DC",
+   "Aumentar la capacidad de conducción de corriente del alambre",
+   "Evitar el acoplamiento de señales no deseadas hacia o desde el alambre",
+   "Reducir la sobrecarga del receptor"
+  ]
+ },
+ "T6D04": {
+  "question": "¿Cuál de los siguientes muestra una magnitud eléctrica como un valor numérico?",
+  "answers": [
+   "Potenciómetro",
+   "Transistor",
+   "Medidor",
+   "Relé"
+  ]
+ },
+ "T6D05": {
+  "question": "¿Qué tipo de circuito controla la tensión de una fuente de alimentación?",
+  "answers": [
+   "Regulador",
+   "Oscilador",
+   "Filtro",
+   "Inversor de fase"
+  ]
+ },
+ "T6D06": {
+  "question": "¿Qué componente convierte la alimentación de 120 V AC en una tensión de AC más baja para otros usos?",
+  "answers": [
+   "Capacitor variable",
+   "Transformador",
+   "Transistor",
+   "Diodo"
+  ]
+ },
+ "T6D07": {
+  "question": "¿Cuál de los siguientes se usa comúnmente como indicador visual?",
+  "answers": [
+   "LED",
+   "FET",
+   "Diodo Zener",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T6D08": {
+  "question": "¿Cuál de los siguientes se combina con un inductor para formar un circuito resonante?",
+  "answers": [
+   "Resistor",
+   "Diodo Zener",
+   "Potenciómetro",
+   "Capacitor"
+  ]
+ },
+ "T6D09": {
+  "question": "¿Cómo se llama un dispositivo que combina varios semiconductores y otros componentes en un solo encapsulado?",
+  "answers": [
+   "Transductor",
+   "Relé multipolar",
+   "Circuito integrado",
+   "Transformador"
+  ]
+ },
+ "T6D10": {
+  "question": "¿Cuál es la función del componente 2 en la Figura T-1?",
+  "answers": [
+   "Emitir luz cuando circula corriente por él",
+   "Suministrar energía eléctrica",
+   "Controlar el flujo de corriente",
+   "Convertir energía eléctrica en ondas de radio"
+  ]
+ },
+ "T6D11": {
+  "question": "¿Cuál de los siguientes es un circuito resonante o sintonizado?",
+  "answers": [
+   "Un inductor y un capacitor en serie o en paralelo",
+   "Un regulador lineal de tensión",
+   "Un circuito de resistores usado para reducir la relación de onda estacionaria (ROE/SWR)",
+   "Un circuito diseñado para proporcionar audio de alta fidelidad"
+  ]
+ },
+ "T7A01": {
+  "question": "¿Qué término describe la capacidad de un receptor para detectar la presencia de una señal?",
+  "answers": [
+   "Ganancia de RF",
+   "Sensibilidad",
+   "Selectividad",
+   "Distorsión armónica total"
+  ]
+ },
+ "T7A02": {
+  "question": "¿Qué es un transceptor?",
+  "answers": [
+   "Un dispositivo que combina un receptor y un transmisor",
+   "Un dispositivo para adaptar la impedancia de la línea de alimentación a 50 ohmios",
+   "Un dispositivo para enviar y decodificar automáticamente código Morse",
+   "Un dispositivo para convertir las frecuencias del receptor y del transmisor a otra banda"
+  ]
+ },
+ "T7A03": {
+  "question": "¿Cuál de los siguientes dispositivos se usa para convertir una señal de una frecuencia a otra?",
+  "answers": [
+   "Divisor de fase",
+   "Mezclador",
+   "Inversor",
+   "Amplificador"
+  ]
+ },
+ "T7A04": {
+  "question": "¿Qué término describe la capacidad de un receptor para discriminar entre varias señales?",
+  "answers": [
+   "Relación de discriminación",
+   "Sensibilidad",
+   "Selectividad",
+   "Distorsión armónica"
+  ]
+ },
+ "T7A05": {
+  "question": "¿Cómo se llama el circuito que genera una señal en una frecuencia específica?",
+  "answers": [
+   "Modulador de reactancia",
+   "Modulador de fase",
+   "Filtro pasa bajos",
+   "Oscilador"
+  ]
+ },
+ "T7A06": {
+  "question": "¿Qué dispositivo convierte la entrada y la salida de RF de un transceptor a otra banda?",
+  "answers": [
+   "Filtro pasa altos",
+   "Filtro pasa bajos",
+   "Transversor (transverter)",
+   "Convertidor de fase"
+  ]
+ },
+ "T7A07": {
+  "question": "¿Cuál es la función de la entrada PTT de un transceptor?",
+  "answers": [
+   "Entrada para una llave usada para transmitir CW",
+   "Cambia el transceptor de recepción a transmisión cuando se conecta a tierra",
+   "Proporciona un tono de ajuste de transmisión cuando se conecta a tierra",
+   "Entrada para un tono de ajuste del preamplificador"
+  ]
+ },
+ "T7A08": {
+  "question": "¿Cuál de las siguientes opciones describe la combinación de voz con una señal portadora de RF?",
+  "answers": [
+   "Adaptación de impedancia",
+   "Oscilación",
+   "Modulación",
+   "Filtrado pasa bajos"
+  ]
+ },
+ "T7A09": {
+  "question": "¿Cuál es la función del interruptor que selecciona SSB o CW-FM en algunos amplificadores de potencia VHF?",
+  "answers": [
+   "Cambiar el modo de la señal transmitida",
+   "Ajustar el amplificador para que funcione correctamente en el modo seleccionado",
+   "Cambiar el rango de frecuencias del amplificador para que funcione en el segmento adecuado de la banda",
+   "Reducir el ruido de la señal recibida"
+  ]
+ },
+ "T7A10": {
+  "question": "¿Qué se puede agregar a la salida de un transceptor para aumentar la potencia de salida transmitida?",
+  "answers": [
+   "Un potenciómetro",
+   "Un amplificador de potencia de RF",
+   "Un multiplicador de impedancia",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T7A11": {
+  "question": "¿Cuál es la función del circuito oscilador de frecuencia variable (VFO) de un transceptor?",
+  "answers": [
+   "Establecer las frecuencias de recepción y transmisión",
+   "Proporcionar control automático de frecuencia",
+   "Inyectar una frecuencia variable para permitir la recepción de CW",
+   "Generar y demodular señales de banda lateral única"
+  ]
+ },
+ "T7B01": {
+  "question": "¿Qué puede hacer si le informan que su transceptor FM portátil o móvil tiene una desviación excesiva?",
+  "answers": [
+   "Hablar más fuerte hacia el micrófono",
+   "Dejar que el transceptor se enfríe",
+   "Cambiar a un nivel de potencia más alto",
+   "Hablar a mayor distancia del micrófono"
+  ]
+ },
+ "T7B02": {
+  "question": "¿Qué podría hacer que un radio receptor de AM o FM para radiodifusión recibiera involuntariamente una transmisión de radioaficionado?",
+  "answers": [
+   "El receptor no puede rechazar señales intensas fuera de la banda AM o FM",
+   "La ganancia del micrófono del transmisor está demasiado alta",
+   "El amplificador de audio del transmisor está sobrecargado",
+   "La desviación de un transmisor FM está ajustada demasiado baja"
+  ]
+ },
+ "T7B03": {
+  "question": "¿Cuál de las siguientes opciones puede causar interferencia de radiofrecuencia?",
+  "answers": [
+   "Sobrecarga por la señal fundamental",
+   "Armónicos",
+   "Emisiones espurias",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T7B04": {
+  "question": "¿Cuál de las siguientes opciones podría causar una baja potencia de salida de RF en un transceptor de estado sólido?",
+  "answers": [
+   "Una figura de ruido deficiente del amplificador",
+   "Una linealidad deficiente del amplificador",
+   "Una ROE (SWR) baja",
+   "Una ROE (SWR) alta"
+  ]
+ },
+ "T7B05": {
+  "question": "¿Cuál de las siguientes opciones podría reducir la interferencia que una estación de radioaficionado causa a un receptor de radio por aire de una persona que no es radioaficionada?",
+  "answers": [
+   "Bloquear la señal de radioaficionado con un filtro en la entrada de antena del receptor afectado",
+   "Bloquear la señal interferente con un filtro en el transmisor de radioaficionado",
+   "Cambiar el transmisor de FM a SSB",
+   "Cambiar el transmisor a un modo de banda estrecha"
+  ]
+ },
+ "T7B06": {
+  "question": "¿Cuál de las siguientes medidas debe tomar si un vecino le dice que las transmisiones de su estación interfieren con la recepción de su radio o televisor?",
+  "answers": [
+   "Asegurarse de que su estación funcione correctamente y no cause interferencia a su propia radio o televisor cuando estén sintonizados en el mismo canal",
+   "Apagar inmediatamente el transmisor y comunicarse con la oficina de la FCC más cercana para pedir ayuda",
+   "Instalar un duplicador de armónicos en la salida del transmisor y ajustarlo hasta eliminar la interferencia",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T7B07": {
+  "question": "¿Cuál de las siguientes opciones puede reducir la interferencia de una estación comercial de FM cercana a un transceptor de la banda de 2 metros?",
+  "answers": [
+   "Instalar un preamplificador de RF",
+   "Usar cable coaxial con doble blindaje",
+   "Instalar capacitores de derivación en el cable del micrófono",
+   "Instalar un filtro de rechazo de banda"
+  ]
+ },
+ "T7B08": {
+  "question": "¿Qué debe hacer si algo en la casa de un vecino está causando interferencia perjudicial a su estación de radioaficionado?",
+  "answers": [
+   "Colaborar con su vecino para identificar el dispositivo que causa la interferencia",
+   "Informar cortésmente a su vecino que las reglas de la FCC prohíben el uso de dispositivos que causan interferencia",
+   "Asegurarse de que su estación cumpla con las normas de buenas prácticas de radioafición",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T7B09": {
+  "question": "¿Cuál debe ser el primer paso para resolver la interferencia a la televisión por cable que no usa fibra óptica, causada por su transmisión de radioaficionado?",
+  "answers": [
+   "Agregar un filtro pasa bajos a la entrada de antena del televisor",
+   "Agregar un filtro pasa altos a la entrada de antena del televisor",
+   "Agregar un preamplificador a la entrada de antena del televisor",
+   "Asegurarse de que todos los conectores coaxiales de la línea de alimentación del televisor estén instalados correctamente"
+  ]
+ },
+ "T7B10": {
+  "question": "¿Cuál podría ser el problema si recibe un informe de que su señal de audio a través de un repetidor FM está distorsionada o es ininteligible?",
+  "answers": [
+   "Su transmisor está ligeramente fuera de frecuencia",
+   "Está hablando demasiado fuerte o demasiado cerca del micrófono",
+   "Está en una ubicación desfavorable",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T7B11": {
+  "question": "¿Cuál de las siguientes opciones puede eliminar las transmisiones de voz distorsionadas?",
+  "answers": [
+   "Agregar más línea de alimentación a la antena para reducir la ROE (SWR)",
+   "Apagar y encender la radio para reiniciar los circuitos controlados por computadora",
+   "Agregar un núcleo de ferrita tipo pinza, o «choque», al cable del micrófono para evitar que la señal transmitida se realimente al transmisor",
+   "Girar completamente en sentido horario el control de silenciamiento para evitar que la señal transmitida active el circuito de silenciamiento"
+  ]
+ },
+ "T7C01": {
+  "question": "¿Cuál es el propósito principal de una carga ficticia?",
+  "answers": [
+   "Evitar transmitir señales al aire mientras se realizan pruebas",
+   "Evitar la sobremodulación de un transmisor",
+   "Mejorar la eficiencia de una antena",
+   "Mejorar la relación señal-ruido de un receptor"
+  ]
+ },
+ "T7C02": {
+  "question": "¿Cuál de los siguientes instrumentos se usa para determinar si una antena está en resonancia en la frecuencia de operación deseada?",
+  "answers": [
+   "Un VTVM",
+   "Un analizador de antena",
+   "Un medidor Q",
+   "Un contador de frecuencia"
+  ]
+ },
+ "T7C03": {
+  "question": "¿De qué está compuesta normalmente una carga ficticia de RF?",
+  "answers": [
+   "Una fuente de alimentación de bajo voltaje y un relé de CA",
+   "Una resistencia no inductiva de 50 ohmios montada en un disipador de calor",
+   "Una fuente de alimentación de bajo voltaje y un relé de CC",
+   "Una reactancia inductiva de 50 ohmios montada en un gabinete blindado"
+  ]
+ },
+ "T7C04": {
+  "question": "¿Qué lectura en un medidor de ROE (SWR) indica una adaptación de impedancia perfecta entre la antena y la línea de alimentación?",
+  "answers": [
+   "50:50",
+   "Cero",
+   "1:1",
+   "Escala completa"
+  ]
+ },
+ "T7C05": {
+  "question": "¿Por qué la mayoría de los transmisores de estado sólido reducen la potencia de salida cuando la ROE (SWR) supera cierto nivel?",
+  "answers": [
+   "Para proteger los transistores del amplificador de salida de RF",
+   "Para cumplir las reglas de la FCC sobre pureza espectral",
+   "Porque las fuentes de alimentación no pueden suministrar suficiente corriente con una ROE alta",
+   "Para reducir la ROE en la línea de transmisión"
+  ]
+ },
+ "T7C06": {
+  "question": "¿Qué indica una lectura de ROE (SWR) de 4:1?",
+  "answers": [
+   "Una pérdida de -4 dB",
+   "Una buena adaptación de impedancia",
+   "Una ganancia de +4 dB",
+   "Una desadaptación de impedancia"
+  ]
+ },
+ "T7C07": {
+  "question": "¿Qué ocurre con la potencia que se pierde en una línea de alimentación?",
+  "answers": [
+   "Aumenta la ROE",
+   "Se irradia como armónicos",
+   "Se convierte en calor",
+   "Distorsiona la señal"
+  ]
+ },
+ "T7C08": {
+  "question": "¿Qué instrumento se puede usar para determinar la ROE?",
+  "answers": [
+   "Voltímetro",
+   "Óhmetro",
+   "Pentámetro yámbico",
+   "Vatímetro direccional"
+  ]
+ },
+ "T7C09": {
+  "question": "¿Cuál de las siguientes opciones causa fallas en los cables coaxiales?",
+  "answers": [
+   "Contaminación por humedad",
+   "Contaminación por fundente de soldadura",
+   "Fluctuación rápida de la potencia de salida del transmisor",
+   "Operación con un ciclo de trabajo del 100% durante un período prolongado"
+  ]
+ },
+ "T7C10": {
+  "question": "¿Por qué la cubierta exterior del cable coaxial debe ser resistente a la luz ultravioleta?",
+  "answers": [
+   "La luz ultravioleta puede aumentar la resistencia de los conductores",
+   "La luz ultravioleta puede aumentar las pérdidas en la cubierta del cable",
+   "La luz ultravioleta y las señales de RF pueden mezclarse y causar interferencia",
+   "La luz ultravioleta puede dañar la cubierta y permitir la entrada de agua al cable"
+  ]
+ },
+ "T7C11": {
+  "question": "¿Qué ventaja tiene el cable coaxial con dieléctrico de espuma frente al cable con dieléctrico sólido?",
+  "answers": [
+   "Es más resistente a la contaminación por humedad",
+   "Tiene una tensión de ruptura más alta",
+   "Tiene menos pérdida por pie",
+   "Tiene una mejor adaptación de impedancia a 50 ohmios"
+  ]
+ },
+ "T7D01": {
+  "question": "¿Qué instrumento usaría para medir el potencial eléctrico?",
+  "answers": [
+   "Un amperímetro",
+   "Un voltímetro",
+   "Un potenciómetro",
+   "Un óhmetro"
+  ]
+ },
+ "T7D02": {
+  "question": "¿Cómo se conecta un voltímetro a un componente para medir el voltaje aplicado?",
+  "answers": [
+   "En serie",
+   "En paralelo",
+   "En cuadratura",
+   "En fase"
+  ]
+ },
+ "T7D03": {
+  "question": "Cuando se configura para medir corriente, ¿cómo se conecta un multímetro a un componente?",
+  "answers": [
+   "En serie",
+   "En paralelo",
+   "En cuadratura",
+   "En fase"
+  ]
+ },
+ "T7D04": {
+  "question": "¿Qué instrumento se usa para medir la corriente eléctrica?",
+  "answers": [
+   "Un óhmetro",
+   "Un electrómetro",
+   "Un voltímetro",
+   "Un amperímetro"
+  ]
+ },
+ "T7D05": {
+  "question": "¿Cómo mide un óhmetro la resistencia de un circuito o componente?",
+  "answers": [
+   "Aplicando una corriente pequeña y midiendo el voltaje resultante",
+   "Colocando una resistencia variable en paralelo con el circuito",
+   "Colocando una resistencia variable en serie con el circuito",
+   "Aplicando un voltaje variable y midiendo el cambio de corriente resultante"
+  ]
+ },
+ "T7D06": {
+  "question": "¿Cuál de las siguientes acciones puede dañar un multímetro?",
+  "answers": [
+   "Intentar medir resistencia usando el ajuste de voltaje",
+   "No conectar una de las puntas de prueba a tierra",
+   "Intentar medir voltaje usando el ajuste de resistencia",
+   "No dejar que se caliente adecuadamente"
+  ]
+ },
+ "T7D07": {
+  "question": "¿Cuáles de las siguientes mediciones se realizan con un multímetro?",
+  "answers": [
+   "Intensidad de señal y ruido",
+   "Impedancia y reactancia",
+   "Voltaje y resistencia",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T7D08": {
+  "question": "¿Cuál de los siguientes tipos de soldadura no debe usarse en aplicaciones de radio y electrónica?",
+  "answers": [
+   "Soldadura con núcleo ácido",
+   "Soldadura de plomo y estaño",
+   "Soldadura con núcleo de resina",
+   "Soldadura de estaño y cobre"
+  ]
+ },
+ "T7D09": {
+  "question": "¿Cuál es el aspecto característico de una unión fría de soldadura de estaño y plomo?",
+  "answers": [
+   "Manchas negras oscuras",
+   "Una superficie brillante o lustrosa",
+   "Una superficie áspera o abultada",
+   "Un matiz verdoso"
+  ]
+ },
+ "T7D10": {
+  "question": "¿Qué lectura indica que un óhmetro está conectado a través de un capacitor grande descargado?",
+  "answers": [
+   "Resistencia que aumenta con el tiempo",
+   "Resistencia que disminuye con el tiempo",
+   "Lectura fija de escala completa",
+   "Alternancia entre circuito abierto y cortocircuito"
+  ]
+ },
+ "T7D11": {
+  "question": "¿Cuál de las siguientes precauciones debe tomarse al medir la resistencia dentro de un circuito con un óhmetro?",
+  "answers": [
+   "Asegurarse de que los voltajes aplicados sean correctos",
+   "Asegurarse de que el circuito no esté energizado",
+   "Asegurarse de que el circuito esté conectado a tierra",
+   "Asegurarse de que el circuito esté funcionando a la frecuencia correcta"
+  ]
+ },
+ "T8A01": {
+  "question": "¿Cuál de las siguientes es una forma de modulación de amplitud?",
+  "answers": [
+   "Espectro ensanchado",
+   "Radio por paquetes",
+   "Banda lateral única (SSB)",
+   "Modulación por desplazamiento de fase (PSK)"
+  ]
+ },
+ "T8A02": {
+  "question": "¿Qué tipo de modulación se usa comúnmente para las transmisiones de radio por paquetes en VHF?",
+  "answers": [
+   "FM o PM",
+   "SSB",
+   "AM",
+   "PSK"
+  ]
+ },
+ "T8A03": {
+  "question": "¿Qué tipo de modo de voz se usa a menudo para contactos de larga distancia (señal débil) en las bandas VHF y UHF?",
+  "answers": [
+   "FM",
+   "DRM",
+   "SSB",
+   "PM"
+  ]
+ },
+ "T8A04": {
+  "question": "¿Qué tipo de modulación se usa comúnmente en los repetidores de voz VHF y UHF?",
+  "answers": [
+   "AM",
+   "SSB",
+   "PSK",
+   "FM o PM"
+  ]
+ },
+ "T8A05": {
+  "question": "¿Cuál de los siguientes tipos de señal tiene el ancho de banda más estrecho?",
+  "answers": [
+   "Voz FM",
+   "Voz SSB",
+   "CW",
+   "Televisión de barrido lento"
+  ]
+ },
+ "T8A06": {
+  "question": "¿Qué banda lateral se usa normalmente para las comunicaciones de banda lateral única en HF de 10 metros, VHF y UHF?",
+  "answers": [
+   "Banda lateral superior",
+   "Banda lateral inferior",
+   "Banda lateral suprimida",
+   "Banda lateral invertida"
+  ]
+ },
+ "T8A07": {
+  "question": "¿Cuál es una característica de la banda lateral única (SSB) en comparación con FM?",
+  "answers": [
+   "Las señales SSB son más fáciles de sintonizar correctamente",
+   "Las señales SSB son menos susceptibles a la interferencia",
+   "Las señales SSB tienen un ancho de banda más estrecho",
+   "Las señales SSB son menos susceptibles a una ROE/SWR alta"
+  ]
+ },
+ "T8A08": {
+  "question": "¿Cuál es el ancho de banda aproximado de una señal de voz típica de banda lateral única (SSB)?",
+  "answers": [
+   "1 kHz",
+   "3 kHz",
+   "6 kHz",
+   "15 kHz"
+  ]
+ },
+ "T8A09": {
+  "question": "¿Cuál es el ancho de banda aproximado de una señal de voz FM en los repetidores VHF?",
+  "answers": [
+   "Menos de 500 Hz",
+   "Aproximadamente 150 kHz",
+   "Entre 10 y 15 kHz",
+   "Entre 50 y 125 kHz"
+  ]
+ },
+ "T8A10": {
+  "question": "¿Cuál es el ancho de banda aproximado de las transmisiones de televisión AM de barrido rápido?",
+  "answers": [
+   "Más de 10 MHz",
+   "Aproximadamente 6 MHz",
+   "Aproximadamente 3 MHz",
+   "Aproximadamente 1 MHz"
+  ]
+ },
+ "T8A11": {
+  "question": "¿Qué ancho de banda aproximado se necesita para transmitir una señal CW?",
+  "answers": [
+   "2.4 kHz",
+   "150 Hz",
+   "1000 Hz",
+   "15 kHz"
+  ]
+ },
+ "T8A12": {
+  "question": "¿Cuál de las siguientes es una desventaja de FM en comparación con la banda lateral única?",
+  "answers": [
+   "La calidad de voz es inferior",
+   "Solo se puede recibir una señal a la vez",
+   "Las señales FM son más difáciles de sintonizar",
+   "Las señales FM son más susceptibles a una ROE/SWR alta"
+  ]
+ },
+ "T8B01": {
+  "question": "¿Qué información de telemetría transmiten normalmente las balizas satelitales?",
+  "answers": [
+   "La intensidad de las señales recibidas",
+   "La hora del día con una precisión de más o menos 1/10 de segundo",
+   "El estado y la condición del satélite",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8B02": {
+  "question": "¿Qué efecto tiene usar una potencia radiada efectiva excesiva en el enlace ascendente a un satélite?",
+  "answers": [
+   "La posibilidad de ordenar al satélite que pase a un modo inadecuado",
+   "Bloquear el acceso de otros usuarios",
+   "Sobrecargar las baterías del satélite",
+   "La posibilidad de reiniciar la computadora de control del satélite"
+  ]
+ },
+ "T8B03": {
+  "question": "¿Cuáles de las siguientes funciones ofrecen los programas de seguimiento de satélites?",
+  "answers": [
+   "Mapas que muestran en tiempo real la trayectoria del satélite sobre la Tierra",
+   "La hora, el azimut y la elevación del inicio, la altitud máxima y el final de un paso",
+   "La frecuencia aparente de la transmisión del satélite, incluidos los efectos del desplazamiento Doppler",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8B04": {
+  "question": "¿Qué modos de transmisión usan comúnmente los satélites de radioaficionados?",
+  "answers": [
+   "SSB",
+   "FM",
+   "CW/datos",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8B05": {
+  "question": "¿Qué es una baliza satelital?",
+  "answers": [
+   "La antena transmisora principal del satélite",
+   "Una luz indicadora que muestra hacia dónde apuntar la antena",
+   "Una superficie reflectante del satélite",
+   "Una transmisión de un satélite que contiene información sobre su estado"
+  ]
+ },
+ "T8B06": {
+  "question": "¿Cuáles de los siguientes datos se ingresan en un programa de seguimiento de satélites?",
+  "answers": [
+   "La potencia transmitida por el satélite",
+   "Los elementos keplerianos",
+   "La última hora observada de desplazamiento Doppler cero",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8B07": {
+  "question": "¿Qué es el desplazamiento Doppler en las comunicaciones por satélite?",
+  "answers": [
+   "Un cambio en la órbita del satélite",
+   "Un modo en el que el satélite recibe señales en una banda y transmite en otra",
+   "Un cambio observado en la frecuencia de la señal causado por el movimiento relativo entre el satélite y la estación terrestre",
+   "Un modo especial de comunicaciones digitales para algunos satélites"
+  ]
+ },
+ "T8B08": {
+  "question": "¿Qué significa que un satélite opere en modo U/V?",
+  "answers": [
+   "El enlace ascendente del satélite está en la banda de 15 metros y el enlace descendente en la banda de 10 metros",
+   "El enlace ascendente del satélite está en la banda de 70 centímetros y el enlace descendente en la banda de 2 metros",
+   "El satélite opera usando frecuencias ultravioletas",
+   "Las frecuencias del satélite suelen ser variables"
+  ]
+ },
+ "T8B09": {
+  "question": "¿Qué causa el desvanecimiento por rotación de las señales satelitales?",
+  "answers": [
+   "Interferencia de ruido con polarización circular radiada por el Sol",
+   "La rotación del satélite y de sus antenas",
+   "El desplazamiento Doppler de la señal recibida",
+   "Señales interferentes dentro de la banda del enlace ascendente del satélite"
+  ]
+ },
+ "T8B10": {
+  "question": "¿Qué significa el término LEO en referencia a los satélites de comunicaciones?",
+  "answers": [
+   "órbita de baja energía, que conserva la energía de la batería",
+   "órbita de baja elevación, que aparece cerca del horizonte desde la estación terrestre",
+   "órbita de bajo equilibrio, que tiene un período ligeramente inestable",
+   "órbita terrestre baja, que tiene un período de alrededor de 100 minutos"
+  ]
+ },
+ "T8B11": {
+  "question": "¿Quién tiene permiso para recibir telemetría de un satélite de radioaficionados?",
+  "answers": [
+   "Cualquier persona",
+   "Solo el operador de control del satélite",
+   "Solo el operador de control o un radioaficionado con licencia que haya recibido la clave de cifrado del operador de control",
+   "Solo un radioaficionado con licencia que haya recibido la clave de cifrado de AMSAT"
+  ]
+ },
+ "T8B12": {
+  "question": "¿Cuál de las siguientes es una manera de determinar si la potencia de tu enlace ascendente a un satélite con transpondedor lineal no es ni demasiado baja ni demasiado alta?",
+  "answers": [
+   "Revisar el informe de intensidad de tu señal en los datos de telemetría",
+   "Escuchar si hay distorsión en tu señal del enlace descendente",
+   "La intensidad de tu señal en el enlace descendente debería ser aproximadamente igual a la de la baliza",
+   "Comparar tu señal con otras en el enlace descendente usando un receptor SDR por Internet"
+  ]
+ },
+ "T8C01": {
+  "question": "¿Cuál de los siguientes métodos se usa para localizar fuentes de interferencia de ruido o de interferencia intencional?",
+  "answers": [
+   "Ecolocalización",
+   "Radar Doppler",
+   "Radiogoniometría",
+   "Enganche de fase"
+  ]
+ },
+ "T8C02": {
+  "question": "¿Cuál de estos elementos sería útil para una búsqueda de un transmisor oculto?",
+  "answers": [
+   "Medidor de ROE/SWR calibrado",
+   "Una antena direccional",
+   "Un vatímetro direccional",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8C03": {
+  "question": "¿Qué actividad operativa consiste en contactar a tantas estaciones como sea posible durante un período determinado?",
+  "answers": [
+   "Ejercicios simulados de emergencia",
+   "Operaciones de red",
+   "Búsquedas de transmisores ocultos",
+   "Concursos"
+  ]
+ },
+ "T8C04": {
+  "question": "¿Cuál de las siguientes es una buena práctica al contactar otra estación durante un concurso?",
+  "answers": [
+   "Transmitir solo las dos últimas letras de tu indicativo si muchas otras estaciones están llamando",
+   "Contactar la estación dos veces para asegurarte de que apareces en su registro",
+   "Enviar solo la información mínima necesaria para identificarte correctamente y completar el intercambio del concurso",
+   "Agregar ?Por favor, copie? antes de tu intercambio"
+  ]
+ },
+ "T8C05": {
+  "question": "¿Qué es un localizador de cuadrícula?",
+  "answers": [
+   "Un designador alfanumérico asignado a una ubicación geográfica",
+   "Un designador alfanumérico asignado a un azimut y una elevación",
+   "Un instrumento para localizar fallas en amplificadores de potencia",
+   "Un instrumento de radiogoniometría"
+  ]
+ },
+ "T8C06": {
+  "question": "¿Cómo se obtiene acceso por radio al aire a los nodos del Proyecto de Enlace de Radio por Internet (IRLP)?",
+  "answers": [
+   "Obteniendo una contraseña que se transmite por voz al nodo",
+   "Usando señales multifrecuencia de dos tonos (DTMF)",
+   "Ingresando la contraseña de Internet correcta",
+   "Usando códigos de tono del sistema de silenciamiento por tono codificado continuo (CTCSS)"
+  ]
+ },
+ "T8C07": {
+  "question": "¿Qué es la voz sobre protocolo de Internet (VoIP)?",
+  "answers": [
+   "Un conjunto de reglas que especifica cómo identificar tu estación cuando está enlazada por Internet con otra estación",
+   "Una técnica usada para ?marcar? estaciones DX por Internet",
+   "Una técnica para medir la calidad de modulación de un transmisor usando sitios remotos monitoreados por Internet",
+   "Un método para transmitir comunicaciones de voz por Internet mediante técnicas digitales"
+  ]
+ },
+ "T8C08": {
+  "question": "¿Qué es el Proyecto de Enlace de Radio por Internet (IRLP)?",
+  "answers": [
+   "Una técnica para conectar sistemas de radioaficionados, como repetidores, por Internet",
+   "Un sistema para acceder a sitios web por radioafición",
+   "Un sistema para informar a los radioaficionados en tiempo real de la frecuencia de las estaciones DX activas",
+   "Una técnica para medir por Internet la intensidad de la señal de un transmisor de radioaficionado"
+  ]
+ },
+ "T8C09": {
+  "question": "¿Cuál de los siguientes protocolos permite que una estación de radioaficionado transmita a través de un repetidor sin usar una radio para iniciar la transmisión?",
+  "answers": [
+   "IRLP",
+   "D-STAR",
+   "DMR",
+   "EchoLink"
+  ]
+ },
+ "T8C10": {
+  "question": "¿Qué se requiere antes de usar el sistema EchoLink?",
+  "answers": [
+   "Completar la capacitación requerida de EchoLink",
+   "Comprar una licencia para usar el software EchoLink",
+   "Registrar tu indicativo y proporcionar prueba de licencia",
+   "Tener al menos una licencia de clase General"
+  ]
+ },
+ "T8C11": {
+  "question": "¿Cómo se denomina una estación de radioaficionado que conecta otras estaciones de radioaficionados a Internet?",
+  "answers": [
+   "Una puerta de enlace",
+   "Un repetidor",
+   "Un digipeater",
+   "Una baliza"
+  ]
+ },
+ "T8D01": {
+  "question": "¿Cuál de los siguientes es un modo de comunicación digital?",
+  "answers": [
+   "Radio por paquetes",
+   "IEEE 802.11",
+   "FT8",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8D02": {
+  "question": "¿Qué es FT8?",
+  "answers": [
+   "Un modo de voz FM de banda ancha",
+   "Un modo digital capaz de operar con una relación señal-ruido baja",
+   "Un modo de multiplexación de ocho canales para repetidores FM",
+   "Un modo digital de televisión de barrido lento con corrección de errores hacia adelante y compensación automática del color"
+  ]
+ },
+ "T8D03": {
+  "question": "¿Qué tipo de datos se pueden transmitir mediante APRS?",
+  "answers": [
+   "Datos de posición GPS",
+   "Mensajes de texto",
+   "Datos meteorológicos",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8D04": {
+  "question": "¿Qué significa el término NTSC?",
+  "answers": [
+   "Un estándar de transmisión digital para cifrar datos",
+   "Un modo especial para el enlace ascendente satelital",
+   "Una señal analógica de televisión en color de barrido rápido",
+   "Un esquema de compresión de cuadros para señales de televisión"
+  ]
+ },
+ "T8D05": {
+  "question": "¿Cuál de las siguientes es una aplicación de APRS?",
+  "answers": [
+   "Proporcionar comunicaciones digitales tácticas en tiempo real junto con un mapa que muestra la ubicación de las estaciones",
+   "Mostrar automáticamente el número de paquetes transmitidos mediante PACTOR durante un intervalo de tiempo específico",
+   "Proporcionar una conexión de voz por Internet entre repetidores",
+   "Proporcionar información sobre el número de estaciones registradas en un repetidor"
+  ]
+ },
+ "T8D06": {
+  "question": "¿Qué significa la abreviatura PSK?",
+  "answers": [
+   "Modulación por desplazamiento de pulsos",
+   "Modulación por desplazamiento de fase",
+   "Modulación por muestreo de paquetes",
+   "Modulación por muestreo de potencia"
+  ]
+ },
+ "T8D07": {
+  "question": "¿Cuál de las siguientes opciones describe DMR?",
+  "answers": [
+   "Una técnica para multiplexar en el tiempo dos señales de voz digitales en un solo canal de repetidor de 12.5 kHz",
+   "Un modo de seguimiento automático de posición para radios móviles FM que se comunican mediante repetidores",
+   "Una técnica automática de registro por computadora para registrar contactos sin usar las manos al comunicarse mientras se conduce un vehículo",
+   "Una técnica digital para transmitir simultáneamente en dos entradas de repetidor a fin de corregir errores automáticamente"
+  ]
+ },
+ "T8D08": {
+  "question": "¿Qué se incluye en las transmisiones de radio por paquetes?",
+  "answers": [
+   "Una suma de comprobación que permite detectar errores",
+   "Un encabezado que contiene el indicativo de la estación a la que se envía la información",
+   "Solicitud automática de repetición en caso de error",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8D09": {
+  "question": "¿Qué es CW?",
+  "answers": [
+   "Un tipo de propagación electromagnética",
+   "Un modo digital usado principalmente en FM de 2 metros",
+   "Corrección de errores para transmisión digital mediante palabras de código",
+   "Otro nombre para una transmisión en código Morse"
+  ]
+ },
+ "T8D10": {
+  "question": "¿Cuál de las siguientes actividades operativas es compatible con el software de modos digitales de la suite WSJT-X?",
+  "answers": [
+   "Tierra-Luna-Tierra",
+   "Balizas de propagación de señales débiles",
+   "Dispersión meteórica",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T8D11": {
+  "question": "¿Cuál es la función de ARQ en un sistema de transmisión?",
+  "answers": [
+   "Un formato de transmisión especial limitado a señales de video",
+   "Un sistema usado para cifrar señales de comando hacia un satélite de radioaficionados",
+   "Un método de corrección de errores en el que la estación receptora detecta errores y solicita la retransmisión",
+   "Un método para comprimir datos usando códigos Q reiterativos autónomos antes de la codificación final"
+  ]
+ },
+ "T8D12": {
+  "question": "¿Cuál de las siguientes opciones describe mejor una red mallada de radioaficionados?",
+  "answers": [
+   "Una red de datos de radioaficionados que usa equipos Wi-Fi comerciales con firmware modificado",
+   "Un modo de voz digital de gran ancho de banda que emplea protocolos DMR",
+   "Una red de comunicaciones por satélite de radioaficionados que usa equipos comerciales de televisión satelital modificados",
+   "Un protocolo de enlace por Internet que permite comunicarse mediante repetidores de todo el mundo"
+  ]
+ },
+ "T9A01": {
+  "question": "¿Qué es una antena de haz?",
+  "answers": [
+   "Una antena construida con vigas cuadradas de aluminio",
+   "Una antena omnidireccional inventada por Clarence Beam",
+   "Una antena que concentra las señales en una dirección",
+   "Una antena que enfoca la señal en dos haces intensos"
+  ]
+ },
+ "T9A02": {
+  "question": "¿Cuál de las siguientes opciones describe un tipo de carga de antena?",
+  "answers": [
+   "Alargarla eléctricamente mediante la inserción de inductores en los elementos radiantes",
+   "Insertar una resistencia en la parte radiante de la antena para hacerla resonante",
+   "Instalar un resorte en la base de una antena vertical móvil para hacerla más flexible",
+   "Reforzar los elementos radiantes de una antena de haz para que resistan mejor los daños causados por el viento"
+  ]
+ },
+ "T9A03": {
+  "question": "¿Cómo se describe la polarización de una antena?",
+  "answers": [
+   "Por la forma del elemento excitado",
+   "Por la orientación del campo eléctrico",
+   "Por la orientación del campo magnético",
+   "Por la dirección de la radiación"
+  ]
+ },
+ "T9A04": {
+  "question": "¿Cuál es una desventaja de la antena flexible y corta de un transceptor portátil, en comparación con una antena de cuarto de onda de tamaño completo?",
+  "answers": [
+   "Tiene baja eficiencia",
+   "Transmite únicamente señales polarizadas circularmente",
+   "Es más susceptible a la desensibilización del receptor",
+   "Solo funciona con señales analógicas, no digitales"
+  ]
+ },
+ "T9A05": {
+  "question": "¿Cuál de las siguientes opciones aumenta la frecuencia de resonancia de una antena dipolo?",
+  "answers": [
+   "Alargarla",
+   "Insertar bobinas en serie con los conductores radiantes",
+   "Acortarla",
+   "Agregar carga capacitiva en los extremos de los conductores radiantes"
+  ]
+ },
+ "T9A06": {
+  "question": "¿Cuál de los siguientes tipos de antena ofrece la mayor ganancia?",
+  "answers": [
+   "Vertical de 5/8 de onda",
+   "Isotrópica",
+   "J-pole",
+   "Yagi"
+  ]
+ },
+ "T9A07": {
+  "question": "¿Cuál es un posible inconveniente de usar un transceptor portátil VHF dentro de un vehículo que no tiene una antena montada externamente?",
+  "answers": [
+   "La intensidad de la señal se reduce debido al efecto de apantallamiento del vehículo",
+   "El ancho de banda de la antena disminuirá y aumentará la ROE (SWR)",
+   "La ROE (SWR) podría disminuir, reduciendo la intensidad de la señal",
+   "El transceptor portátil se sobrecalentará debido a la potencia reflejada dentro del vehículo"
+  ]
+ },
+ "T9A08": {
+  "question": "¿Por qué se suele usar en 2 metros una antena vertical de 19 pulgadas de largo?",
+  "answers": [
+   "Tiene alta ganancia",
+   "Es una antena resonante de media onda",
+   "Es una antena resonante de cuarto de onda",
+   "Tiene baja exposición a la radiación de RF"
+  ]
+ },
+ "T9A09": {
+  "question": "¿Qué ventaja tiene una antena látigo de 5/8 de longitud de onda para el servicio móvil VHF o UHF, en comparación con una antena de 1/4 de onda?",
+  "answers": [
+   "Tiene más ganancia",
+   "Irradia con un ángulo más alto",
+   "Tiene menor ROE (SWR)",
+   "Tiene menor impedancia"
+  ]
+ },
+ "T9A10": {
+  "question": "¿En qué dirección irradia la señal más intensa una antena dipolo de media onda?",
+  "answers": [
+   "Por igual en todas las direcciones",
+   "Desde los extremos de la antena",
+   "En la dirección de la línea de alimentación",
+   "Perpendicularmente a la antena"
+  ]
+ },
+ "T9A11": {
+  "question": "¿Qué es la ganancia de una antena?",
+  "answers": [
+   "La potencia adicional que se suma a la potencia del transmisor",
+   "La potencia adicional que se necesita en la antena al transmitir en una frecuencia más alta",
+   "El aumento de la intensidad de la señal en una dirección específica, en comparación con una antena de referencia",
+   "El aumento de la impedancia durante la recepción o transmisión, en comparación con una antena de referencia"
+  ]
+ },
+ "T9B01": {
+  "question": "¿Cuál de los siguientes conectores debe cubrirse cuidadosamente con cinta para protegerlo de la intemperie cuando se usa al aire libre?",
+  "answers": [
+   "PL259",
+   "BNC",
+   "Type N",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T9B02": {
+  "question": "¿Cuál es la impedancia más común de los cables coaxiales utilizados en la radioafición?",
+  "answers": [
+   "8 ohms",
+   "50 ohms",
+   "600 ohms",
+   "12 ohms"
+  ]
+ },
+ "T9B03": {
+  "question": "¿Por qué el cable coaxial es la línea de alimentación más común en los sistemas de antena de radioaficionados?",
+  "answers": [
+   "Es fácil de usar y requiere pocas consideraciones especiales de instalación",
+   "Tiene menos pérdida que cualquier otro tipo de línea de alimentación",
+   "Puede manejar más potencia que cualquier otro tipo de línea de alimentación",
+   "Es menos costoso que cualquier otro tipo de línea de alimentación"
+  ]
+ },
+ "T9B04": {
+  "question": "¿Cuál es la función principal de un sintonizador de antena (acoplador de antena)?",
+  "answers": [
+   "Adaptar la impedancia del sistema de antena a la impedancia de salida del transceptor",
+   "Ayudar a un receptor a sintonizar automáticamente estaciones débiles",
+   "Permitir que una antena se use tanto para transmitir como para recibir",
+   "Seleccionar automáticamente la antena adecuada para la banda de frecuencias que se está usando"
+  ]
+ },
+ "T9B05": {
+  "question": "¿Qué ocurre cuando aumenta la frecuencia de una señal en un cable coaxial?",
+  "answers": [
+   "La impedancia característica disminuye",
+   "La pérdida disminuye",
+   "La impedancia característica aumenta",
+   "La pérdida aumenta"
+  ]
+ },
+ "T9B06": {
+  "question": "¿Cuál de los siguientes tipos de conector es el más adecuado como conector de RF para frecuencias superiores a 400 MHz?",
+  "answers": [
+   "PL-259",
+   "Type N",
+   "RS-213",
+   "DB-25"
+  ]
+ },
+ "T9B07": {
+  "question": "¿Cuál de las siguientes afirmaciones sobre los conectores coaxiales tipo PL-259 es verdadera?",
+  "answers": [
+   "Se prefieren para operar en microondas",
+   "Son herméticos al agua",
+   "Se usan comúnmente en frecuencias HF y VHF",
+   "Son conectores de tipo bayoneta"
+  ]
+ },
+ "T9B08": {
+  "question": "¿Cuál de las siguientes opciones es una fuente de pérdida en una línea de alimentación coaxial?",
+  "answers": [
+   "La entrada de agua en los conectores coaxiales",
+   "Una ROE (SWR) alta",
+   "Varios conectores en la línea",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T9B09": {
+  "question": "¿Qué puede causar cambios erráticos en la ROE (SWR)?",
+  "answers": [
+   "Una tormenta eléctrica local",
+   "Una conexión floja en la antena o en la línea de alimentación",
+   "La sobremodulación",
+   "La sobrecarga causada por una estación local potente"
+  ]
+ },
+ "T9B10": {
+  "question": "¿Cuál es la diferencia eléctrica entre los cables coaxiales RG-58 y RG-213?",
+  "answers": [
+   "No hay una diferencia significativa entre los dos tipos",
+   "El cable RG-58 tiene dos blindajes",
+   "El cable RG-213 tiene menos pérdida a una frecuencia determinada",
+   "El cable RG-58 puede manejar niveles de potencia más altos"
+  ]
+ },
+ "T9B11": {
+  "question": "¿Cuál de los siguientes tipos de línea de alimentación tiene la menor pérdida?",
+  "answers": [
+   "Cable coaxial flexible de 50 ohms",
+   "Cable no balanceado de varios conductores",
+   "Línea rígida con aislamiento de aire",
+   "Cable coaxial flexible de 75 ohms"
+  ]
+ },
+ "T9B12": {
+  "question": "¿Qué es la relación de onda estacionaria (ROE/SWR)?",
+  "answers": [
+   "Una medida de qué tan bien está adaptada una carga a una línea de transmisión",
+   "La relación entre la potencia de salida y la potencia de entrada del amplificador",
+   "La relación de eficiencia del transmisor",
+   "Una indicación de la calidad de la conexión a tierra de la estación"
+  ]
+ },
+ "T0A01": {
+  "question": "¿Cuál de los siguientes es un riesgo de seguridad de una batería de almacenamiento de 12 voltios que carece de circuitos internos de protección?",
+  "answers": [
+   "Tocar ambos terminales con las manos puede causar una descarga eléctrica",
+   "Un cortocircuito entre los terminales puede causar quemaduras, un incendio o una explosión",
+   "Las emisiones de RF de un transmisor cercano pueden hacer que el electrolito emita un gas venenoso",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0A02": {
+  "question": "¿Qué riesgo para la salud representa la corriente eléctrica que atraviesa el cuerpo?",
+  "answers": [
+   "Puede causar lesiones al calentar los tejidos del cuerpo",
+   "Puede alterar las funciones eléctricas de las células",
+   "Puede causar contracciones musculares involuntarias",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0A03": {
+  "question": "En Estados Unidos, ¿qué circuito indica el aislamiento negro de un cable de CA de 120 V y tres conductores?",
+  "answers": [
+   "Neutro",
+   "Fase (hot)",
+   "Tierra del equipo",
+   "Negativo"
+  ]
+ },
+ "T0A04": {
+  "question": "¿Cuál es la función de un fusible en un circuito eléctrico?",
+  "answers": [
+   "Evitar que la ondulación de la fuente de alimentación dañe un componente",
+   "Interrumpir la alimentación en caso de sobrecarga",
+   "Limitar la corriente y evitar descargas eléctricas",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0A05": {
+  "question": "¿Por qué nunca se debe reemplazar un fusible de 5 amperios por uno de 20 amperios?",
+  "answers": [
+   "Es probable que el fusible de mayor capacidad se funda porque está clasificado para una corriente más alta",
+   "La ondulación de la fuente de alimentación aumentaría considerablemente",
+   "Una corriente excesiva podría provocar un incendio",
+   "La caída de tensión en el fusible de mayor corriente podría hacer que el dispositivo recibiera una tensión demasiado baja"
+  ]
+ },
+ "T0A06": {
+  "question": "¿Cuál es una buena manera de protegerse contra descargas eléctricas en su estación?",
+  "answers": [
+   "Use cables y enchufes de tres conductores en todos los equipos alimentados con CA",
+   "Conecte todos los equipos de la estación alimentados con CA a una misma tierra de seguridad",
+   "Asegúrese de que todos los capacitores usados para CC de alta tensión estén completamente descargados antes de trabajar dentro del equipo",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0A07": {
+  "question": "¿Dónde se debe instalar un protector contra rayos en una línea coaxial de alimentación?",
+  "answers": [
+   "En el conector de salida de un transceptor",
+   "En el punto de alimentación de la antena",
+   "En el tablero de servicio eléctrico de CA",
+   "En un panel conectado a tierra, cerca del punto donde las líneas de alimentación entran al edificio"
+  ]
+ },
+ "T0A08": {
+  "question": "¿Dónde se debe instalar un fusible o disyuntor en un circuito de alimentación de CA de 120 V?",
+  "answers": [
+   "En serie únicamente con el conductor de fase",
+   "En serie con los conductores de fase y neutro",
+   "En paralelo únicamente con el conductor de fase",
+   "En paralelo con los conductores de fase y neutro"
+  ]
+ },
+ "T0A09": {
+  "question": "¿Qué se debe hacer con todas las varillas o conexiones externas de puesta a tierra?",
+  "answers": [
+   "Impermeabilizarlas con sellador de silicona o cinta aislante",
+   "Mantenerlas tan separadas como sea posible",
+   "Unirlas entre sí con un cable grueso o una cinta conductora",
+   "Ajustarlas para que resuenen en la frecuencia de operación más baja"
+  ]
+ },
+ "T0A10": {
+  "question": "¿Qué riesgo existe al cargar o descargar rápidamente una batería sin protección?",
+  "answers": [
+   "Sobrecalentamiento o emisión de gases",
+   "Ondulación excesiva en la salida",
+   "Descarga eléctrica",
+   "Sobretensión"
+  ]
+ },
+ "T0A11": {
+  "question": "¿Qué riesgo existe en una fuente de alimentación inmediatamente después de apagarla?",
+  "answers": [
+   "Corrientes circulantes en el filtro de CC",
+   "Flujo de fuga en el transformador de alimentación",
+   "Transitorios de tensión de los diodos de protección contra sobretensiones",
+   "Carga almacenada en los capacitores del filtro"
+  ]
+ },
+ "T0A12": {
+  "question": "¿Qué precaución se debe tomar al medir altas tensiones con un voltímetro?",
+  "answers": [
+   "Asegurarse de que el voltímetro tenga una impedancia muy baja",
+   "Asegurarse de que el voltímetro y sus cables estén clasificados para las tensiones que se van a medir",
+   "Asegurarse de que el circuito esté conectado a tierra a través del voltímetro",
+   "Asegurarse de que el voltímetro esté configurado para la frecuencia correcta"
+  ]
+ },
+ "T0B01": {
+  "question": "¿Cuál de las siguientes es una buena práctica al instalar cables de puesta a tierra en una torre para protegerla contra rayos?",
+  "answers": [
+   "Hacer un bucle de goteo en la conexión a tierra para evitar daños por agua al sistema de puesta a tierra",
+   "Asegurarse de que todas las curvas del cable de tierra formen ángulos rectos",
+   "Asegurarse de que las conexiones sean cortas y directas",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0B02": {
+  "question": "¿Qué se requiere al subir a una torre de antena?",
+  "answers": [
+   "Tener capacitación suficiente en técnicas seguras para subir torres",
+   "Usar en todo momento un sistema de sujeción adecuado a la torre",
+   "Llevar siempre un arnés de escalada aprobado",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0B03": {
+  "question": "¿En qué circunstancias es seguro subir a una torre sin ayudante ni observador?",
+  "answers": [
+   "Cuando no se realicen trabajos eléctricos",
+   "Cuando no se realicen trabajos mecánicos",
+   "Cuando el trabajo se realice a no más de 20 pies sobre el suelo",
+   "Nunca"
+  ]
+ },
+ "T0B04": {
+  "question": "¿Cuál de las siguientes es una precaución de seguridad importante al instalar una torre de antena?",
+  "answers": [
+   "Llevar en todo momento una pulsera antiestática conectada a la muñeca",
+   "Aislar la base de la torre para evitar descargas de rayos",
+   "Buscar y mantenerse alejado de cualquier cable eléctrico aéreo",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0B05": {
+  "question": "¿Cuál es la función de un alambre de seguridad pasado por un tensor usado para tensar vientos?",
+  "answers": [
+   "Sujetar el viento si se rompe el tensor",
+   "Evitar que la vibración afloje el tensor",
+   "Proporcionar una trayectoria a tierra para las descargas de rayos",
+   "Permitir medir si la tensión es la adecuada"
+  ]
+ },
+ "T0B06": {
+  "question": "¿Cuál es la distancia mínima segura que se debe mantener respecto de una línea eléctrica al instalar una antena?",
+  "answers": [
+   "Sumar la altura de la antena y la altura de la línea eléctrica, y multiplicar el resultado por un factor de 1.5",
+   "La altura de la línea eléctrica sobre el suelo",
+   "1/2 longitud de onda a la frecuencia de operación",
+   "Una distancia suficiente para que, si la antena cae, ninguna parte de ella quede a menos de 10 pies de los cables eléctricos"
+  ]
+ },
+ "T0B07": {
+  "question": "¿Cuál de las siguientes es una regla de seguridad importante que se debe recordar al usar una torre abatible?",
+  "answers": [
+   "Este tipo de torre nunca se debe pintar",
+   "Este tipo de torre nunca se debe conectar a tierra",
+   "No se debe subir a este tipo de torre a menos que esté retraída o se hayan instalado dispositivos mecánicos de bloqueo de seguridad",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0B08": {
+  "question": "¿Cuál es un método adecuado para poner a tierra una torre?",
+  "answers": [
+   "Una sola varilla de puesta a tierra de cuatro pies, clavada a no más de 12 pulgadas de la base",
+   "Un choque de RF con núcleo de ferrita conectado entre la torre y tierra",
+   "Una conexión entre la base de la torre y una tubería de agua fría",
+   "Varillas de puesta a tierra de ocho pies separadas para cada pata de la torre, unidas a la torre y entre sí"
+  ]
+ },
+ "T0B09": {
+  "question": "¿Por qué se debe evitar fijar una antena a un poste de servicios públicos?",
+  "answers": [
+   "La antena no funcionará correctamente debido a las tensiones inducidas",
+   "La antena podría desequilibrar el transformador de alimentación y causar fluctuaciones de energía",
+   "La antena podría entrar en contacto con líneas eléctricas de alta tensión",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0B10": {
+  "question": "¿Cuál de las siguientes afirmaciones es verdadera al instalar conductores de puesta a tierra usados para proteger contra rayos?",
+  "answers": [
+   "Use únicamente cable sin aislamiento",
+   "Los cables deben tenderse cuidadosamente, con curvas precisas en ángulo recto",
+   "Se deben evitar las curvas pronunciadas",
+   "Se deben evitar las tierras comunes"
+  ]
+ },
+ "T0B11": {
+  "question": "¿Cuál de las siguientes establece los requisitos de puesta a tierra para una torre o antena de radioaficionado?",
+  "answers": [
+   "Las reglas FCC Parte 97",
+   "Los códigos eléctricos locales",
+   "Las normas de iluminación de torres de la FAA",
+   "Las prácticas recomendadas por UL"
+  ]
+ },
+ "T0C01": {
+  "question": "¿Qué tipo de radiación son las señales de radio?",
+  "answers": [
+   "Radiación gamma",
+   "Radiación ionizante",
+   "Radiación alfa",
+   "Radiación no ionizante"
+  ]
+ },
+ "T0C02": {
+  "question": "¿Cuál de las siguientes bandas tiene el límite máximo de exposición permisible más bajo para la seguridad frente a RF?",
+  "answers": [
+   "3.5 MHz",
+   "50 MHz",
+   "440 MHz",
+   "1296 MHz"
+  ]
+ },
+ "T0C03": {
+  "question": "¿Cómo cambia la densidad de potencia permitida para la seguridad frente a RF si el ciclo de trabajo cambia de 100 por ciento a 50 por ciento?",
+  "answers": [
+   "Aumenta por un factor de 3",
+   "Disminuye un 50 por ciento",
+   "Aumenta por un factor de 2",
+   "No se permite ningún ajuste por un ciclo de trabajo menor"
+  ]
+ },
+ "T0C04": {
+  "question": "¿Qué factores afectan la exposición a RF de las personas que están cerca de la antena de una estación de radioaficionado?",
+  "answers": [
+   "La frecuencia y el nivel de potencia del campo de RF",
+   "La distancia entre la antena y una persona",
+   "El patrón de radiación de la antena",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0C05": {
+  "question": "¿Por qué varían los límites de exposición según la frecuencia?",
+  "answers": [
+   "Los campos de RF de menor frecuencia tienen más energía que los campos de mayor frecuencia",
+   "Los campos de RF de menor frecuencia no penetran en el cuerpo humano",
+   "Los campos de RF de mayor frecuencia son de naturaleza transitoria",
+   "El cuerpo humano absorbe más energía de RF en algunas frecuencias que en otras"
+  ]
+ },
+ "T0C06": {
+  "question": "¿Cuál de los siguientes es un método aceptable para determinar si su estación cumple con las regulaciones de exposición a RF de la FCC?",
+  "answers": [
+   "Mediante cálculos basados en el Boletín 65 de FCC OET",
+   "Mediante cálculos basados en modelos computacionales",
+   "Midiendo la intensidad de campo con equipo calibrado",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0C07": {
+  "question": "¿Qué riesgo se crea al tocar una antena durante una transmisión?",
+  "answers": [
+   "Electrocución",
+   "Quemadura de RF en la piel",
+   "Exposición a radiación ionizante",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0C08": {
+  "question": "¿Cuál de las siguientes acciones puede reducir la exposición a la radiación de RF?",
+  "answers": [
+   "Reubicar las antenas",
+   "Reubicar el transmisor",
+   "Aumentar el ciclo de trabajo",
+   "Todas estas opciones son correctas"
+  ]
+ },
+ "T0C09": {
+  "question": "¿Cómo puede asegurarse de que su estación siga cumpliendo las normas de seguridad frente a RF?",
+  "answers": [
+   "Informando a la FCC de cualquier cambio realizado en su estación",
+   "Volviendo a evaluar la estación cada vez que se cambie un elemento del transmisor o del sistema de antena",
+   "Asegurándose de que sus antenas tengan una ROE (SWR) baja",
+   "Usando únicamente equipos de transmisión aprobados por Underwriter Laboratories"
+  ]
+ },
+ "T0C10": {
+  "question": "¿Por qué se usa el ciclo de trabajo como uno de los factores para determinar los niveles seguros de exposición a la radiación de RF?",
+  "answers": [
+   "Afecta la exposición promedio a la radiación",
+   "Afecta la exposición máxima a la radiación",
+   "Tiene en cuenta la pérdida en la línea de alimentación de la antena",
+   "Tiene en cuenta los efectos térmicos del amplificador final"
+  ]
+ },
+ "T0C11": {
+  "question": "¿Cuál es la definición de ciclo de trabajo durante el tiempo de promediado para la exposición a RF?",
+  "answers": [
+   "La diferencia entre la potencia de salida más baja y la más alta de un transmisor",
+   "La diferencia entre la PEP y la potencia de salida promedio de un transmisor",
+   "El porcentaje del tiempo durante el cual un transmisor está transmitiendo",
+   "El porcentaje del tiempo durante el cual un transmisor no está transmitiendo"
+  ]
+ },
+ "T0C12": {
+  "question": "¿En qué se diferencia la radiación de RF de la radiación ionizante (radiactividad)?",
+  "answers": [
+   "La radiación de RF no tiene energía suficiente para causar cambios químicos en las células ni dañar el ADN",
+   "La radiación de RF solo se puede detectar con un dosímetro de RF",
+   "La radiación de RF tiene un alcance limitado a unos pocos pies",
+   "La radiación de RF es completamente segura"
+  ]
+ },
+ "T0C13": {
+  "question": "¿Quién es responsable de garantizar que ninguna persona esté expuesta a energía de RF por encima de los límites de exposición de la FCC?",
+  "answers": [
+   "La FCC",
+   "El titular de la licencia de la estación",
+   "Cualquier persona que esté cerca de una antena",
+   "La junta local de zonificación"
+  ]
+ }
+}

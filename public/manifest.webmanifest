@@ -1,0 +1,15 @@
+{
+  "name": "EA5KAO Ham Exam Prep · Examen Radioaficionado FCC",
+  "short_name": "EA5KAO Ham Exam",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#1f5fbf",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
