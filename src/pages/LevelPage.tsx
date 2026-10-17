@@ -72,7 +72,7 @@ function LevelContent({ levelId }: { levelId: LevelId }) {
 
   return (
     <main className="page">
-      <Link to="/" className="back">← {t('back')}</Link>
+      <Link to="/usa" className="back">← {t('back')}</Link>
       <h1>{level.name[state.lang]}</h1>
       <p className="muted">
         {t('element')} {level.element} · {t('validity')}: {level.validFrom} → {level.validTo} ·{' '}

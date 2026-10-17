@@ -14,6 +14,8 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 
 ## Funciones
 
+- **Inicio por país**: dos bloques para elegir Estados Unidos (`/#/usa`) o España
+  (`/#/spain`). Los tres niveles FCC y su progreso se muestran dentro de Estados Unidos.
 - **Banco completo** de los tres exámenes (409 / 423 / 599 preguntas) con sus figuras.
 - **Selección de grupos**: el alumno marca subelementos y grupos (T1A, G2B, E9C…) o *Todo el banco*. La selección se guarda por nivel.
 - **Tres modos de examen** (se califican, se guarda el historial y se pueden repasar las falladas):

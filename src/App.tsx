@@ -5,7 +5,7 @@ import { Header } from './components/Header'
 import { AppContext, makeT, type AppContextValue } from './lib/app'
 import { loadState, saveState, type AppState } from './lib/progress'
 import { ExamPage } from './pages/ExamPage'
-import { HomePage } from './pages/HomePage'
+import { HomePage, UsaPage } from './pages/HomePage'
 import { LevelPage } from './pages/LevelPage'
 import { NotFound } from './pages/NotFound'
 import { PracticePage } from './pages/PracticePage'
@@ -33,6 +33,7 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/usa" element={<UsaPage />} />
           <Route path="/references" element={<ReferencesPage />} />
           <Route path="/spain" element={<SpainPage />} />
           <Route path="/level/:levelId" element={<LevelPage />} />

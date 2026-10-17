@@ -83,6 +83,13 @@ ul.plain { list-style: none; padding: 0; }
 .level-technician { border-top-color: #2e9d5b; }
 .level-general { border-top-color: #1f5fbf; }
 .level-extra { border-top-color: #b4492a; }
+.country-grid { margin-top: 1.5rem; }
+.country-card { display: flex; flex-direction: column; padding: 1.5rem; }
+.country-spain { border-top-color: #b4492a; }
+.country-code { font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 0.8rem; }
+.country-spain .country-code { color: #b4492a; }
+.country-action { margin-top: auto; padding-top: 1rem; font-weight: 700; color: var(--primary); }
+.country-card:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
 
 .progress { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
 .progress > div { height: 100%; background: var(--ok); transition: width 0.3s; }
