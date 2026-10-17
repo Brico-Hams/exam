@@ -5,10 +5,10 @@ const dict = {
     es: '73 y buena suerte en tu examen',
     en: '73 and good luck on your exam',
   },
-  appTitle: { es: 'Preparación Examen Radioaficionado FCC', en: 'FCC Amateur Radio Exam Prep' },
+  appTitle: { es: 'Preparación Examen Radioaficionado', en: 'Amateur Radio Exam Prep' },
   subtitle: {
-    es: 'Technician · General · Amateur Extra — bancos oficiales NCVEC',
-    en: 'Technician · General · Amateur Extra — official NCVEC pools',
+    es: 'España (HAREC) · Estados Unidos (FCC: Technician, General y Amateur Extra)',
+    en: 'Spain (HAREC) · United States (FCC: Technician, General and Amateur Extra)',
   },
   home: { es: 'Inicio', en: 'Home' },
   references: { es: 'Referencias', en: 'References' },

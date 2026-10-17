@@ -40,6 +40,13 @@ export function HomePage() {
   return (
     <main className="page">
       <p className="subtitle">{t('subtitle')}</p>
+      <Link to="/spain" className="card level-card">
+        <h2>{state.lang === 'es' ? 'España — Radioaficionado / HAREC' : 'Spain — Amateur radio / HAREC'}</h2>
+        <p>{state.lang === 'es'
+          ? 'Electricidad y radioelectricidad + Reglamentación. 30 preguntas por parte; 15 aciertos para aprobar cada una.'
+          : 'Electricity and radio engineering + Regulations. 30 questions per part; 15 correct answers to pass each.'}</p>
+      </Link>
+      <h2>{state.lang === 'es' ? 'Estados Unidos — FCC' : 'United States — FCC'}</h2>
       <div className="grid">
         {LEVELS.map((l) => (
           <LevelCard key={l.id} level={l} />

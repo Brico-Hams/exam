@@ -1,9 +1,10 @@
-# 📻 EA5KAO Ham Exam Prep — Preparación Examen Radioaficionado FCC
+# 📻 EA5KAO Ham Exam Prep — España y EE. UU.
 
 **Autor: Anatol EA5KAO** · [github.com/anatolbricoham/exam](https://github.com/anatolbricoham/exam)
 
 Aplicación multiplataforma (**Web + Android**) para preparar los tres exámenes de licencia de
-radioaficionado de EE. UU., en **español e inglés**.
+radioaficionado de EE. UU., en **español e inglés**, y el examen de España
+(módulo preparado, pendiente de incorporar las preguntas autorizadas).
 
 | Nivel | Elemento | Vigencia del banco | Preguntas | Aprueba con |
 |---|---|---|---|---|
@@ -76,6 +77,58 @@ Para fusionar traducciones por subelemento (archivos `T1.json`, `G2.json`…):
 ```bash
 node scripts/merge-translations.mjs <carpeta>
 ```
+
+## España — Radioaficionado / HAREC
+
+Acceso desde la portada o `/#/spain`. Módulo independiente de los niveles FCC:
+
+- Electricidad y radioelectricidad y Reglamentación.
+- Cada parte tiene 30 preguntas, 45 minutos y aprobado con 15 aciertos, sin restar
+  por errores. Las notas no se compensan. En la simulación completa se realiza
+  primero Técnica y después Reglamentación, con temporizadores independientes.
+  Al agotarse el tiempo se entrega automáticamente la parte actual. Los intentos
+  y sus resultados duran durante la sesión; recargar la página abandona el intento.
+- Práctica con corrección inmediata y flashcards, filtrables por temas.
+- Las simulaciones toman 30 preguntas aleatorias distintas de todo el banco de
+  cada parte; los filtros de estudio no afectan al examen.
+- El banco se entrega vacío: **pendiente de las preguntas autorizadas del autor**.
+  No contiene preguntas copiadas de asociaciones ni un supuesto banco oficial.
+- Importación JSON desde la pantalla de España, con confirmación de permiso,
+  validación y almacenamiento local. Los datos se añaden al banco existente;
+  una importación inválida no modifica el banco. No se envían a ningún servidor.
+  El almacenamiento local puede perderse al borrar los datos del navegador:
+  conserva tus archivos originales.
+
+El archivo debe ser una lista de objetos con estos campos:
+
+| Campo | Contenido |
+|---|---|
+| `id` | Identificador único, por ejemplo `ES-TEC-0001` |
+| `part` | `technical` o `regulations` |
+| `topic` | Tema de estudio |
+| `question` | Enunciado en español |
+| `answers` | Cuatro opciones distintas en su orden de presentación |
+| `correct` | Índice de la respuesta correcta: **0, 1, 2 o 3** |
+| `source` | Procedencia y referencia del contenido autorizado |
+| `figure` | Opcional: `figures/spain/nombre.svg` (también PNG o WebP) |
+| `figureAlt` | Descripción accesible, obligatoria si hay figura |
+
+Se omiten duplicadas por **parte + enunciado + texto de respuesta correcta**,
+normalizando mayúsculas y espacios, aunque las opciones estén reordenadas.
+No se borran acentos, cifras ni unidades para evitar fusionar preguntas diferentes.
+Las respuestas correctas contradictorias y los identificadores reutilizados para
+preguntas distintas generan un error explícito.
+
+Para distribuir el banco en web y Android, incorpora los objetos autorizados a
+[`src/data/spain.json`](src/data/spain.json), coloca las ilustraciones propias en
+`public/figures/spain/` y vuelve a compilar/sincronizar. La importación del navegador
+solo carga texto y referencias: **no sube imágenes**. Las imágenes deben estar ya
+incluidas en la aplicación. No se incluyen ilustraciones de terceros ni dibujos
+de relleno mientras se desconozcan las preguntas.
+
+Reglas de referencia: [Resolución de 3 de junio de 2014, BOE-A-2014-6461](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6461).
+La simulación es una ayuda educativa, no certifica la vigencia de las preguntas ni
+reproduce una distribución temática oficial no publicada.
 
 ## Desarrollo
 

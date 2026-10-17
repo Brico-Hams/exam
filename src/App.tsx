@@ -11,6 +11,7 @@ import { NotFound } from './pages/NotFound'
 import { PracticePage } from './pages/PracticePage'
 import { ReferencesPage } from './pages/ReferencesPage'
 import { StudyPage } from './pages/StudyPage'
+import { SpainPage } from './pages/SpainPage'
 
 export default function App() {
   const [state, setState] = useState<AppState>(loadState)
@@ -33,6 +34,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/references" element={<ReferencesPage />} />
+          <Route path="/spain" element={<SpainPage />} />
           <Route path="/level/:levelId" element={<LevelPage />} />
           <Route path="/level/:levelId/study" element={<StudyPage />} />
           <Route path="/level/:levelId/practice" element={<PracticePage />} />
