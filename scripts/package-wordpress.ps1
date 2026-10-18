@@ -11,6 +11,7 @@ try {
     $name = "BricoHams-radio-examenes-$($commit.Substring(0, 7)).zip"
     $zipPath = Join-Path $output $name
     if (Test-Path $zipPath) { throw "Package already exists: $zipPath. Preserve it or choose a new source commit." }
+    Add-Type -AssemblyName System.IO.Compression
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     $dist = Join-Path $root 'dist'
     $archive = [IO.Compression.ZipFile]::Open($zipPath, [IO.Compression.ZipArchiveMode]::Create)
