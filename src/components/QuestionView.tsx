@@ -1,6 +1,7 @@
 import { useApp } from '../lib/app'
 import { LETTERS } from '../lib/exam'
 import type { Question } from '../lib/types'
+import { Explanation } from './Explanation'
 
 interface Props {
   q: Question
@@ -70,6 +71,7 @@ export function QuestionView({ q, selected, reveal, onSelect, onlyCorrect }: Pro
           )
         })}
       </ol>
+      {(reveal || onlyCorrect) && <Explanation q={q} />}
     </div>
   )
 }

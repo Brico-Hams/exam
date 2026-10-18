@@ -13,6 +13,7 @@ export interface SpainQuestion {
   source: string
   figure?: string
   figureAlt?: string
+  explanation?: { es: string; en: string }
 }
 
 export const SPAIN_RULES = { questions: 30, passing: 15, seconds: 45 * 60 }
@@ -56,10 +57,19 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
     if (row.figure !== undefined && (typeof row.figureAlt !== 'string' || !row.figureAlt.trim())) {
       error('la ilustración necesita figureAlt.')
     }
+    let explanation: SpainQuestion['explanation']
+    if (row.explanation !== undefined) {
+      if (!isRecord(row.explanation)) throw new Error(`Pregunta ${index + 1}: explanation debe contener es y en.`)
+      explanation = {
+        es: text(row.explanation.es, 'explanation.es'),
+        en: text(row.explanation.en, 'explanation.en'),
+      }
+    }
     const q: SpainQuestion = {
       id: text(row.id, 'id'), part, topic: text(row.topic, 'topic'),
       question: text(row.question, 'question'), answers, correct,
       source: text(row.source, 'source'),
+      ...(explanation ? { explanation } : {}),
       ...(row.figure !== undefined ? {
         figure: text(row.figure, 'figure'), figureAlt: text(row.figureAlt, 'figureAlt'),
       } : {}),

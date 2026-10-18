@@ -42,6 +42,12 @@ describe('Banco de España', () => {
     const q = { ...question(0), figure: 'figures/spain/circuit.svg', figureAlt: 'Circuito propio' }
     expect(parseSpainQuestions([q]).questions).toEqual([q])
   })
+  it('conserva explicaciones bilingües y rechaza explicaciones incompletas', () => {
+    const q = { ...question(0), explanation: { es: 'Explicación propia.', en: 'Original explanation.' } }
+    expect(parseSpainQuestions([q]).questions[0].explanation).toEqual(q.explanation)
+    expect(() => parseSpainQuestions([{ ...q, explanation: { es: 'Solo español' } }])).toThrow('explanation.en')
+    expect(() => parseSpainQuestions([{ ...q, explanation: 'Texto' }])).toThrow()
+  })
 })
 
 describe('Simulaciones de España', () => {

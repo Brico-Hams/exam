@@ -27,6 +27,14 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
   - *Todo lo seleccionado*: todas las preguntas de los grupos elegidos, en orden aleatorio, con la misma regla del 74 %.
 - **Práctica** con retroalimentación inmediata, por grupos seleccionados o solo con las preguntas falladas.
 - **Tarjetas (flashcards)** y vista **"solo respuesta correcta"** (como el método K8DAA).
+- **Explicación y fundamentos ES/EN**: aparece después de responder en práctica,
+  al revelar una flashcard, en la lista de respuestas correctas y tras entregar
+  el examen (incluidas las preguntas acertadas). No revela respuestas durante el examen.
+  Incluye enlaces a las secciones del eCFR citadas en cada pregunta y guías originales
+  de principios físicos/técnicos. Las guías temáticas no sustituyen una explicación
+  individual: la interfaz identifica explícitamente los razonamientos individuales
+  pendientes. Hay ejemplos desarrollados de ley de Ohm, potencia, dB, valores RMS,
+  ancho de banda y normativa; no se afirma disponer de 1.431 soluciones redactadas.
 - Progreso por subelemento: una pregunta cuenta como dominada tras 2 aciertos seguidos.
 - Interfaz en español/inglés y contenido en modo **inglés**, **español** o **bilingüe**.
 - Página de **referencias**: FCC, NCVEC, ARRL, KP4ARA, HamStudy, HamExam, K8DAA y GLAARG.
@@ -117,12 +125,16 @@ El archivo debe ser una lista de objetos con estos campos:
 | `source` | Procedencia y referencia del contenido autorizado |
 | `figure` | Opcional: `figures/spain/nombre.svg` (también PNG o WebP) |
 | `figureAlt` | Descripción accesible, obligatoria si hay figura |
+| `explanation` | Opcional: objeto con textos propios `es` y `en`; ambos obligatorios si se incluye |
 
 Se omiten duplicadas por **parte + enunciado + texto de respuesta correcta**,
 normalizando mayúsculas y espacios, aunque las opciones estén reordenadas.
 No se borran acentos, cifras ni unidades para evitar fusionar preguntas diferentes.
 Las respuestas correctas contradictorias y los identificadores reutilizados para
 preguntas distintas generan un error explícito.
+Las explicaciones de España se mostrarán al corregir o revelar la respuesta,
+no durante la prueba. Si no vienen en el banco se indica que están pendientes;
+no se aplican automáticamente normas FCC a las preguntas españolas.
 
 Para distribuir el banco en web y Android, incorpora los objetos autorizados a
 [`src/data/spain.json`](src/data/spain.json), coloca las ilustraciones propias en

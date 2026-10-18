@@ -20,6 +20,20 @@ interface Session {
   questions: SpainQuestion[][]
 }
 
+function SpainExplanation({ q }: { q: SpainQuestion }) {
+  return <details className="explanation" key={q.id}>
+    <summary>Explicación / Explanation · ES / EN</summary>
+    {q.explanation ? <>
+      <p lang="es">{q.explanation.es}</p>
+      <p lang="en">{q.explanation.en}</p>
+    </> : <>
+      <p lang="es">Explicación pendiente de incorporar con el banco autorizado.</p>
+      <p lang="en">Explanation pending inclusion with the authorized question bank.</p>
+    </>}
+    <p>Fuente / Source: {q.source}</p>
+  </details>
+}
+
 function SpainSession({ session, onExit }: { session: Session; onExit: () => void }) {
   const [partIndex, setPartIndex] = useState(0)
   const [scores, setScores] = useState<{ correct: number; passed: boolean }[]>([])
@@ -81,6 +95,7 @@ function SpainRound({ mode, part, questions, onFinish, onExit }: {
           <p><strong>{item.question}</strong></p>
           <p>Tu respuesta: {item.answers[answers[item.id]] ?? 'Sin responder'}</p>
           <p>Correcta: {item.answers[item.correct]}</p>
+          <SpainExplanation q={item} />
         </div>)}
       </details>
       <button className="btn primary" onClick={() => onFinish(result)}>Continuar</button>
@@ -107,6 +122,7 @@ function SpainRound({ mode, part, questions, onFinish, onExit }: {
     {showAnswer && mode === 'practice' && <p role="status" className={selected === q.correct ? 'ok' : 'bad'}>
       {selected === q.correct ? 'Correcto.' : 'Incorrecto.'} Respuesta: {q.answers[q.correct]}
     </p>}
+    {showAnswer && <SpainExplanation q={q} />}
     <p className="muted">Fuente: {q.source}</p>
     <div className="toolbar">
       <button className="btn" disabled={index === 0} onClick={() => navigate(index - 1)}>Anterior</button>

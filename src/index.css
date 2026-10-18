@@ -90,6 +90,9 @@ ul.plain { list-style: none; padding: 0; }
 .country-spain .country-code { color: #b4492a; }
 .country-action { margin-top: auto; padding-top: 1rem; font-weight: 700; color: var(--primary); }
 .country-card:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+.explanation { margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 0.8rem; }
+.explanation summary { cursor: pointer; color: var(--primary); font-weight: 700; }
+.explanation section { padding: 0.25rem 0; }
 
 .progress { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
 .progress > div { height: 100%; background: var(--ok); transition: width 0.3s; }

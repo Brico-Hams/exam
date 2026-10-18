@@ -74,6 +74,12 @@ export function ExamPage() {
         <p className="muted">{modeTitle}</p>
         <ContentToggle />
         <button type="button" className="btn primary" onClick={restart}>{t('newExam')}</button>
+        <details className="card">
+          <summary>{state.lang === 'es' ? 'Explicaciones de todas las preguntas' : 'Explanations for all questions'}</summary>
+          {exam.map((q) => <div className="card" key={q.id}>
+            <QuestionView q={q} selected={answers[q.id]} reveal />
+          </div>)}
+        </details>
         {result.wrong.length > 0 && (
           <>
             <h2>{t('reviewWrong')} ({result.wrong.length})</h2>
