@@ -65,7 +65,7 @@ En el editor crea una página, añade un bloque **HTML personalizado** y pega:
 ```html
 <iframe
   src="/radio-examenes/"
-  title="BricoHams · Preparación de radioaficionado · Chomp &amp; Chip"
+  title="BricoHams · Preparación de radioaficionado · Los DamWatts"
   width="100%"
   height="950"
   style="display:block;border:0;min-height:80vh"
