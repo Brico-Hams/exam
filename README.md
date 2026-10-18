@@ -35,6 +35,16 @@ follow EN/ES/bilingual selection; Spain uses the available Spanish content.
 Shared story templates reuse existing explanations, with warnings and credits
 preserved. See [identity and comic scope](docs/CHOMP-CHIP.md).
 
+Los episodios seleccionan gags temáticos con RESI, CONDI, TRANSI y la Banda del
+Corto, además de aventuras de radio y normativa. Separan ficción y ciencia e
+incluyen advertencias para no imitar acciones peligrosas. Título inglés:
+**Chomp & Chip: Circuit Chaos**; título húngaro de franquicia:
+**Csomp és Csip: Áramkör para** (no implica traducción al húngaro).
+
+Episodes select themed ES/EN comedy scenes while preserving technical content
+and safety notices. Hungarian is a recorded franchise title, not an available
+question or interface language.
+
 | Nivel | Elemento | Vigencia del banco | Preguntas | Aprueba con |
 |---|---|---|---|---|
 | Technician | 2 | 2026-07-01 → 2030-06-30 | 35 | 26 |

@@ -44,7 +44,7 @@ circuits. The original identity did not define Chip's appearance. The subsequent
 requested educational comic introduces original artwork: Chip is a turquoise
 integrated circuit with a face, and Chomp is a brown beaver with incisors and a
 tail. These visual decisions were not part of the original identity message.
-No English adaptation of the duo designation or tagline has been approved.
+The subsequently supplied English title is “Chomp & Chip: Circuit Chaos”.
 
 The comic is integrated into study and answer-review screens. Every question
 generates a four-panel episode with a “Chomp & Chip · Anatol EA5KAO” watermark.
@@ -89,3 +89,60 @@ Capacitor synchronization pass. Browser checks cover language selection,
 watermark, 390 px mobile layout, answer figures, warnings and post-exam review.
 The `v1.0.0-debug.20261018` APK predates this feature; syncing Android assets is
 not a new APK compilation or device test.
+
+## Humor, aventura y títulos de franquicia / Humor, adventure and franchise titles
+
+| Idioma / Language | Título proporcionado / Supplied title |
+|---|---|
+| Español | Chomp y Chip: Caos en el Circuito |
+| English | Chomp & Chip: Circuit Chaos |
+| Magyar | Csomp és Csip: Áramkör para |
+
+La interfaz usa el título ES o EN correspondiente al episodio. El título húngaro
+se conserva como identidad de franquicia, no como promesa de traducción del banco
+o de la aplicación. DamWatts y Shock & Chew quedan como alternativas propuestas,
+no como cambios de marca.
+
+Los episodios eligen una de seis escenas según el enunciado y su clasificación:
+RESI (resistencia), CONDI (condensador), TRANSI (transistor), Banda del Corto
+(cortocircuitos/descargas), archivo de permisos (normativa) o taller de radio
+(resto). Cada escena tiene planteamiento cómico, pista, solución y remate ES/EN.
+Las preguntas normativas tienen prioridad sobre coincidencias de componentes.
+Los invitados tienen representaciones vectoriales originales de castores;
+Chip conserva su diseño de circuito integrado.
+
+RESI organiza el tráfico imaginario; CONDI lleva una mochila desbordada de notas;
+TRANSI es el portero de una discoteca ficticia. Son caricaturas de comportamiento,
+sin diagnósticos médicos. «Banda del Corto» es el nombre editorial usado en el
+contenido infantil en lugar de la propuesta de nombre político de los villanos.
+No se presentan explosiones o descargas como juegos que deban imitarse.
+
+Cada episodio separa metáfora y ciencia: las resistencias disipan energía;
+los condensadores la almacenan en un campo eléctrico y pueden retener carga;
+los transistores no son todos interruptores binarios ni tienen el mismo control;
+un corto no necesita ir a tierra. Nunca se deben morder cables ni manipular
+circuitos energizados. Las preguntas, claves y explicaciones siguen intactas.
+
+Episodes select one of six bilingual comedy scenes from question text and
+classification. Regulation scenes take priority. RESI, CONDI and TRANSI appear
+as original beaver caricatures; Chip remains an integrated circuit. The villains
+are called the Short-Circuit Crew, without a political label. Medical diagnoses
+are not used as jokes. Each episode separates fictional props from technical
+principles and warns against biting cables or handling energized circuits.
+Pool questions, answers and explanations are unchanged.
+
+Esta documentación registra decisiones editoriales y nombres aportados, no una
+búsqueda de disponibilidad ni una solicitud o concesión de marca. No se ha creado
+un borrador legal, una integración Stripe ni un diseño de kit comercial.
+
+This is an editorial record, not a trademark availability search, application or
+registration. No legal filing, Stripe integration or commercial kit design was
+created as part of this comic update.
+
+Validación de esta actualización: 164 pruebas correctas, lint, build público y
+sincronización Android. En navegador se comprobaron el gag de normativa, el aviso
+de seguridad, el título inglés, las cuatro marcas de agua y ancho móvil de 390 px.
+
+Update validation: 164 passing tests, lint, public build and Android sync.
+Browser checks covered the regulatory gag, safety notice, English title, four
+watermarks and a 390 px mobile viewport.
