@@ -2,6 +2,7 @@ import { useApp } from '../lib/app'
 import { LETTERS } from '../lib/exam'
 import type { Question } from '../lib/types'
 import { Explanation } from './Explanation'
+import { UsaQuestionComic } from './QuestionComic'
 
 interface Props {
   q: Question
@@ -72,6 +73,7 @@ export function QuestionView({ q, selected, reveal, onSelect, onlyCorrect }: Pro
         })}
       </ol>
       {(reveal || onlyCorrect) && <Explanation q={q} />}
+      {(reveal || onlyCorrect) && <UsaQuestionComic q={q} content={mode} uiLang={state.lang} />}
     </div>
   )
 }

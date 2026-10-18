@@ -48,6 +48,7 @@ flowchart TD
 | `src/lib/spain.ts` | Schema, validation, deduplication, ID-based merge, choices and Spanish exams |
 | `src/lib/explanations.ts`, `calculation-explanations.ts` | Bilingual US foundations and individual worked solutions |
 | `src/lib/progress.ts` | US state, statistics and local history |
+| `src/lib/comics.ts`, `src/components/QuestionComic.tsx` | Per-question Chomp & Chip episodes, original SVG artwork and watermark; only after disclosure or submission. See [scope](CHOMP-CHIP.md) |
 | `scripts/import-*.mjs`, `spain-review.mjs` | Conversion, provenance and explicit reviewed data corrections |
 | `public/figures/` | Packaged static resources, not third-party runtime downloads |
 | `android/` | Capacitor native wrapper, manifest, icons and Gradle project |

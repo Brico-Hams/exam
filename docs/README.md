@@ -16,8 +16,8 @@
 - [APK debug, checksum y procedencia / Debug APK, checksum and provenance](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018)
 - [Evidencia Android en JSON / Android build evidence](results/android-build.json)
 - [Identidad Chomp & Chip / Chomp & Chip identity](CHOMP-CHIP.md)
-  — referencia independiente; no sustituye la marca de la aplicación /
-  independent reference; does not replace the application brand.
+  — identidad y cómic educativo; conserva la marca de la aplicación /
+  identity and educational comic; preserves the application brand.
 
 La APK es **debug, solo para pruebas**. No es una publicación en Google Play.
 Consulta el informe de validación para el enlace de descarga y el estado real de

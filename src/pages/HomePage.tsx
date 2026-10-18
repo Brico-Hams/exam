@@ -61,6 +61,14 @@ export function HomePage() {
           <span className="country-action">{es ? 'Entrar a España' : 'Open Spain'} →</span>
         </Link>
       </div>
+      <section className="card">
+        <h2>Chomp &amp; Chip · Los Protectores del Silicio</h2>
+        <p>Chomp y Chip: Caos en el Circuito</p>
+        <p>{es
+          ? 'Cada pregunta tiene una aventura educativa ilustrada. Revela la respuesta en práctica o flashcards y abre «Leer cómic». En simulacros, está disponible solo después de entregar.'
+          : 'Every question has an illustrated educational adventure. Reveal the answer in practice or flashcards, then open “Read comic”. In mock exams, it is available only after submission.'}</p>
+        <p className="muted">Chomp &amp; Chip · Anatol EA5KAO</p>
+      </section>
     </main>
   )
 }

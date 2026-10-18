@@ -10,11 +10,30 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 
 - [Descargar APK de pruebas / Download testing APK](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018)
   — debug, Android 7+, no probada en dispositivo / not device-tested.
+  Esta APK corresponde al build `0b43ec7`, anterior al cómic /
+  this APK is build `0b43ec7`, predating the comic.
 - [Índice bilingüe: arquitectura, requisitos, procesos, despliegue y carga](docs/README.md)
 - [Guía completa en español](docs/GUIA-TECNICA.es.md)
 - [Complete English guide](docs/TECHNICAL-GUIDE.en.md)
 - [Compilación APK y resultados ES](docs/VALIDACION.es.md) /
   [APK build and results EN](docs/VALIDATION.en.md)
+
+## Chomp & Chip · Los Protectores del Silicio
+
+**Chomp y Chip: Caos en el Circuito**: cada pregunta de USA y España genera una
+aventura educativa de cuatro viñetas con dibujos originales y marca de agua
+**Chomp & Chip · Anatol EA5KAO**. Responde en práctica o revela la flashcard y abre
+«Leer cómic»; en simulacros aparece únicamente en la revisión tras entregar.
+USA sigue el selector EN/ES/bilingüe; España usa el contenido español disponible.
+Los episodios reutilizan una plantilla narrativa y la explicación existente:
+no son guiones individuales certificados. Se conservan avisos y atribuciones.
+
+Every US and Spain question generates a four-panel educational comic using
+original character artwork and an **Anatol EA5KAO** watermark. Reveal the answer
+and open “Read comic”; mock exams expose it only after submission. US episodes
+follow EN/ES/bilingual selection; Spain uses the available Spanish content.
+Shared story templates reuse existing explanations, with warnings and credits
+preserved. See [identity and comic scope](docs/CHOMP-CHIP.md).
 
 | Nivel | Elemento | Vigencia del banco | Preguntas | Aprueba con |
 |---|---|---|---|---|

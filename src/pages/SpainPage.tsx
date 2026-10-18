@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { SpainQuestionComic } from '../components/QuestionComic'
 import bundledQuestions from '../data/spain.json'
 import bankInfo from '../data/spain-import-report.json'
 import { useApp } from '../lib/app'
@@ -134,6 +135,7 @@ function SpainRound({ mode, part, questions, onFinish, onExit }: {
             <SpainAnswer q={item} index={i} zoom />
           </div>)}
           <SpainExplanation q={item} />
+          <SpainQuestionComic q={item} />
         </div>)}
       </details>
       <button className="btn primary" onClick={() => onFinish(result)}>Continuar</button>
@@ -165,6 +167,7 @@ function SpainRound({ mode, part, questions, onFinish, onExit }: {
       {selected === q.correct ? 'Correcto.' : 'Incorrecto.'} Respuesta: {LETTERS[q.correct]}. {q.answers[q.correct]}
     </p>}
     {showAnswer && <SpainExplanation q={q} />}
+    {showAnswer && <SpainQuestionComic q={q} />}
     <p className="muted">Fuente: {q.source}</p>
     <div className="toolbar">
       <button className="btn" disabled={index === 0} onClick={() => navigate(index - 1)}>Anterior</button>

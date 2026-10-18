@@ -96,6 +96,31 @@ ul.plain { list-style: none; padding: 0; }
 .explanation summary { cursor: pointer; color: var(--primary); font-weight: 700; }
 .explanation section { padding: 0.25rem 0; }
 
+.question-comic { margin: 1rem 0; border-top: 1px solid var(--border); padding-top: 0.8rem; }
+.question-comic > summary { cursor: pointer; font-weight: 700; color: var(--primary); }
+.comic-story { margin-top: 1rem; padding: 1rem; background: #fff8e8; color: #27364b; border: 3px solid #27364b; border-radius: 14px; overflow-wrap: anywhere; }
+.comic-brand { display: flex; flex-direction: column; gap: 0.2rem; border-bottom: 3px solid #27364b; padding-bottom: 0.8rem; }
+.comic-brand strong { font-size: 1.8rem; color: #174980; }
+.comic-panels { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.comic-panel { position: relative; isolation: isolate; min-width: 0; border: 2px solid #27364b; border-radius: 8px; background: white; padding: 0.8rem; display: flex; flex-direction: column; overflow: hidden; }
+.comic-panel::after { content: "Chomp & Chip · EA5KAO"; position: absolute; inset: 45% 0 auto; text-align: center; transform: rotate(-24deg); font-size: 1.4rem; font-weight: 900; color: #174980; opacity: 0.09; pointer-events: none; z-index: 1; }
+.comic-panel h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+.comic-art { display: block; width: 100%; height: auto; background: #eef6fa; border-radius: 6px; }
+.comic-dialogue { background: #edf8f4; border: 1px solid #8bb4b9; padding: 0.65rem; border-radius: 12px 12px 12px 0; }
+.comic-panel blockquote { margin: 0 0 1rem; padding-left: 0.7rem; border-left: 4px solid #d08920; white-space: pre-line; }
+.comic-panel figure { margin: 0 0 1rem; }
+.comic-panel figure img { max-width: 100%; max-height: 300px; object-fit: contain; background: white; }
+.comic-panel figcaption, .comic-disclaimer { font-size: 0.8rem; }
+.comic-watermark { display: block; margin-top: auto; padding-top: 0.6rem; border-top: 1px dashed #a2aab4; text-align: right; font-size: 0.75rem; font-weight: 700; color: #526071; }
+.comic-credit { text-align: center; font-weight: 700; border-top: 3px solid #27364b; padding-top: 0.7rem; }
+@media (max-width: 600px) {
+  .comic-panels { grid-template-columns: minmax(0, 1fr); }
+  .comic-story { padding: 0.65rem; }
+}
+@media print {
+  .comic-panel { break-inside: avoid; }
+}
+
 .progress { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
 .progress > div { height: 100%; background: var(--ok); transition: width 0.3s; }
 .progress.small { height: 4px; margin-top: 0.3rem; }
