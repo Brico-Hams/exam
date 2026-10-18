@@ -57,7 +57,7 @@ export function HomePage() {
           <h2>{es ? 'España' : 'Spain'}</h2>
           <p className="muted">{es ? 'Radioaficionado · HAREC' : 'Amateur radio · HAREC'}</p>
           <p>{es ? 'Electricidad y radioelectricidad · Reglamentación' : 'Electricity and radio engineering · Regulations'}</p>
-          <p>{es ? 'Dos partes independientes. Banco pendiente de incorporación.' : 'Two independent parts. Question bank pending.'}</p>
+          <p>{es ? 'Dos partes independientes. Práctica y flashcards con banco histórico FEDI-EA.' : 'Two independent parts. Practice and flashcards with a historical FEDI-EA bank.'}</p>
           <span className="country-action">{es ? 'Entrar a España' : 'Open Spain'} →</span>
         </Link>
       </div>

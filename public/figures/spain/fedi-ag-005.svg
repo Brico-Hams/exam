@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" role="img">
+<title>Esquema educativo original EA5KAO</title>
+<rect width="1000" height="340" fill="white"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#24639c"/></marker></defs>
+<g fill="none" stroke="#24639c" stroke-width="2.5" font-family="sans-serif"><rect x="30" y="125" width="286.6666666666667" height="52" rx="8" fill="#edf5ff"/><text x="173.33333333333334" y="156" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">Entrada</text><path d="M316.6666666666667 151L331.6666666666667 151" marker-end="url(#arrow)"/><rect x="336.6666666666667" y="125" width="286.6666666666667" height="52" rx="8" fill="#edf5ff"/><text x="480" y="156" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">Circuito</text><path d="M623.3333333333334 151L638.3333333333334 151" marker-end="url(#arrow)"/><rect x="643.3333333333334" y="125" width="286.6666666666667" height="52" rx="8" fill="#edf5ff"/><text x="786.6666666666667" y="156" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">Salida</text><path d="M860 125V50H150V125" marker-end="url(#arrow)"/></g>
+<text x="870" y="325" font-size="13" text-anchor="middle" fill="#142b45" stroke="none">EA5KAO · esquema propio</text></svg>

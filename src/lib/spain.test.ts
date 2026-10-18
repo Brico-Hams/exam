@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { seededRng } from './exam'
-import { generateSpainExam, parseSpainQuestions, scoreSpainExam, SPAIN_RULES, type SpainQuestion } from './spain'
+import { generateSpainExam, mergeSpainQuestions, parseSpainQuestions, scoreSpainExam, SPAIN_RULES, type SpainQuestion } from './spain'
 
 const question = (i: number, part: SpainQuestion['part'] = 'technical'): SpainQuestion => ({
   id: `ES-${part}-${i}`, part, topic: 'Prueba de software',
@@ -24,6 +24,43 @@ describe('Banco de España', () => {
   })
   it('rechaza respuestas correctas contradictorias', () => {
     expect(() => parseSpainQuestions([question(0), { ...question(0), correct: 1 }])).toThrow('contradictoria')
+  })
+  it('admite variantes con alternativas distintas sin confundirlas con claves contradictorias', () => {
+    const variant = { ...question(0), id: 'variante', answers: ['Cinco', 'Seis', 'Siete', 'Ocho'] }
+    expect(parseSpainQuestions([question(0), variant]).questions).toHaveLength(2)
+  })
+  it('no fusiona enunciados que hacen referencia a figuras diferentes', () => {
+    const first = { ...question(0), figure: 'figures/spain/one.svg', figureAlt: 'Primer circuito' }
+    const second = { ...first, id: 'second', figure: 'figures/spain/two.svg' }
+    expect(parseSpainQuestions([first, second]).questions).toHaveLength(2)
+  })
+  it('valida y conserva las figuras de respuesta, incluso si las etiquetas de texto coinciden', () => {
+    const answerFigures = Array.from({ length: 4 }, (_, i) => ({
+      figure: `figures/spain/option-${i}.svg`, figureAlt: `Esquema de la opción ${i + 1}`,
+    }))
+    const q = { ...question(0), answers: ['Esquema', 'Esquema', 'Esquema', 'Esquema'], answerFigures }
+    expect(parseSpainQuestions([q]).questions).toEqual([q])
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [] }])).toThrow('cuatro')
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [null, null, null, 'imagen'] }])).toThrow()
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [{ figure: 'https://external/img.svg', figureAlt: 'A' }, null, null, null] }])).toThrow()
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [{ figure: 'figures/spain/a.svg' }, null, null, null] }])).toThrow('figureAlt')
+  })
+  it('deduplica alternativas gráficas reordenadas conservando la identidad de la respuesta correcta', () => {
+    const first = { ...question(0), answerFigures: [
+      { figure: 'figures/spain/one.svg', figureAlt: 'Circuito' }, null, null, null,
+    ] }
+    const second = { ...first, id: 'second', answers: ['Dos', 'Uno', 'Tres', 'Cuatro'], correct: 1,
+      answerFigures: [null, first.answerFigures[0], null, null] }
+    expect(parseSpainQuestions([first, second]).duplicates).toBe(1)
+    expect(() => parseSpainQuestions([first, { ...first, id: 'wrong', correct: 1 }])).toThrow('contradictoria')
+  })
+  it('mantiene el aviso histórico y combina el banco nuevo con datos locales anteriores', () => {
+    const bundled = [{ ...question(0), historical: true }]
+    expect(mergeSpainQuestions(bundled, [])).toEqual(bundled)
+    expect(mergeSpainQuestions(bundled, [question(1)])).toHaveLength(2)
+    expect(mergeSpainQuestions(bundled, bundled)).toEqual(bundled)
+    expect(() => mergeSpainQuestions(bundled, {})).toThrow()
+    expect(() => parseSpainQuestions([{ ...question(0), historical: 'yes' }])).toThrow()
   })
   it('rechaza identificadores repetidos para preguntas distintas', () => {
     expect(() => parseSpainQuestions([question(0), { ...question(1), id: question(0).id }])).toThrow('identificador')
