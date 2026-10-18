@@ -3,58 +3,138 @@ import type { ComicEpisode } from '../lib/comics'
 import { spainComic, usaComic } from '../lib/comics'
 import type { ContentMode, Lang, Question } from '../lib/types'
 import type { SpainQuestion } from '../lib/spain'
-import { COMIC_TITLES, comicScene } from '../lib/comic-stories'
+import { COMIC_TITLES, comicScene, FRANCHISE } from '../lib/comic-stories'
 
-function ComicArt({ chip, regulations, scene }: { chip: boolean; regulations: boolean; scene: ReturnType<typeof comicScene>['id'] }) {
+const INK = '#27364b'
+type Scene = ReturnType<typeof comicScene>['id']
+
+// Shared beaver silhouette (400×520 design grid, see the DamWatts character sheets).
+function BeaverBody() {
+  return <>
+    <ellipse cx="300" cy="410" rx="60" ry="100" transform="rotate(-30 300 410)" fill="#4a3020" />
+    <path d="M265 360L335 460M285 345L350 440" stroke="#3a2418" />
+    <ellipse cx="200" cy="360" rx="110" ry="125" fill="#8b5a2b" />
+    <ellipse cx="200" cy="385" rx="70" ry="88" fill="#c99a6b" />
+    <ellipse cx="150" cy="482" rx="40" ry="18" fill="#4a3020" />
+    <ellipse cx="250" cy="482" rx="40" ry="18" fill="#4a3020" />
+    <circle cx="125" cy="100" r="24" fill="#6b4420" /><circle cx="275" cy="100" r="24" fill="#6b4420" />
+    <circle cx="200" cy="175" r="95" fill="#8b5a2b" />
+    <ellipse cx="200" cy="217" rx="55" ry="40" fill="#c99a6b" />
+    <ellipse cx="200" cy="195" rx="18" ry="12" fill={INK} />
+    <rect x="186" y="227" width="28" height="30" rx="4" fill="white" />
+    <path d="M200 227V257" />
+  </>
+}
+
+function Eyes({ y = 157 }: { y?: number }) {
+  return <>
+    <circle cx="165" cy={y} r="13" fill={INK} /><circle cx="235" cy={y} r="13" fill={INK} />
+    <circle cx="169" cy={y - 4} r="4" fill="white" stroke="none" /><circle cx="239" cy={y - 4} r="4" fill="white" stroke="none" />
+  </>
+}
+
+// Captain: orange scarf and lightning badge.
+function Chomp() {
+  return <>
+    <BeaverBody /><Eyes />
+    <path d="M143 128L185 136M257 128L215 136" />
+    <path d="M118 262Q200 304 282 262L270 294Q200 326 130 294Z" fill="#f26b1d" />
+    <circle cx="200" cy="308" r="22" fill="#fbf6ee" />
+    <path d="M205 294L192 311H202L196 324L210 304H200Z" fill="#f26b1d" stroke="none" />
+  </>
+}
+
+// Integrated circuit with a pin-1 dot; pins double as limbs.
+function Chip() {
+  return <>
+    <path d="M130 120V70M175 120V60M225 120V60M270 120V70M150 380V470H120M250 380V470H280M100 190H50V250M300 190H350V140" fill="none" />
+    <rect x="100" y="110" width="200" height="280" rx="28" fill="#64d8ca" />
+    <circle cx="132" cy="140" r="10" fill={INK} stroke="none" />
+    <circle cx="160" cy="210" r="16" fill="white" /><circle cx="240" cy="210" r="16" fill="white" />
+    <circle cx="163" cy="213" r="7" fill={INK} stroke="none" /><circle cx="243" cy="213" r="7" fill={INK} stroke="none" />
+    <path d="M160 262Q200 296 240 262" fill="none" />
+    <rect x="320" y="110" width="58" height="76" rx="6" fill="#fbf6ee" transform="rotate(12 349 148)" />
+  </>
+}
+
+// Resistor: hard hat, round glasses, sweat drop and a log with 1 kΩ colour bands.
+function Resi() {
+  return <>
+    <BeaverBody /><Eyes y={162} />
+    <circle cx="165" cy="160" r="26" fill="white" fillOpacity=".5" /><circle cx="235" cy="160" r="26" fill="white" fillOpacity=".5" />
+    <path d="M191 160H209M140 124L185 136M260 124L215 136" />
+    <path d="M110 120A90 82 0 0 1 290 120Z" fill="#f26b1d" /><rect x="92" y="114" width="216" height="18" rx="9" fill="#f26b1d" />
+    <path d="M318 150C330 168 330 182 318 186C306 182 306 168 318 150Z" fill="#9ed3f5" />
+    <rect x="70" y="318" width="260" height="52" rx="26" fill="#b07a42" />
+    <rect x="128" y="318" width="20" height="52" fill="#6b3a1f" /><rect x="168" y="318" width="20" height="52" fill={INK} />
+    <rect x="208" y="318" width="20" height="52" fill="#c0392b" /><rect x="268" y="318" width="20" height="52" fill="#d4a017" />
+  </>
+}
+
+// Capacitor: puffed cheeks and an overfull electrolytic-can backpack.
+function Condi() {
+  return <>
+    <rect x="236" y="196" width="140" height="230" rx="34" fill="#4c7cc4" />
+    <rect x="336" y="196" width="40" height="230" fill="#9dbdea" />
+    <path d="M350 240H364M350 290H364M350 340H364" />
+    <rect x="244" y="140" width="24" height="24" fill="#ffe27a" transform="rotate(-18 256 152)" />
+    <BeaverBody />
+    <circle cx="125" cy="218" r="32" fill="#f7a35c" /><circle cx="275" cy="218" r="32" fill="#f7a35c" />
+    <circle cx="165" cy="157" r="20" fill="white" /><circle cx="235" cy="157" r="20" fill="white" />
+    <circle cx="165" cy="157" r="6" fill={INK} stroke="none" /><circle cx="235" cy="157" r="6" fill={INK} stroke="none" />
+  </>
+}
+
+// Transistor: sunglasses, C-B-E badge and a tail raised like a gate barrier.
+function Transi() {
+  return <>
+    <path d="M300 420L338 160" stroke="#4a3020" strokeWidth="40" />
+    <BeaverBody />
+    <rect x="160" y="380" width="80" height="44" rx="8" fill="#fbf6ee" />
+    <text x="200" y="411" textAnchor="middle" fontSize="24" fontWeight="700" fill={INK} stroke="none">C B E</text>
+    <rect x="80" y="300" width="240" height="56" rx="28" fill="#8b5a2b" />
+    <rect x="122" y="132" width="66" height="40" rx="14" fill={INK} /><rect x="212" y="132" width="66" height="40" rx="14" fill={INK} />
+    <path d="M188 146H212" />
+  </>
+}
+
+// Short-Circuit Crew: three electrons on tiny scooters.
+const CREW = [[120, 320, 78], [290, 210, 54], [340, 400, 42]]
+function Crew() {
+  return <>{CREW.map(([x, y, r]) => <g key={x}>
+    <path d={`M${x - 10} ${y - r - 50}L${x + 10} ${y - r - 10}L${x - 4} ${y - r - 14}L${x + 6} ${y - r + 8}`} fill="#f26b1d" />
+    <circle cx={x} cy={y} r={r} fill={INK} />
+    <path d={`M${x - r / 3} ${y + r / 6}H${x + r / 3}`} stroke="white" strokeWidth="9" />
+    <rect x={x - r * 0.8} y={y + r + 6} width={r * 1.6} height="13" rx="6" fill="#f26b1d" />
+  </g>)}</>
+}
+
+const GUESTS: Partial<Record<Scene, () => React.JSX.Element>> = {
+  resistance: Resi, capacitor: Condi, transistor: Transi, short: Crew,
+}
+
+export function ComicArt({ chip, regulations, scene }: { chip: boolean; regulations: boolean; scene: Scene }) {
+  const Guest = GUESTS[scene]
   return <svg className="comic-art" viewBox="0 0 320 150" aria-hidden="true">
     <path d="M0 125H320M20 110V35H85V65H145M225 20V48H300V110" fill="none" stroke="#8bb4b9" strokeWidth="4" />
     <circle cx="85" cy="65" r="6" fill="#ffb84d" />
-    {['resistance', 'capacitor', 'transistor'].includes(scene) && <g stroke="#27364b" strokeWidth="2">
-      <circle cx="33" cy="69" r="7" fill="#b77946" /><circle cx="65" cy="69" r="7" fill="#b77946" />
-      <ellipse cx="49" cy="90" rx="23" ry="22" fill={scene === 'capacitor' ? '#b7d5ff' : scene === 'transistor' ? '#c5e9c2' : '#ffda85'} />
-      <circle cx="42" cy="83" r="2" /><circle cx="56" cy="83" r="2" />
-      <path d="M42 96H56M49 96V103" fill="none" />
-      {scene === 'resistance' && <path d="M16 114H73M29 109L39 119L49 109L59 119" fill="none" />}
-      {scene === 'capacitor' && <path d="M37 114H61M37 120H61" />}
-      {scene === 'transistor' && <path d="M25 120L72 108" strokeWidth="5" />}
-    </g>}
-    {scene === 'short' && <g fill="#ffb84d" stroke="#27364b" strokeWidth="2">
-      <circle cx="40" cy="100" r="12" /><path d="M34 95L38 97M46 95L42 97M34 104H46M20 118H65" />
-      <circle cx="27" cy="123" r="4" /><circle cx="58" cy="123" r="4" />
-    </g>}
-    {regulations ? <g fill="#fff8dd" stroke="#27364b" strokeWidth="3">
+    {Guest && <g transform="translate(2 22) scale(.24)" stroke={INK} strokeWidth="6" strokeLinejoin="round" strokeLinecap="round"><Guest /></g>}
+    <g transform="translate(108 12) scale(.25)" stroke={INK} strokeWidth="6" strokeLinejoin="round" strokeLinecap="round">
+      {chip ? <Chip /> : <Chomp />}
+    </g>
+    {regulations ? <g fill="#fff8dd" stroke={INK} strokeWidth="3">
       <path d="M240 70V118H290V70ZM250 80H280M250 90H280M250 100H272" />
-    </g> : <g fill="none" stroke="#27364b" strokeWidth="3">
+    </g> : <g fill="none" stroke={INK} strokeWidth="3">
       <path d="M250 120V65M235 120H265M240 65H260M228 49Q250 25 272 49M237 57Q250 43 263 57" />
     </g>}
-    {chip ? <g stroke="#27364b" strokeWidth="4" strokeLinejoin="round">
-      <path d="M115 40V20M140 40V20M165 40V20M115 110V130M140 110V130M165 110V130M100 55H80M100 80H80M180 55H200M180 80H200" />
-      <rect x="100" y="35" width="80" height="80" rx="14" fill="#64d8ca" />
-      <circle cx="122" cy="65" r="4" fill="#27364b" />
-      <circle cx="158" cy="65" r="4" fill="#27364b" />
-      <path d="M120 85Q140 104 160 85" fill="none" />
-    </g> : <g stroke="#27364b" strokeWidth="3" strokeLinejoin="round">
-      <ellipse cx="89" cy="112" rx="22" ry="29" transform="rotate(-35 89 112)" fill="#91633d" />
-      <path d="M75 101L101 122M75 114L91 130" />
-      <ellipse cx="145" cy="109" rx="42" ry="29" fill="#b77946" />
-      <circle cx="114" cy="41" r="14" fill="#b77946" />
-      <circle cx="174" cy="41" r="14" fill="#b77946" />
-      <ellipse cx="144" cy="69" rx="45" ry="36" fill="#c98c54" />
-      <ellipse cx="144" cy="81" rx="25" ry="16" fill="#ffe0b0" />
-      <circle cx="127" cy="61" r="4" fill="#27364b" />
-      <circle cx="162" cy="61" r="4" fill="#27364b" />
-      <path d="M137 77L144 83L151 77Z" fill="#27364b" />
-      <path d="M135 89H153V104H135ZM144 89V104" fill="white" />
-      <path d="M117 116H171" stroke="#1f5fbf" strokeWidth="9" />
-    </g>}
-    <text x="312" y="143" textAnchor="end" fill="#344b60" fontSize="10">Chomp &amp; Chip · EA5KAO</text>
+    <text x="312" y="143" textAnchor="end" fill="#344b60" fontSize="10">{FRANCHISE.credit}</text>
   </svg>
 }
 
 export function QuestionComic({ episodes, uiLang }: { episodes: ComicEpisode[]; uiLang: Lang }) {
   const [open, setOpen] = useState(false)
   return <details className="question-comic" onToggle={(event) => setOpen(event.currentTarget.open)}>
-    <summary>{uiLang === 'es' ? 'Leer cómic · Chomp & Chip' : 'Read comic · Chomp & Chip'}</summary>
+    <summary>{uiLang === 'es' ? 'Leer cómic' : 'Read comic'} · {FRANCHISE.name}</summary>
     {open && episodes.map((episode) => <ComicStory key={episode.lang} episode={episode} />)}
   </details>
 }
@@ -78,11 +158,11 @@ function ComicStory({ episode: e }: { episode: ComicEpisode }) {
         : (es ? 'La aventura es ficticia. Estudia las referencias: el cómic no sustituye las normas ni acredita una respuesta oficial.'
           : 'The adventure is fictional. Study the references: the comic does not replace rules or certify an official answer.') },
   ]
-  return <article className="comic-story" lang={e.lang} aria-label={`Chomp & Chip · ${e.id} · ${e.lang}`}>
+  return <article className="comic-story" lang={e.lang} aria-label={`${FRANCHISE.name} · ${e.id} · ${e.lang}`}>
     <header className="comic-brand">
-      <strong>Chomp &amp; Chip</strong>
-      <span>Los Protectores del Silicio</span>
+      <strong>{FRANCHISE.name}</strong>
       <span>{COMIC_TITLES[e.lang]}</span>
+      <span>{FRANCHISE.team[e.lang]}</span>
       <small>{es ? 'Episodio' : 'Episode'} {e.id} · {e.lang.toUpperCase()}</small>
       <small>{es ? 'Escenario' : 'Setting'}: {scene.guest}</small>
     </header>
@@ -101,9 +181,9 @@ function ComicStory({ episode: e }: { episode: ComicEpisode }) {
           : 'Shared foundation or pending explanation; not an individual worked solution.'}</p>}
         {panel.figure && <figure>
           <img src={`${import.meta.env.BASE_URL}${panel.figure.src}`} alt={panel.figure.alt} loading="lazy" />
-          <figcaption>{es ? 'Ilustración del banco · no es un dibujo de Chomp & Chip' : 'Pool diagram · not Chomp & Chip artwork'}</figcaption>
+          <figcaption>{es ? 'Ilustración del banco · no es un dibujo de Los DamWatts' : 'Pool diagram · not DamWatts artwork'}</figcaption>
         </figure>}
-        <span className="comic-watermark">Chomp &amp; Chip · Anatol EA5KAO</span>
+        <span className="comic-watermark">{FRANCHISE.credit}</span>
       </li>)}
     </ol>
     <p className="comic-disclaimer"><strong>{es ? 'Ficción y ciencia:' : 'Fiction and science:'}</strong> {scene.metaphor}</p>
@@ -119,7 +199,7 @@ function ComicStory({ episode: e }: { episode: ComicEpisode }) {
     {e.sources.length > 0 && <ul className="comic-disclaimer">{e.sources.map((source) => <li key={source.url}>
       <a href={source.url} target="_blank" rel="noreferrer">{source.label}</a>
     </li>)}</ul>}
-    <footer className="comic-credit">Chomp &amp; Chip · Anatol EA5KAO</footer>
+    <footer className="comic-credit">{FRANCHISE.credit}</footer>
   </article>
 }
 

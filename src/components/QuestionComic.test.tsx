@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { AppContext, makeT, type AppContextValue } from '../lib/app'
 import { QuestionView } from './QuestionView'
 import type { Question } from '../lib/types'
-import { UsaQuestionComic } from './QuestionComic'
+import { ComicArt, UsaQuestionComic } from './QuestionComic'
 
 const q: Question = {
   id: 'T1A01', question: 'Mission?', answers: ['A', 'B', 'C', 'D'], correct: 2,
@@ -18,7 +18,7 @@ describe('Comic answer visibility', () => {
       <QuestionView q={q} selected={0} />
     </AppContext.Provider>)
     expect(html).not.toContain('question-comic')
-    expect(html).not.toContain('Chomp')
+    expect(html).not.toContain('DamWatts')
   })
   it.each([{ reveal: true }, { onlyCorrect: true }])('makes the comic available after disclosure: %j', (props) => {
     const html = renderToStaticMarkup(<AppContext.Provider value={ctx}>
@@ -31,5 +31,23 @@ describe('Comic answer visibility', () => {
     expect(html).toContain('Read comic')
     expect(html).not.toContain('<svg')
     expect(html).not.toContain('Mission?')
+  })
+})
+
+describe('DamWatts character artwork', () => {
+  it.each([
+    ['resistance', '#d4a017'],
+    ['capacitor', '#4c7cc4'],
+    ['transistor', 'C B E'],
+    ['short', '#f26b1d'],
+  ] as const)('draws the %s guest with its signature detail', (scene, detail) => {
+    const html = renderToStaticMarkup(<ComicArt chip={false} regulations={false} scene={scene} />)
+    expect(html).toContain(detail)
+    expect(html).toContain('Los DamWatts')
+  })
+  it('draws Chip as an integrated circuit and no guest in regulation scenes', () => {
+    const html = renderToStaticMarkup(<ComicArt chip regulations scene="regulations" />)
+    expect(html).toContain('#64d8ca')
+    expect(html).not.toContain('#8b5a2b')
   })
 })

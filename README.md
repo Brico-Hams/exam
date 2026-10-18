@@ -19,11 +19,11 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 - [Compilación APK y resultados ES](docs/VALIDACION.es.md) /
   [APK build and results EN](docs/VALIDATION.en.md)
 
-## Chomp & Chip · Los Protectores del Silicio
+## Los DamWatts · ¡A toda carga!
 
-**Chomp y Chip: Caos en el Circuito**: cada pregunta de USA y España genera una
+**Los DamWatts: ¡A toda carga!**: cada pregunta de USA y España genera una
 aventura educativa de cuatro viñetas con dibujos originales y marca de agua
-**Chomp & Chip · Anatol EA5KAO**. Responde en práctica o revela la flashcard y abre
+**Los DamWatts · Anatol EA5KAO**. Responde en práctica o revela la flashcard y abre
 «Leer cómic»; en simulacros aparece únicamente en la revisión tras entregar.
 USA sigue el selector EN/ES/bilingüe; España usa el contenido español disponible.
 Los episodios reutilizan una plantilla narrativa y la explicación existente:
@@ -34,13 +34,13 @@ original character artwork and an **Anatol EA5KAO** watermark. Reveal the answer
 and open “Read comic”; mock exams expose it only after submission. US episodes
 follow EN/ES/bilingual selection; Spain uses the available Spanish content.
 Shared story templates reuse existing explanations, with warnings and credits
-preserved. See [identity and comic scope](docs/CHOMP-CHIP.md).
+preserved. See [identity and comic scope](docs/DAMWATTS.md).
 
-Los episodios seleccionan gags temáticos con RESI, CONDI, TRANSI y la Banda del
-Corto, además de aventuras de radio y normativa. Separan ficción y ciencia e
+El equipo lo forman Chomp, Chip, RESI, CONDI y TRANSI contra la Banda del
+Corto, con gags temáticos además de aventuras de radio y normativa. Separan ficción y ciencia e
 incluyen advertencias para no imitar acciones peligrosas. Título inglés:
-**Chomp & Chip: Circuit Chaos**; título húngaro de franquicia:
-**Csomp és Csip: Áramkör para** (no implica traducción al húngaro).
+**The DamWatts: Fully Charged!**; título húngaro de franquicia:
+**Gát-Wattok: Túltöltve!** (no implica traducción al húngaro).
 
 Episodes select themed ES/EN comedy scenes while preserving technical content
 and safety notices. Hungarian is a recorded franchise title, not an available

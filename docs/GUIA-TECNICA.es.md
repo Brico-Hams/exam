@@ -46,7 +46,7 @@ flowchart TD
 | `src/lib/exam.ts`, `selection.ts` | Aleatoriedad, selección por grupo y calificación USA |
 | `src/lib/spain.ts` | Esquema, validación, deduplicación, mezcla por ID, opciones y exámenes España |
 | `src/lib/explanations.ts`, `calculation-explanations.ts` | Fundamentos bilingües y desarrollos individuales USA |
-| `src/lib/comics.ts`, `src/components/QuestionComic.tsx` | Episodios Chomp & Chip generados por pregunta, viñetas SVG originales y marca de agua; solo tras revelar o entregar. Véase [alcance](CHOMP-CHIP.md) |
+| `src/lib/comics.ts`, `src/components/QuestionComic.tsx` | Episodios Los DamWatts generados por pregunta, viñetas SVG originales y marca de agua; solo tras revelar o entregar. Véase [alcance](DAMWATTS.md) |
 | `src/lib/progress.ts` | Estado USA, estadísticas e historial local |
 | `scripts/import-*.mjs`, `spain-review.mjs` | Conversión, trazabilidad, revisión y reglas explícitas sobre datos |
 | `public/figures/` | Recursos estáticos empaquetados; no se descargan bajo demanda de un tercero |

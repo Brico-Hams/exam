@@ -5,7 +5,7 @@ import { loadPool } from './pools'
 import { parseSpainQuestions, shuffleSpainAnswers } from './spain'
 import { seededRng } from './exam'
 
-describe('Chomp & Chip episode coverage', () => {
+describe('DamWatts episode coverage', () => {
   it.each(['technician', 'general', 'extra'] as const)('adapts every %s question in ES and EN without changing its answer', async (level) => {
     const pool = await loadPool(level)
     for (const q of pool.questions) {

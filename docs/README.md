@@ -16,7 +16,7 @@
 - [APK debug, checksum y procedencia / Debug APK, checksum and provenance](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018)
 - [Evidencia Android en JSON / Android build evidence](results/android-build.json)
 - [Subir a WordPress BricoHams / Deploy alongside BricoHams WordPress](WORDPRESS.md)
-- [Identidad Chomp & Chip / Chomp & Chip identity](CHOMP-CHIP.md)
+- [Identidad Los DamWatts / DamWatts identity](DAMWATTS.md)
   — identidad y cómic educativo; conserva la marca de la aplicación /
   identity and educational comic; preserves the application brand.
 

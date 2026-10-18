@@ -25,9 +25,9 @@ describe('Humorous comic scenes', () => {
     expect(comicScene('transistor', false, 'en').metaphor).toContain('different control mechanisms')
     expect(comicScene('short circuit', false, 'es').metaphor).toContain('no tiene por qué ir a tierra')
   })
-  it('preserves the three supplied franchise titles without enabling unsupported languages', () => {
-    expect(COMIC_TITLES.en).toBe('Chomp & Chip: Circuit Chaos')
-    expect(COMIC_TITLES.es).toBe('Chomp y Chip: Caos en el Circuito')
-    expect(COMIC_TITLES.hu).toBe('Csomp és Csip: Áramkör para')
+  it('preserves the three DamWatts franchise titles without enabling unsupported languages', () => {
+    expect(COMIC_TITLES.en).toBe('The DamWatts: Fully Charged!')
+    expect(COMIC_TITLES.es).toBe('Los DamWatts: ¡A toda carga!')
+    expect(COMIC_TITLES.hu).toBe('Gát-Wattok: Túltöltve!')
   })
 })

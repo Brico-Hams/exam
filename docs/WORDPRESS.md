@@ -1,6 +1,6 @@
 # Publicar en WordPress / Deploy alongside WordPress
 
-**BricoHams · EA5KAO Ham Exam Prep · Chomp & Chip**
+**BricoHams · EA5KAO Ham Exam Prep · Los DamWatts**
 
 **Autor de la aplicación / Application author: Anatol EA5KAO**
 
@@ -9,7 +9,7 @@
 ### Qué contiene la entrega
 
 ZIP de la aplicación web compilada en modo público, con los bancos USA y España,
-cómics Chomp & Chip, ilustraciones, licencias, branding y marca de agua.
+cómics Los DamWatts, ilustraciones, licencias, branding y marca de agua.
 No contiene traducciones GLAARG opcionales. Funciona como sitio estático;
 **no es un plugin ni un tema de WordPress**. No se sube por
 «Plugins → Añadir plugin» ni se instala desde la biblioteca de medios.
@@ -104,7 +104,7 @@ Un enlace directo es una alternativa que no necesita iframe.
 ## English
 
 This is a **static public web build**, not a WordPress plugin or theme.
-It includes US/Spain question banks, original Chomp & Chip character artwork,
+It includes US/Spain question banks, original DamWatts character artwork,
 comics, diagrams, branding, watermark and content credits. Optional GLAARG
 translations are excluded.
 

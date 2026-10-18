@@ -1,9 +1,15 @@
 import type { Lang } from './types'
 
+export const FRANCHISE = {
+  name: 'Los DamWatts',
+  team: { es: 'Chomp, Chip, RESI, CONDI y TRANSI', en: 'Chomp, Chip, RESI, CONDI and TRANSI' },
+  credit: 'Los DamWatts · Anatol EA5KAO',
+}
+
 export const COMIC_TITLES = {
-  es: 'Chomp y Chip: Caos en el Circuito',
-  en: 'Chomp & Chip: Circuit Chaos',
-  hu: 'Csomp és Csip: Áramkör para',
+  es: 'Los DamWatts: ¡A toda carga!',
+  en: 'The DamWatts: Fully Charged!',
+  hu: 'Gát-Wattok: Túltöltve!',
 }
 
 type SceneId = 'resistance' | 'capacitor' | 'transistor' | 'short' | 'regulations' | 'radio'
