@@ -6,6 +6,16 @@ Aplicación multiplataforma (**Web + Android**) para preparar los tres exámenes
 radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 (banco BricoHams con preguntas, explicaciones e ilustraciones en español).
 
+## Documentación técnica / Technical documentation
+
+- [Descargar APK de pruebas / Download testing APK](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018)
+  — debug, Android 7+, no probada en dispositivo / not device-tested.
+- [Índice bilingüe: arquitectura, requisitos, procesos, despliegue y carga](docs/README.md)
+- [Guía completa en español](docs/GUIA-TECNICA.es.md)
+- [Complete English guide](docs/TECHNICAL-GUIDE.en.md)
+- [Compilación APK y resultados ES](docs/VALIDACION.es.md) /
+  [APK build and results EN](docs/VALIDATION.en.md)
+
 | Nivel | Elemento | Vigencia del banco | Preguntas | Aprueba con |
 |---|---|---|---|---|
 | Technician | 2 | 2026-07-01 → 2030-06-30 | 35 | 26 |
@@ -39,10 +49,13 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
   Los cálculos nuevos se recalculan en las pruebas con la tolerancia del redondeo
   de la opción. No se afirma disponer de 1.431 soluciones individuales paso a paso:
   la cobertura completa se refiere a los fundamentos, no a esos desarrollos.
-- Progreso por subelemento: una pregunta cuenta como dominada tras 2 aciertos seguidos.
+- Progreso por subelemento: una pregunta cuenta como dominada si el último intento
+  fue correcto y la precisión acumulada es al menos del 75 %.
 - Interfaz en español/inglés y contenido en modo **inglés**, **español** o **bilingüe**.
 - Página de **referencias**: FCC, NCVEC, ARRL, KP4ARA, HamStudy, HamExam, K8DAA y GLAARG.
-- Funciona sin conexión. El progreso se guarda localmente en `localStorage`.
+- Android incluye bancos e imágenes para estudiar sin conexión. La web no tiene
+  service worker ni garantiza reapertura sin red; una pestaña ya cargada puede
+  seguir funcionando. El progreso USA se guarda localmente en `localStorage`.
 
 ## Datos y licencias
 
@@ -226,14 +239,15 @@ reproduce una distribución temática oficial no publicada.
 
 ## Desarrollo
 
-Requisitos: Node.js 20+.
+Requisitos validados: Node.js 22.23.3 y npm del mismo entorno.
 
 ```bash
-npm install
+npm ci
 npm run dev        # servidor de desarrollo
 npm test           # pruebas (vitest)
 npm run lint       # oxlint
 npm run build      # build web en dist/
+npm run build:public # entrega sin traducciones GLAARG locales
 ```
 
 El build web (`dist/`) es estático. Usa rutas relativas y `HashRouter`, así que se puede publicar
@@ -241,15 +255,22 @@ en cualquier hosting estático (GitHub Pages, Netlify, etc.).
 
 ## Android (Capacitor)
 
-Requisitos: Android Studio (incluye JDK 17+ y el Android SDK).
+Requisitos: JDK **21**, Android SDK API 36 y Build Tools 35.0.0.
+Android mínimo: 7.0/API 24. Target SDK: 36. Java 8/17 no bastan.
 
 ```bash
 npm run android:sync   # build web + copia a android/
 npm run android:open   # abre el proyecto en Android Studio
 npm run android:run    # build y ejecuta en un dispositivo/emulador
+npm run android:apk    # Windows: build público, APK debug y verificación
 ```
 
 Desde Android Studio puedes generar el APK/AAB firmado (*Build → Generate Signed Bundle / APK*).
+El workflow [Android debug APK](.github/workflows/android-apk.yml) genera una APK de
+pruebas y publica checksum/procedencia como artefacto Actions durante 30 días.
+No es una firma de release ni una publicación en Google Play.
+La [guía técnica](docs/GUIA-TECNICA.es.md) explica firma privada, instalación,
+despliegue web, recuperación, pruebas y los límites de funcionamiento offline.
 
 ## Estructura
 

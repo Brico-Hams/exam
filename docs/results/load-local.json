@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-10-18T08:44:05.527Z",
+  "sourceCommit": "0b43ec7025b6dc325588e02f6f933927776273ef",
+  "workingTreeDirty": true,
+  "generatorSha256": "deb60023d93058ff89b03e087eb0a2681320893607f345fdb32d1915aa5d8a41",
+  "baseUrl": "http://127.0.0.1:4183/",
+  "environment": {
+    "node": "v22.23.3",
+    "os": "win32",
+    "logicalCpus": 12,
+    "memoryGiB": 31.64
+  },
+  "scope": "Closed-loop HTTP simulation against an existing static build; no browser rendering, JS execution, localStorage, user think time, TLS/WAN or production capacity certification.",
+  "thresholds": {
+    "maxErrors": 0,
+    "maxRequestP95Ms": 2000,
+    "timeoutMs": 10000
+  },
+  "assets": {
+    "index.html": {
+      "bytes": 841,
+      "sha256": "c86cfd9da532179aac4c7663dc6f4a60f8cbdf23a911412f73e25d58678ea2bd"
+    },
+    "assets/index-BQg9XzMX.css": {
+      "bytes": 8625,
+      "sha256": "7f16ee8d1260c50bbc6c796f153da31e95b8210efe6f6ae90f2cbc6e4a95a8dd"
+    },
+    "assets/index-BYEsl1iG.js": {
+      "bytes": 2065543,
+      "sha256": "982c6476a3bdc778ac5edeab321baf86fda428d2a69c5437a84cff8d00f31239"
+    },
+    "figures/spain/bh-fedi-ea-fedi-ag-005.svg": {
+      "bytes": 4572,
+      "sha256": "e3a0f2775678229836f3266627cd46e6b8917d79e4378f4070951b15131ff974"
+    },
+    "figures/spain/bh-fedi-ea-fedi-ag-009.svg": {
+      "bytes": 13146,
+      "sha256": "95602b10e74990b41193f53cde241a02d0b3e1f2ebe0338c21caaac0415e3b59"
+    }
+  },
+  "stages": [
+    {
+      "profile": "cold-visit",
+      "concurrency": 1,
+      "sessions": 30,
+      "requests": 150,
+      "failures": 0,
+      "failureDetails": [],
+      "seconds": 3.345,
+      "requestsPerSecond": 44.85,
+      "uncompressedBytes": 62781810,
+      "requestMs": {
+        "p50": 5.352,
+        "p95": 93.681,
+        "p99": 108.217,
+        "max": 132.626
+      },
+      "sessionMs": {
+        "p50": 108.912,
+        "p95": 135.837
+      },
+      "passed": true
+    },
+    {
+      "profile": "cold-visit",
+      "concurrency": 5,
+      "sessions": 30,
+      "requests": 150,
+      "failures": 0,
+      "failureDetails": [],
+      "seconds": 1.427,
+      "requestsPerSecond": 105.13,
+      "uncompressedBytes": 62781810,
+      "requestMs": {
+        "p50": 15.343,
+        "p95": 190.527,
+        "p99": 200.421,
+        "max": 225.647
+      },
+      "sessionMs": {
+        "p50": 230.627,
+        "p95": 263.916
+      },
+      "passed": true
+    },
+    {
+      "profile": "cold-visit",
+      "concurrency": 20,
+      "sessions": 30,
+      "requests": 150,
+      "failures": 0,
+      "failureDetails": [],
+      "seconds": 1.32,
+      "requestsPerSecond": 113.61,
+      "uncompressedBytes": 62781810,
+      "requestMs": {
+        "p50": 50.15,
+        "p95": 762.92,
+        "p99": 799.279,
+        "max": 819.14
+      },
+      "sessionMs": {
+        "p50": 860.126,
+        "p95": 997.587
+      },
+      "passed": true
+    },
+    {
+      "profile": "figure-navigation",
+      "concurrency": 1,
+      "sessions": 30,
+      "requests": 60,
+      "failures": 0,
+      "failureDetails": [],
+      "seconds": 0.323,
+      "requestsPerSecond": 185.95,
+      "uncompressedBytes": 531540,
+      "requestMs": {
+        "p50": 4.924,
+        "p95": 9.4,
+        "p99": 9.936,
+        "max": 9.936
+      },
+      "sessionMs": {
+        "p50": 10.96,
+        "p95": 15.282
+      },
+      "passed": true
+    },
+    {
+      "profile": "figure-navigation",
+      "concurrency": 5,
+      "sessions": 30,
+      "requests": 60,
+      "failures": 0,
+      "failureDetails": [],
+      "seconds": 0.161,
+      "requestsPerSecond": 373.46,
+      "uncompressedBytes": 531540,
+      "requestMs": {
+        "p50": 11.009,
+        "p95": 25.62,
+        "p99": 27.9,
+        "max": 27.9
+      },
+      "sessionMs": {
+        "p50": 21.24,
+        "p95": 50.173
+      },
+      "passed": true
+    },
+    {
+      "profile": "figure-navigation",
+      "concurrency": 20,
+      "sessions": 30,
+      "requests": 60,
+      "failures": 0,
+      "failureDetails": [],
+      "seconds": 0.115,
+      "requestsPerSecond": 523.66,
+      "uncompressedBytes": 531540,
+      "requestMs": {
+        "p50": 37.609,
+        "p95": 46.679,
+        "p99": 47.466,
+        "max": 47.466
+      },
+      "sessionMs": {
+        "p50": 80.385,
+        "p95": 85.308
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
