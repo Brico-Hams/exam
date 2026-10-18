@@ -1,27 +1,31 @@
 import type { LevelId, Pool, Question, Translation } from './types'
+import technician from '../data/pools/technician.json'
+import general from '../data/pools/general.json'
+import extra from '../data/pools/extra.json'
+import esTechnician from '../data/i18n/es/technician.json'
+import esGeneral from '../data/i18n/es/general.json'
+import esExtra from '../data/i18n/es/extra.json'
 
-type JsonModule<T> = { default: T }
-
-const poolLoaders: Record<LevelId, () => Promise<JsonModule<Pool>>> = {
-  technician: () => import('../data/pools/technician.json') as Promise<JsonModule<Pool>>,
-  general: () => import('../data/pools/general.json') as Promise<JsonModule<Pool>>,
-  extra: () => import('../data/pools/extra.json') as Promise<JsonModule<Pool>>,
+const pools: Record<LevelId, Pool> = {
+  technician: technician as Pool,
+  general: general as Pool,
+  extra: extra as Pool,
 }
 
-const esLoaders: Record<LevelId, () => Promise<JsonModule<Record<string, Translation>>>> = {
-  technician: () => import('../data/i18n/es/technician.json'),
-  general: () => import('../data/i18n/es/general.json'),
-  extra: () => import('../data/i18n/es/extra.json'),
+const translations: Record<LevelId, Record<string, Translation>> = {
+  technician: esTechnician,
+  general: esGeneral,
+  extra: esExtra,
 }
 
 // Spanish banks from GLAARG PR, generated locally by `npm run import-glaarg` (optional, not committed).
 const glaargLoaders = import.meta.glob<Record<string, Translation>>('../data/i18n/es-glaarg/*.json', {
   import: 'default',
+  eager: true,
 })
 
-async function loadGlaarg(level: LevelId): Promise<Record<string, Translation>> {
-  const loader = glaargLoaders[`../data/i18n/es-glaarg/${level}.json`]
-  return loader ? loader() : {}
+function loadGlaarg(level: LevelId): Record<string, Translation> {
+  return glaargLoaders[`../data/i18n/es-glaarg/${level}.json`] ?? {}
 }
 
 const valid = (t: Translation | undefined, q: Question) => !!t && t.answers?.length === q.answers.length
@@ -42,14 +46,12 @@ export function mergeTranslations(
   }
 }
 
-const cache = new Map<LevelId, Promise<Pool>>()
+const cache = new Map<LevelId, Pool>()
 
-export function loadPool(level: LevelId): Promise<Pool> {
+export async function loadPool(level: LevelId): Promise<Pool> {
   let p = cache.get(level)
   if (!p) {
-    p = Promise.all([poolLoaders[level](), esLoaders[level](), loadGlaarg(level)]).then(([pool, es, glaarg]) =>
-      mergeTranslations(pool.default, es.default, glaarg),
-    )
+    p = mergeTranslations(pools[level], translations[level], loadGlaarg(level))
     cache.set(level, p)
   }
   return p
