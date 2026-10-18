@@ -16,8 +16,11 @@ aplicacion, Anatol EA5KAO, ni la licencia de otros materiales.
 
 Adaptaciones realizadas: conversion al esquema de datos de la aplicacion,
 deduplicacion de una pregunta y cambio de rutas de las ilustraciones.
-Se mantienen los textos, las claves, las explicaciones, las notas y los
-avisos de revision del paquete. Los SVG se distribuyen sin alteraciones.
+Revision educativa del 2026-10-18: se contrastan 161 preguntas, retirando
+160 avisos y corrigiendo o precisando 84 enunciados, alternativas, claves
+o explicaciones. Se mantienen 46 avisos pendientes con motivos concretos.
+El informe src/data/spain-import-report.json conserva originales y
+referencias. Las notas del paquete y los SVG se conservan sin alteraciones.
 Las adaptaciones del material BricoHams se comparten bajo CC BY-SA 4.0.
 
 Las preguntas son material educativo, no un banco oficial certificado.

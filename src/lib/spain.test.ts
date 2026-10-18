@@ -50,6 +50,24 @@ describe('Banco de España', () => {
     expect(() => parseSpainQuestions([{ ...q, explanation: { es: 'Texto', en: '' } }])).toThrow('explanation.en')
     expect(() => parseSpainQuestions([{ ...q, explanation: 'Texto' }])).toThrow()
   })
+  it('conserva referencias de contraste y exige fecha, evidencia y estado coherentes', () => {
+    const validation = { date: '2026-10-18', sources: [
+      { label: 'Norma de referencia', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2013-7624#a25' },
+    ], rationale: 'Contraste documentado', corrected: true }
+    expect(parseSpainQuestions([{ ...question(0), validation }]).questions[0].validation).toEqual(validation)
+    for (const invalid of [
+      null, { ...validation, date: '2026-02-30' }, { ...validation, date: 'ayer' },
+      { ...validation, sources: [] }, { ...validation, corrected: 'sí' },
+      { ...validation, rationale: '' },
+      { ...validation, sources: [{ label: 'Insegura', url: 'javascript:alert(1)' }] },
+      { ...validation, sources: [{ label: '', url: 'https://www.boe.es' }] },
+    ]) expect(() => parseSpainQuestions([{ ...question(0), validation: invalid }])).toThrow()
+    expect(() => parseSpainQuestions([{ ...question(0), validation, reviewReason: 'Pendiente' }])).toThrow('pendiente')
+    const duplicate = { ...question(0), id: 'duplicate', reviewReason: 'Nueva duda' }
+    const result = parseSpainQuestions([{ ...question(0), validation }, duplicate]).questions[0]
+    expect(result.reviewReason).toBe('Nueva duda')
+    expect(result.validation).toBeUndefined()
+  })
   it('conserva avisos y notas y valida sus tipos', () => {
     const q = { ...question(0), reviewReason: 'Verificar normativa', note: 'Corrección del banco' }
     expect(parseSpainQuestions([q]).questions).toEqual([q])
@@ -88,6 +106,14 @@ describe('Banco de España', () => {
     expect(mergeSpainQuestions([question(0)], [question(1)])).toHaveLength(2)
     expect(mergeSpainQuestions([question(0)], [question(0)])).toEqual([question(0)])
     expect(() => mergeSpainQuestions([question(0)], {})).toThrow()
+  })
+  it('da prioridad a la versión incluida por ID y preserva las preguntas locales ajenas', () => {
+    const current = { ...question(0), question: 'Enunciado corregido', correct: 2 }
+    const old = { ...question(0), correct: 1, reviewReason: 'Aviso antiguo' }
+    const addition = question(1)
+    expect(mergeSpainQuestions([current], [old, addition])).toEqual([current, addition])
+    expect(() => mergeSpainQuestions([current], [null])).toThrow()
+    expect(() => mergeSpainQuestions([current], [{ ...addition, correct: 4 }])).toThrow()
   })
   it('mezcla las opciones de texto sin alterar la clave ni el banco original', () => {
     const q = question(0)

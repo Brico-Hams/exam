@@ -116,14 +116,29 @@ Acceso desde la portada o `/#/spain`. Módulo independiente de los niveles FCC:
 - **73 ilustraciones SVG** incluidas sin alteraciones, con rutas locales para
   funcionar en web y Android sin conexión. Los esquemas del enunciado y las
   alternativas gráficas pueden ampliarse y se muestran también al revisar.
-- Cada pregunta incluye la **explicación en español del paquete**. Se conservan
+- Cada pregunta incluye una **explicación en español**, con las correcciones
+  documentadas del paquete donde se han contrastado respuestas. Se conservan
   las 16 notas del banco, incluidas sus correcciones. Las explicaciones en inglés
   no vienen en el archivo y se muestran como pendientes, sin traducciones ficticias.
-- Las **206 preguntas marcadas para revisión normativa** (3 técnicas y 203 de
-  reglamentación) están disponibles en práctica y flashcards con un aviso, pero
-  quedan fuera de los simulacros. Quedan 575 técnicas y 313 de reglamentación
-  disponibles para simular. La ausencia de marca no certifica la corrección o
-  vigencia de las demás; este material no es un banco oficial.
+- **Contraste del 2026-10-18:** de las 206 preguntas originalmente marcadas,
+  se retira el aviso a **160** con referencias documentadas. Se contrasta además
+  una pregunta relacionada sin marca previa (`bh-r266`, expedición de HAREC):
+  **161 contrastadas en total**, **84 corregidas o precisadas** en enunciado,
+  alternativas, clave o explicación. No todas eran claves erróneas: algunas
+  necesitaban acotar condiciones o actualizar la referencia.
+- Permanecen **46 preguntas de reglamentación pendientes**, con motivo concreto
+  y excluidas de simulacros. Hay **578 técnicas y 470 de reglamentación** disponibles
+  para simular. No se ha certificado el resto del banco ni la vigencia futura.
+  Las referencias y la fecha se muestran después de responder o revelar, nunca
+  como pista durante un simulacro.
+- Fuentes principales del contraste:
+  [Orden IET/1311/2013 consolidada](https://www.boe.es/buscar/act.php?id=BOE-A-2013-7624),
+  [Ley 11/2022 consolidada](https://www.boe.es/buscar/act.php?id=BOE-A-2022-10757),
+  [Ley 19/1983](https://www.boe.es/buscar/act.php?id=BOE-A-1983-31093) y
+  [RD 2623/1986](https://www.boe.es/buscar/act.php?id=BOE-A-1986-33766).
+  El caso físico `bh-e390` se acota con P = I²R y resistencia de radiación constante,
+  con referencia a OpenStax. El informe conserva el contenido previo de cada
+  pregunta contrastada, las modificaciones y los motivos pendientes.
 - Se mezclan las alternativas de texto al iniciar cada sesión para evitar el
   sesgo del archivo, que coloca casi todas las claves primero. La respuesta
   correcta se recalcula y el banco original no cambia. Las siete preguntas
@@ -140,6 +155,9 @@ Acceso desde la portada o `/#/spain`. Módulo independiente de los niveles FCC:
   conserva tus archivos originales.
 - Al arrancar se combina el banco incluido con las preguntas guardadas localmente:
   una importación anterior vacía no oculta las preguntas recién incorporadas.
+  Para IDs del paquete prevalece la versión incluida, evitando que una copia
+  antigua restaure claves o avisos ya corregidos; las preguntas locales con otros
+  IDs se conservan y validan normalmente.
 
 ### Reimportar el paquete BricoHams
 
@@ -153,7 +171,11 @@ npm run import-bricohams -- "C:\ruta\BricoHams_banco_preguntas"
 El conversor valida claves, opciones, avisos y referencias de figuras; rechaza
 SVG activos o con recursos externos. Genera el banco y el informe de importación,
 y copia los SVG sin modificarlos. No descarga contenido de Internet.
-No sustituye una revisión técnica o normativa del material.
+Aplica las decisiones explícitas de [`scripts/spain-review.mjs`](scripts/spain-review.mjs)
+y genera la trazabilidad en [`src/data/spain-import-report.json`](src/data/spain-import-report.json).
+La huella SHA-256 del JSON original impide aplicar estas decisiones automáticamente
+a otro paquete: una versión diferente obliga a revisar y actualizar las decisiones.
+No sustituye una revisión completa del material ni una certificación oficial.
 
 ### Importación local en la aplicación
 
@@ -175,6 +197,7 @@ El archivo debe ser una lista de objetos con estos campos:
 | `explanation` | Opcional: objeto con `es` obligatorio y `en` opcional, ambos no vacíos si se proporcionan |
 | `reviewReason` | Opcional: motivo no vacío de revisión pendiente; excluye la pregunta de los simulacros |
 | `note` | Opcional: nota del autor del banco; se muestra después de corregir o revelar |
+| `validation` | Opcional: `{ date: "AAAA-MM-DD", sources: [{ label, url }], rationale, corrected: boolean }`; referencias HTTPS y textos no vacíos. Incompatible con `reviewReason`. Es trazabilidad educativa, no certificación oficial |
 
 Se omiten duplicadas por **parte + enunciado + figura del enunciado + respuesta
 correcta**, incluida su figura si la hay, normalizando mayúsculas y espacios,
@@ -183,7 +206,9 @@ No se borran acentos, cifras ni unidades para evitar fusionar preguntas diferent
 El mismo enunciado con las mismas alternativas pero claves diferentes produce
 un error explícito, al igual que reutilizar un identificador para preguntas distintas.
 Las variantes con alternativas diferentes no se consideran automáticamente contradictorias.
-Una duplicada nunca elimina un aviso de revisión ya existente.
+Una duplicada nunca elimina un aviso de revisión ya existente. Si aporta una duda
+a una pregunta contrastada, se retira su estado de contraste para evitar mostrar
+simultáneamente «validada» y «pendiente».
 Las explicaciones de España se mostrarán al corregir o revelar la respuesta,
 no durante la prueba. Si no vienen en el banco se indica que están pendientes;
 no se aplican automáticamente normas FCC a las preguntas españolas.

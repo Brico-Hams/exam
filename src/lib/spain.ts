@@ -3,6 +3,12 @@ import { shuffle, type Rng } from './exam'
 export type SpainPart = 'technical' | 'regulations'
 export type SpainMode = 'practice' | 'flashcards' | 'exam'
 export interface SpainFigure { figure: string; figureAlt: string }
+export interface SpainValidation {
+  date: string
+  sources: { label: string; url: string }[]
+  rationale: string
+  corrected: boolean
+}
 
 export interface SpainQuestion {
   id: string
@@ -19,6 +25,7 @@ export interface SpainQuestion {
   explanation?: { es: string; en?: string }
   reviewReason?: string
   note?: string
+  validation?: SpainValidation
 }
 
 export const SPAIN_RULES = { questions: 30, passing: 15, seconds: 45 * 60 }
@@ -83,6 +90,24 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
         ...(row.explanation.en !== undefined ? { en: text(row.explanation.en, 'explanation.en') } : {}),
       }
     }
+    let validation: SpainValidation | undefined
+    if (row.validation !== undefined) {
+      const value = row.validation
+      if (!isRecord(value)) return error('validation debe ser un objeto.')
+      const date = text(value.date, 'validation.date')
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(Date.parse(date)) ||
+        new Date(date).toISOString().slice(0, 10) !== date) return error('fecha de validación incorrecta.')
+      if (typeof value.corrected !== 'boolean') return error('validation.corrected debe ser booleano.')
+      if (!Array.isArray(value.sources) || value.sources.length === 0) return error('faltan referencias de validación.')
+      const sources = value.sources.map((source: unknown) => {
+        if (!isRecord(source)) return error('referencia de validación incorrecta.')
+        const url = text(source.url, 'validation.sources.url')
+        if (!URL.canParse(url) || new URL(url).protocol !== 'https:') return error('la referencia debe ser una URL HTTPS.')
+        return { label: text(source.label, 'validation.sources.label'), url }
+      })
+      if (row.reviewReason !== undefined) return error('una pregunta pendiente no puede declararse validada.')
+      validation = { date, sources, rationale: text(value.rationale, 'validation.rationale'), corrected: value.corrected }
+    }
     const q: SpainQuestion = {
       id: text(row.id, 'id'), part, topic: text(row.topic, 'topic'),
       question: text(row.question, 'question'), answers, correct,
@@ -93,6 +118,7 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
       ...(row.figure !== undefined ? parseFigure(row) : {}),
       ...(row.reviewReason !== undefined ? { reviewReason: text(row.reviewReason, 'reviewReason') } : {}),
       ...(row.note !== undefined ? { note: text(row.note, 'note') } : {}),
+      ...(validation ? { validation } : {}),
     }
     if (new Set(q.answers.map((_, i) => answerIdentity(q, i))).size !== 4) error('las cuatro opciones deben ser distintas.')
     const stem = JSON.stringify([q.part, normalized(q.question), q.figure ?? ''])
@@ -105,7 +131,10 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
     const retained = seen.get(key)
     if (retained) {
       // Una duplicada nunca debe borrar una advertencia de revisión.
-      if (q.reviewReason && !retained.reviewReason) retained.reviewReason = q.reviewReason
+      if (q.reviewReason && !retained.reviewReason) {
+        retained.reviewReason = q.reviewReason
+        delete retained.validation
+      }
       duplicates++
       continue
     }
@@ -118,9 +147,14 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
 }
 
 export function mergeSpainQuestions(bundled: unknown, saved: unknown): SpainQuestion[] {
+  const current = parseSpainQuestions(bundled).questions
+  const ids = new Set(current.map((q) => q.id))
+  if (!Array.isArray(saved)) throw new Error('El banco guardado debe ser una lista JSON de preguntas.')
+  // El ID del paquete identifica su revisión vigente, no una copia local antigua.
+  const additions = saved.filter((row: unknown) => !isRecord(row) || typeof row.id !== 'string' || !ids.has(row.id))
   return parseSpainQuestions([
-    ...parseSpainQuestions(bundled).questions,
-    ...parseSpainQuestions(saved).questions,
+    ...current,
+    ...parseSpainQuestions(additions).questions,
   ]).questions
 }
 

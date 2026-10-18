@@ -1,12 +1,19 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createHash } from 'node:crypto'
+import { applySpainReview, pendingReason, reviewDate, reviewedIds, reviewedSourceSha256 } from './spain-review.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const directory = process.argv[2]
 if (!directory) throw new Error('Uso: npm run import-bricohams -- "C:\\ruta\\BricoHams_banco_preguntas"')
 const base = resolve(directory)
-const bank = JSON.parse(await readFile(join(base, 'preguntas_bricohams.json'), 'utf8'))
+const sourceBytes = await readFile(join(base, 'preguntas_bricohams.json'))
+const sourceSha256 = createHash('sha256').update(sourceBytes).digest('hex')
+if (sourceSha256 !== reviewedSourceSha256) {
+  throw new Error('El banco no coincide con el archivo contrastado. Revisar las decisiones y su huella antes de aplicar correcciones a otra versión.')
+}
+const bank = JSON.parse(sourceBytes.toString('utf8'))
 if (!bank.meta || !Array.isArray(bank.preguntas) || !Array.isArray(bank.bloques)) {
   throw new Error('Formato BricoHams incorrecto.')
 }
@@ -36,6 +43,8 @@ async function figureFor(source, alt) {
 const questions = []
 const seen = new Map(), variants = new Map(), ids = new Set()
 const duplicates = []
+const validations = []
+const pending = []
 for (const row of bank.preguntas) {
   required(row.id, 'id')
   if (ids.has(row.id)) throw new Error(`Identificador repetido: ${row.id}`)
@@ -70,6 +79,12 @@ for (const row of bank.preguntas) {
     ...(row.revisar !== undefined ? { reviewReason: required(row.revisar, 'revisar') } : {}),
     ...(row.nota !== undefined ? { note: required(row.nota, 'nota') } : {}),
   }
+  const validation = applySpainReview(q)
+  if (validation) validations.push(validation)
+  else if (q.reviewReason) {
+    q.reviewReason = pendingReason(q)
+    pending.push({ id: q.id, reason: q.reviewReason })
+  }
   const stem = JSON.stringify([part, normalize(q.question), q.figure ?? ''])
   const identity = (i) => JSON.stringify([normalize(q.answers[i]), q.answerFigures?.[i]?.figure ?? ''])
   const variant = JSON.stringify([stem, q.answers.map((_, i) => identity(i)).sort()])
@@ -78,20 +93,36 @@ for (const row of bank.preguntas) {
   const key = JSON.stringify([stem, identity(q.correct)])
   const retained = seen.get(key)
   if (retained) {
-    if (q.reviewReason && !retained.reviewReason) retained.reviewReason = q.reviewReason
+    if (q.reviewReason && !retained.reviewReason) {
+      retained.reviewReason = q.reviewReason
+      delete retained.validation
+    }
     duplicates.push({ id: q.id, retainedId: retained.id, original: row })
   } else {
     seen.set(key, q)
     questions.push(q)
   }
 }
+if (reviewedIds.some((id) => !validations.some((item) => item.id === id))) {
+  throw new Error('Hay decisiones de revisión sin pregunta de origen.')
+}
 const report = {
   title: bank.meta.titulo, source: bank.meta.fuente, version: bank.meta.version,
   license: bank.meta.licencia, licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
-  changes: 'Conversión del formato, rutas locales de ilustraciones y deduplicación. Textos, explicaciones, claves y SVG suministrados sin alteraciones.',
+  changes: 'Conversión, deduplicación y correcciones documentadas de enunciados, alternativas, claves y explicaciones. Revisión selectiva con referencias, conservando originales en el informe. SVG y notas suministrados sin alteraciones.',
   inputCount: bank.preguntas.length, importedCount: questions.length,
   duplicateCount: duplicates.length, figureCount: figures.size,
   reviewCount: questions.filter((q) => q.reviewReason).length,
+  validation: {
+    date: reviewDate, sourceSha256,
+    originallyFlagged: validations.filter((item) => item.previouslyFlagged).length + pending.length,
+    cleared: validations.filter((item) => item.previouslyFlagged).length,
+    validated: validations.length,
+    corrected: validations.filter((item) => item.corrected).length,
+    answerCorrections: validations.filter((item) => item.answerChanged).length,
+    decisions: validations,
+    pending,
+  },
   parts: Object.fromEntries(Object.values(parts).map((part) => [part, {
     total: questions.filter((q) => q.part === part).length,
     examEligible: questions.filter((q) => q.part === part && !q.reviewReason).length,
@@ -106,4 +137,4 @@ for (const { svg, filename } of figures.values()) {
 }
 await writeFile(join(root, 'src', 'data', 'spain.json'), `${JSON.stringify(questions, null, 2)}\n`, 'utf8')
 await writeFile(join(root, 'src', 'data', 'spain-import-report.json'), `${JSON.stringify(report, null, 2)}\n`, 'utf8')
-console.log(JSON.stringify({ ...report, figures: undefined, duplicates }, null, 2))
+console.log(JSON.stringify({ ...report, validation: { ...report.validation, decisions: undefined, pending: undefined }, figures: undefined, duplicates }, null, 2))

@@ -54,6 +54,15 @@ function SpainExplanation({ q }: { q: SpainQuestion }) {
       <p lang="en">Explanation pending inclusion with the authorized question bank.</p>
     </>}
     {q.note && <p><strong>Nota del banco:</strong> {q.note}</p>}
+    {q.validation && <section aria-label="Contraste de respuesta">
+      <p><strong>Respuesta contrastada · {q.validation.date}</strong>
+        {q.validation.corrected ? ' · Contenido corregido o precisado respecto al paquete original.' : ''}</p>
+      <p>{q.validation.rationale}</p>
+      <ul>{q.validation.sources.map((source) => <li key={source.url}>
+        <a href={source.url} target="_blank" rel="noreferrer">{source.label}</a>
+      </li>)}</ul>
+      <p className="muted">Contraste educativo con las referencias indicadas; no es una certificación oficial ni garantiza cambios normativos posteriores.</p>
+    </section>}
     <p>Fuente / Source: {q.source}</p>
   </details>
 }
@@ -217,6 +226,7 @@ export function SpainPage() {
         <h2>Banco BricoHams</h2>
         <p>{bankInfo.importedCount} preguntas con explicación en español · {bankInfo.figureCount} ilustraciones SVG · {bankInfo.duplicateCount} duplicada omitida.</p>
         <p>{bankInfo.reviewCount} preguntas del paquete están marcadas para comprobar su vigencia normativa. Se mantienen en práctica y flashcards con aviso, pero no se utilizan para calificar simulacros. El resto tampoco constituye un banco oficial certificado.</p>
+        <p>Revisión del {bankInfo.validation.date}: se ha retirado la marca de {bankInfo.validation.cleared} preguntas tras contrastarlas; {bankInfo.validation.corrected} preguntas se han corregido o precisado, incluida una relacionada sin marca previa. Las referencias se muestran al revelar o corregir cada respuesta contrastada.</p>
         <p className="muted">Las explicaciones en inglés no vienen en este paquete; su traducción está pendiente. Se conservan las notas y correcciones del autor del banco.</p>
       </section>
       <section className="card">

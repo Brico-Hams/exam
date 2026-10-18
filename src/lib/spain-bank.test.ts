@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest'
 import bank from '../data/spain.json'
 import info from '../data/spain-import-report.json'
 import { seededRng } from './exam'
-import { generateSpainExam, parseSpainQuestions, SPAIN_PARTS } from './spain'
+import { generateSpainExam, mergeSpainQuestions, parseSpainQuestions, SPAIN_PARTS } from './spain'
 
 const parsed = parseSpainQuestions(bank)
 
@@ -25,15 +25,15 @@ describe('Banco BricoHams suministrado', () => {
     expect(info.license).toBe('CC BY-SA 4.0 · BricoHams')
     expect(parsed.questions.every((q) => q.explanation?.es.trim())).toBe(true)
     expect(parsed.questions.every((q) => q.source.includes('BricoHams · CC BY-SA 4.0'))).toBe(true)
-    expect(parsed.questions.filter((q) => q.reviewReason)).toHaveLength(206)
+    expect(parsed.questions.filter((q) => q.reviewReason)).toHaveLength(46)
     expect(parsed.questions.filter((q) => q.note)).toHaveLength(16)
     expect(parsed.questions.find((q) => q.id === 'bh-e011')?.note).toContain('orden técnicamente correcto')
     expect(parsed.questions.find((q) => q.id === 'bh-e001')?.explanation?.es).toContain('R = V / I')
   })
   it('tiene las dos partes y excluye revisiones al simular sin aplicar los filtros de estudio', () => {
     expect(info.parts).toEqual({
-      technical: { total: 578, examEligible: 575 },
-      regulations: { total: 516, examEligible: 313 },
+      technical: { total: 578, examEligible: 578 },
+      regulations: { total: 516, examEligible: 470 },
     })
     for (const part of SPAIN_PARTS) {
       expect(parsed.questions.filter((q) => q.part === part)).toHaveLength(info.parts[part].total)
@@ -49,6 +49,72 @@ describe('Banco BricoHams suministrado', () => {
       }
     }
   })
+  it('retira marcas únicamente con evidencia y conserva el alcance y los originales de la revisión', () => {
+      expect(info.validation.originallyFlagged).toBe(206)
+      expect(info.validation.cleared).toBe(160)
+      expect(info.validation.validated).toBe(161)
+      expect(info.validation.corrected).toBe(84)
+      expect(info.validation.decisions).toHaveLength(161)
+      expect(parsed.questions.filter((q) => q.validation)).toHaveLength(161)
+      expect(info.validation.cleared + info.reviewCount).toBe(206)
+      expect(info.validation.pending).toHaveLength(46)
+      for (const decision of info.validation.decisions) {
+        const q = parsed.questions.find((q) => q.id === decision.id)!
+        expect(q.reviewReason).toBeUndefined()
+        expect(q.validation).toEqual({
+          date: info.validation.date, corrected: decision.corrected,
+          sources: decision.sources, rationale: decision.rationale,
+        })
+        expect(q.validation?.sources.length).toBeGreaterThan(0)
+        expect(q.note).toBe(decision.original.note)
+        expect(decision.previouslyFlagged).toBe(Boolean(decision.original.reviewReason))
+        expect(decision.corrected).toBe(JSON.stringify([
+          q.question, q.answers, q.correct, q.explanation,
+        ]) !== JSON.stringify([
+          decision.original.question, decision.original.answers, decision.original.correct, decision.original.explanation,
+        ]))
+        expect(decision.answerChanged).toBe(q.answers[q.correct] !== decision.original.answers[decision.original.correct])
+      }
+      for (const pending of info.validation.pending) {
+        const q = parsed.questions.find((q) => q.id === pending.id)!
+        expect(q.reviewReason).toBe(pending.reason)
+        expect(q.validation).toBeUndefined()
+      }
+      expect(info.validation.answerCorrections).toBe(info.validation.decisions.filter((d) => d.answerChanged).length)
+    })
+    it.each([
+      ['bh-r010', '50 W'], ['bh-r268', '50 W'], ['bh-r119', '6 dBd'],
+      ['bh-r189', 'Quince días naturales consecutivos'], ['bh-r114', 'Grave'],
+      ['bh-r059', 'Muy grave'], ['bh-r135', 'Leve'], ['bh-r117', '2.000.000 €'],
+      ['bh-r266', 'Tras resultar apto en ambas partes de la prueba'],
+    ])('corrige la clave de %s y elimina la advertencia con referencia', (id, answer) => {
+      const q = parsed.questions.find((q) => q.id === id)!
+      expect(q.answers[q.correct]).toBe(answer)
+      expect(q.reviewReason).toBeUndefined()
+      expect(q.validation?.corrected).toBe(true)
+    })
+    it('no confunde una precisión con una afirmación normativa universal', () => {
+      const get = (id: string) => parsed.questions.find((q) => q.id === id)!
+      expect(get('bh-r013').question).toContain('inicial')
+      expect(get('bh-r202').explanation?.es).toContain('ampliación')
+      expect(get('bh-r027').question).toContain('antes de aplicar')
+      expect(get('bh-r094').answers[get('bh-r094').correct]).toContain('no superior')
+      expect(get('bh-r131').explanation?.es).toContain('No es un máximo absoluto')
+      expect(get('bh-r068').explanation?.es).toContain('eliminó')
+      expect(get('bh-r225').answers[get('bh-r225').correct]).toContain('Ya no')
+      expect(get('bh-r463').answers).not.toContain('DDD')
+      expect(get('bh-e390').question).toContain('constantes')
+      expect(get('bh-e078').answers[get('bh-e078').correct]).toContain('50 mW')
+      expect(get('bh-r507').question).toContain('sin cambiar su ubicación')
+      expect(get('bh-r444').answers[get('bh-r444').correct]).toContain('licencia de estación fija')
+      expect(get('bh-r444').answers[get('bh-r444').correct]).not.toContain('autorización')
+    })
+    it('actualiza copias locales antiguas sin resucitar avisos o claves desfasadas', () => {
+      const old = info.validation.decisions.map((decision) => decision.original)
+      const merged = mergeSpainQuestions(bank, old)
+      expect(merged).toEqual(parsed.questions)
+      expect(merged.filter((q) => q.reviewReason)).toHaveLength(46)
+    })
   it('conserva los 73 SVG suministrados como archivos locales estáticos sin referencias perdidas', () => {
     const references = new Set(parsed.questions.flatMap((q) => [
       ...(q.figure ? [q.figure] : []),
