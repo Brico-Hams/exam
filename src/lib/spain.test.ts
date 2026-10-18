@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { seededRng } from './exam'
-import { generateSpainExam, parseSpainQuestions, scoreSpainExam, SPAIN_RULES, type SpainQuestion } from './spain'
+import { generateSpainExam, mergeSpainQuestions, parseSpainQuestions, scoreSpainExam, shuffleSpainAnswers, SPAIN_RULES, type SpainQuestion } from './spain'
 
 const question = (i: number, part: SpainQuestion['part'] = 'technical'): SpainQuestion => ({
   id: `ES-${part}-${i}`, part, topic: 'Prueba de software',
@@ -42,11 +42,63 @@ describe('Banco de España', () => {
     const q = { ...question(0), figure: 'figures/spain/circuit.svg', figureAlt: 'Circuito propio' }
     expect(parseSpainQuestions([q]).questions).toEqual([q])
   })
-  it('conserva explicaciones bilingües y rechaza explicaciones incompletas', () => {
+  it('admite explicaciones ES y ES/EN sin inventar traducciones ausentes', () => {
     const q = { ...question(0), explanation: { es: 'Explicación propia.', en: 'Original explanation.' } }
     expect(parseSpainQuestions([q]).questions[0].explanation).toEqual(q.explanation)
-    expect(() => parseSpainQuestions([{ ...q, explanation: { es: 'Solo español' } }])).toThrow('explanation.en')
+    expect(parseSpainQuestions([{ ...q, explanation: { es: 'Solo español' } }]).questions[0].explanation).toEqual({ es: 'Solo español' })
+    expect(() => parseSpainQuestions([{ ...q, explanation: { es: '', en: 'English' } }])).toThrow('explanation.es')
+    expect(() => parseSpainQuestions([{ ...q, explanation: { es: 'Texto', en: '' } }])).toThrow('explanation.en')
     expect(() => parseSpainQuestions([{ ...q, explanation: 'Texto' }])).toThrow()
+  })
+  it('conserva avisos y notas y valida sus tipos', () => {
+    const q = { ...question(0), reviewReason: 'Verificar normativa', note: 'Corrección del banco' }
+    expect(parseSpainQuestions([q]).questions).toEqual([q])
+    expect(() => parseSpainQuestions([{ ...q, reviewReason: false }])).toThrow('reviewReason')
+    expect(() => parseSpainQuestions([{ ...q, note: '' }])).toThrow('note')
+    expect(() => parseSpainQuestions([{ ...q, answersFixed: 'sí' }])).toThrow('answersFixed')
+    expect(parseSpainQuestions([question(0), q]).questions[0].reviewReason).toBe(q.reviewReason)
+  })
+  it('compara el contexto de las figuras y las alternativas al detectar duplicadas y conflictos', () => {
+    const a = { ...question(0), figure: 'figures/spain/a.svg', figureAlt: 'Primer esquema' }
+    const b = { ...a, id: 'b', figure: 'figures/spain/b.svg' }
+    expect(parseSpainQuestions([a, b]).questions).toHaveLength(2)
+    const variant = { ...question(0), id: 'variant', answers: ['Cinco', 'Seis', 'Siete', 'Ocho'] }
+    expect(parseSpainQuestions([question(0), variant]).questions).toHaveLength(2)
+  })
+  it('valida y conserva las cuatro ilustraciones de alternativas', () => {
+    const answerFigures = Array.from({ length: 4 }, (_, i) => ({
+      figure: `figures/spain/choice-${i}.svg`, figureAlt: `Esquema ${i + 1}`,
+    }))
+    const q = { ...question(0), answerFigures, answersFixed: true }
+    expect(parseSpainQuestions([q]).questions).toEqual([q])
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [] }])).toThrow()
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [null, null, null, 'image'] }])).toThrow()
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [
+      { figure: 'https://external/a.svg', figureAlt: 'A' }, null, null, null,
+    ] }])).toThrow('local')
+    expect(() => parseSpainQuestions([{ ...q, answerFigures: [
+      { figure: 'figures/spain/a.svg' }, null, null, null,
+    ] }])).toThrow('figureAlt')
+    const reordered = { ...q, id: 'another', answers: ['Dos', 'Uno', 'Tres', 'Cuatro'], correct: 1,
+      answerFigures: [answerFigures[1], answerFigures[0], answerFigures[2], answerFigures[3]] }
+    expect(parseSpainQuestions([q, reordered]).duplicates).toBe(1)
+  })
+  it('combina el banco incluido con importaciones previas sin ocultarlo con una lista vacía', () => {
+    expect(mergeSpainQuestions([question(0)], [])).toEqual([question(0)])
+    expect(mergeSpainQuestions([question(0)], [question(1)])).toHaveLength(2)
+    expect(mergeSpainQuestions([question(0)], [question(0)])).toEqual([question(0)])
+    expect(() => mergeSpainQuestions([question(0)], {})).toThrow()
+  })
+  it('mezcla las opciones de texto sin alterar la clave ni el banco original', () => {
+    const q = question(0)
+    const mixed = shuffleSpainAnswers(q, () => 0)
+    expect(mixed.answers).toEqual(['Dos', 'Tres', 'Cuatro', 'Uno'])
+    expect(mixed.correct).toBe(3)
+    expect(mixed.answers[mixed.correct]).toBe(q.answers[q.correct])
+    expect(q.answers).toEqual(['Uno', 'Dos', 'Tres', 'Cuatro'])
+    expect(shuffleSpainAnswers({ ...q, answersFixed: true }, () => 0).answers).toEqual(q.answers)
+    const graphical = { ...q, answerFigures: [{ figure: 'figures/spain/a.svg', figureAlt: 'A' }, null, null, null] }
+    expect(shuffleSpainAnswers(graphical, () => 0)).toBe(graphical)
   })
 })
 
@@ -61,6 +113,16 @@ describe('Simulaciones de España', () => {
   it('no permite simular con menos de 30 preguntas por parte', () => {
     expect(() => generateSpainExam(pool.slice(0, 29), 'technical')).toThrow()
     expect(() => generateSpainExam(pool, 'regulations')).toThrow()
+  })
+  it('excluye todas las preguntas pendientes de revisión de los simulacros', () => {
+    const mixed = pool.map((q, i) => i < 10 ? { ...q, reviewReason: 'Comprobar vigencia' } : q)
+    const exam = generateSpainExam(mixed, 'technical', seededRng(9))
+    expect(exam).toHaveLength(30)
+    expect(exam.every((q) => !q.reviewReason)).toBe(true)
+    expect(() => generateSpainExam(mixed.slice(0, 39), 'technical')).toThrow('sin revisión pendiente')
+    for (const q of exam) {
+      expect(q.answers[q.correct]).toBe(pool.find((original) => original.id === q.id)?.answers[0])
+    }
   })
   it('aprueba con exactamente 15, suspende con 14, sin penalizaciones', () => {
     const exam = pool.slice(0, 30)

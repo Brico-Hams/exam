@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="265.536pt" height="265.536pt" viewBox="0 0 265.536 265.536" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-18T03:31:00.614340</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 265.536 
+L 265.536 265.536 
+L 265.536 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 132.768 230.3424 
+L 132.768 144.9648 
+" clip-path="url(#peae63d9da7)" style="fill: none; stroke: #1b2a4a; stroke-width: 5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 132.768 144.9648 
+L 132.768 38.2428 
+" clip-path="url(#peae63d9da7)" style="fill: none; stroke: #a80048; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 132.768 144.9648 
+L 44.3412 224.244 
+" clip-path="url(#peae63d9da7)" style="fill: none; stroke: #1b2a4a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 132.768 144.9648 
+L 90.0792 230.3424 
+" clip-path="url(#peae63d9da7)" style="fill: none; stroke: #1b2a4a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 132.768 144.9648 
+L 175.4568 230.3424 
+" clip-path="url(#peae63d9da7)" style="fill: none; stroke: #1b2a4a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 132.768 144.9648 
+L 221.1948 224.244 
+" clip-path="url(#peae63d9da7)" style="fill: none; stroke: #1b2a4a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2a4a" x="164.7846" y="193.221042" transform="rotate(-0 164.7846 193.221042)">Mástil</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b2a4a" x="164.7846" y="92.417091" transform="rotate(-0 164.7846 92.417091)">Antena</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b2a4a" x="132.768" y="243.352842" transform="rotate(-0 132.768 243.352842)">Radiales</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="peae63d9da7">
+   <rect x="10.8" y="10.8" width="243.936" height="243.936"/>
+  </clipPath>
+ </defs>
+</svg>

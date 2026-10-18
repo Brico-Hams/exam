@@ -4,7 +4,7 @@
 
 Aplicación multiplataforma (**Web + Android**) para preparar los tres exámenes de licencia de
 radioaficionado de EE. UU., en **español e inglés**, y el examen de España
-(módulo preparado, pendiente de incorporar las preguntas autorizadas).
+(banco BricoHams con preguntas, explicaciones e ilustraciones en español).
 
 | Nivel | Elemento | Vigencia del banco | Preguntas | Aprueba con |
 |---|---|---|---|---|
@@ -106,15 +106,56 @@ Acceso desde la portada o `/#/spain`. Módulo independiente de los niveles FCC:
   Al agotarse el tiempo se entrega automáticamente la parte actual. Los intentos
   y sus resultados duran durante la sesión; recargar la página abandona el intento.
 - Práctica con corrección inmediata y flashcards, filtrables por temas.
-- Las simulaciones toman 30 preguntas aleatorias distintas de todo el banco de
-  cada parte; los filtros de estudio no afectan al examen.
-- El banco se entrega vacío: **pendiente de las preguntas autorizadas del autor**.
-  No contiene preguntas copiadas de asociaciones ni un supuesto banco oficial.
+- Las simulaciones toman 30 preguntas aleatorias distintas del banco de cada parte,
+  excluyendo las marcadas para revisión; los filtros de estudio no afectan al examen.
+- **Banco BricoHams, versión 2026-10-18**, aportado por el usuario: de 1.095
+  registros se incorporan **1.094 preguntas únicas** (578 de electricidad y
+  radioelectricidad y 516 de reglamentación). Se omite `bh-r421`, duplicada de
+  `bh-r188` por enunciado y respuesta correcta. El registro omitido se conserva
+  en [`src/data/spain-import-report.json`](src/data/spain-import-report.json).
+- **73 ilustraciones SVG** incluidas sin alteraciones, con rutas locales para
+  funcionar en web y Android sin conexión. Los esquemas del enunciado y las
+  alternativas gráficas pueden ampliarse y se muestran también al revisar.
+- Cada pregunta incluye la **explicación en español del paquete**. Se conservan
+  las 16 notas del banco, incluidas sus correcciones. Las explicaciones en inglés
+  no vienen en el archivo y se muestran como pendientes, sin traducciones ficticias.
+- Las **206 preguntas marcadas para revisión normativa** (3 técnicas y 203 de
+  reglamentación) están disponibles en práctica y flashcards con un aviso, pero
+  quedan fuera de los simulacros. Quedan 575 técnicas y 313 de reglamentación
+  disponibles para simular. La ausencia de marca no certifica la corrección o
+  vigencia de las demás; este material no es un banco oficial.
+- Se mezclan las alternativas de texto al iniciar cada sesión para evitar el
+  sesgo del archivo, que coloca casi todas las claves primero. La respuesta
+  correcta se recalcula y el banco original no cambia. Las siete preguntas
+  gráficas con opciones fijas mantienen su orden y sus letras.
+- Preguntas, explicaciones e ilustraciones: **BricoHams · CC BY-SA 4.0**,
+  según la licencia indicada en el paquete. Se conserva la atribución y se
+  distribuyen las adaptaciones de ese material bajo la misma licencia.
+  [Aviso y enlaces al texto legal](public/figures/spain/LICENSE-BricoHams.txt).
+  La autoría de la aplicación sigue siendo **Anatol EA5KAO**.
 - Importación JSON desde la pantalla de España, con confirmación de permiso,
   validación y almacenamiento local. Los datos se añaden al banco existente;
   una importación inválida no modifica el banco. No se envían a ningún servidor.
   El almacenamiento local puede perderse al borrar los datos del navegador:
   conserva tus archivos originales.
+- Al arrancar se combina el banco incluido con las preguntas guardadas localmente:
+  una importación anterior vacía no oculta las preguntas recién incorporadas.
+
+### Reimportar el paquete BricoHams
+
+Extrae el ZIP original y pasa al conversor la carpeta que contiene
+`preguntas_bricohams.json` e `ilustraciones`:
+
+```powershell
+npm run import-bricohams -- "C:\ruta\BricoHams_banco_preguntas"
+```
+
+El conversor valida claves, opciones, avisos y referencias de figuras; rechaza
+SVG activos o con recursos externos. Genera el banco y el informe de importación,
+y copia los SVG sin modificarlos. No descarga contenido de Internet.
+No sustituye una revisión técnica o normativa del material.
+
+### Importación local en la aplicación
 
 El archivo debe ser una lista de objetos con estos campos:
 
@@ -129,13 +170,20 @@ El archivo debe ser una lista de objetos con estos campos:
 | `source` | Procedencia y referencia del contenido autorizado |
 | `figure` | Opcional: `figures/spain/nombre.svg` (también PNG o WebP) |
 | `figureAlt` | Descripción accesible, obligatoria si hay figura |
-| `explanation` | Opcional: objeto con textos propios `es` y `en`; ambos obligatorios si se incluye |
+| `answerFigures` | Opcional: cuatro posiciones, `null` o `{ "figure": "figures/spain/opcion.svg", "figureAlt": "Descripción" }` |
+| `answersFixed` | Opcional: booleano para conservar el orden. Las opciones con figuras siempre lo conservan |
+| `explanation` | Opcional: objeto con `es` obligatorio y `en` opcional, ambos no vacíos si se proporcionan |
+| `reviewReason` | Opcional: motivo no vacío de revisión pendiente; excluye la pregunta de los simulacros |
+| `note` | Opcional: nota del autor del banco; se muestra después de corregir o revelar |
 
-Se omiten duplicadas por **parte + enunciado + texto de respuesta correcta**,
-normalizando mayúsculas y espacios, aunque las opciones estén reordenadas.
+Se omiten duplicadas por **parte + enunciado + figura del enunciado + respuesta
+correcta**, incluida su figura si la hay, normalizando mayúsculas y espacios,
+aunque las opciones estén reordenadas.
 No se borran acentos, cifras ni unidades para evitar fusionar preguntas diferentes.
-Las respuestas correctas contradictorias y los identificadores reutilizados para
-preguntas distintas generan un error explícito.
+El mismo enunciado con las mismas alternativas pero claves diferentes produce
+un error explícito, al igual que reutilizar un identificador para preguntas distintas.
+Las variantes con alternativas diferentes no se consideran automáticamente contradictorias.
+Una duplicada nunca elimina un aviso de revisión ya existente.
 Las explicaciones de España se mostrarán al corregir o revelar la respuesta,
 no durante la prueba. Si no vienen en el banco se indica que están pendientes;
 no se aplican automáticamente normas FCC a las preguntas españolas.
@@ -144,8 +192,8 @@ Para distribuir el banco en web y Android, incorpora los objetos autorizados a
 [`src/data/spain.json`](src/data/spain.json), coloca las ilustraciones propias en
 `public/figures/spain/` y vuelve a compilar/sincronizar. La importación del navegador
 solo carga texto y referencias: **no sube imágenes**. Las imágenes deben estar ya
-incluidas en la aplicación. No se incluyen ilustraciones de terceros ni dibujos
-de relleno mientras se desconozcan las preguntas.
+incluidas en la aplicación. Las ilustraciones BricoHams incluidas conservan la
+atribución y licencia del paquete suministrado.
 
 Reglas de referencia: [Resolución de 3 de junio de 2014, BOE-A-2014-6461](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6461).
 La simulación es una ayuda educativa, no certifica la vigencia de las preguntas ni

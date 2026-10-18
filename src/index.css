@@ -33,7 +33,9 @@
 * { box-sizing: border-box; }
 body { margin: 0; padding-bottom: env(safe-area-inset-bottom); }
 .spain-answers { display: grid; gap: 0.6rem; margin: 1rem 0; }
-.spain-answers .btn { text-align: left; white-space: normal; }
+.spain-answers .btn { text-align: left; white-space: normal; width: 100%; }
+.spain-answers .small { display: inline-block; margin: 0.3rem 0; }
+.spain-warning { border-left: 4px solid #b97b12; padding: 0.7rem 1rem; }
 .spain-topic { display: inline-flex; align-items: center; gap: 0.3rem; margin: 0.4rem; }
 .spain-figure { max-width: 100%; max-height: 400px; object-fit: contain; }
 a { color: var(--primary); }

@@ -17,6 +17,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "import-pools": "node scripts/import-pools.mjs",
+    "import-bricohams": "node scripts/import-bricohams.mjs",
     "android:sync": "npm run build && cap sync android",
     "android:open": "cap open android",
     "android:run": "npm run build && cap run android",

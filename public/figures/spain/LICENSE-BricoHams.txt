@@ -1,0 +1,24 @@
+Banco de preguntas e ilustraciones BricoHams
+Version suministrada: 2026-10-18
+
+Atribucion: BricoHams.
+Licencia indicada en el paquete del autor: Creative Commons
+Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+
+Resumen de la licencia:
+https://creativecommons.org/licenses/by-sa/4.0/
+Texto legal:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Esta atribucion se aplica a las preguntas, explicaciones e ilustraciones
+BricoHams distribuidas con la aplicacion; no cambia la autoria de la
+aplicacion, Anatol EA5KAO, ni la licencia de otros materiales.
+
+Adaptaciones realizadas: conversion al esquema de datos de la aplicacion,
+deduplicacion de una pregunta y cambio de rutas de las ilustraciones.
+Se mantienen los textos, las claves, las explicaciones, las notas y los
+avisos de revision del paquete. Los SVG se distribuyen sin alteraciones.
+Las adaptaciones del material BricoHams se comparten bajo CC BY-SA 4.0.
+
+Las preguntas son material educativo, no un banco oficial certificado.
+Las marcadas para revision requieren comprobar su vigencia normativa.

@@ -1,0 +1,337 @@
+{
+  "title": "Banco propio BricoHams · Examen de radioaficionado",
+  "source": "Preguntas e ilustraciones originales de BricoHams, redactadas a partir del temario del examen oficial. Las marcadas «revisar» dependen de normativa que debe comprobarse.",
+  "version": "2026-10-18",
+  "license": "CC BY-SA 4.0 · BricoHams",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "changes": "Conversión del formato, rutas locales de ilustraciones y deduplicación. Textos, explicaciones, claves y SVG suministrados sin alteraciones.",
+  "inputCount": 1095,
+  "importedCount": 1094,
+  "duplicateCount": 1,
+  "figureCount": 73,
+  "reviewCount": 206,
+  "parts": {
+    "technical": {
+      "total": 578,
+      "examEligible": 575
+    },
+    "regulations": {
+      "total": 516,
+      "examEligible": 313
+    }
+  },
+  "duplicates": [
+    {
+      "id": "bh-r421",
+      "retainedId": "bh-r188",
+      "original": {
+        "id": "bh-r421",
+        "bloque": "reglamentacion",
+        "tema": "Alfabeto ICAO",
+        "enunciado": "¿Qué palabra corresponde a la letra V?",
+        "opciones": [
+          "Victor",
+          "Vaca",
+          "Volta",
+          "Vigo"
+        ],
+        "respuesta": "Victor",
+        "explicacion": "V se deletrea Victor."
+      }
+    }
+  ],
+  "figures": [
+    {
+      "source": "ilustraciones/e012.svg",
+      "figure": "figures/spain/bh-e012.svg"
+    },
+    {
+      "source": "ilustraciones/e014.svg",
+      "figure": "figures/spain/bh-e014.svg"
+    },
+    {
+      "source": "ilustraciones/e021.svg",
+      "figure": "figures/spain/bh-e021.svg"
+    },
+    {
+      "source": "ilustraciones/e022.svg",
+      "figure": "figures/spain/bh-e022.svg"
+    },
+    {
+      "source": "ilustraciones/e023.svg",
+      "figure": "figures/spain/bh-e023.svg"
+    },
+    {
+      "source": "ilustraciones/e027.svg",
+      "figure": "figures/spain/bh-e027.svg"
+    },
+    {
+      "source": "ilustraciones/e028.svg",
+      "figure": "figures/spain/bh-e028.svg"
+    },
+    {
+      "source": "ilustraciones/e033.svg",
+      "figure": "figures/spain/bh-e033.svg"
+    },
+    {
+      "source": "ilustraciones/e034.svg",
+      "figure": "figures/spain/bh-e034.svg"
+    },
+    {
+      "source": "ilustraciones/e036.svg",
+      "figure": "figures/spain/bh-e036.svg"
+    },
+    {
+      "source": "ilustraciones/e041.svg",
+      "figure": "figures/spain/bh-e041.svg"
+    },
+    {
+      "source": "ilustraciones/e047.svg",
+      "figure": "figures/spain/bh-e047.svg"
+    },
+    {
+      "source": "ilustraciones/e049.svg",
+      "figure": "figures/spain/bh-e049.svg"
+    },
+    {
+      "source": "ilustraciones/e051.svg",
+      "figure": "figures/spain/bh-e051.svg"
+    },
+    {
+      "source": "ilustraciones/e059.svg",
+      "figure": "figures/spain/bh-e059.svg"
+    },
+    {
+      "source": "ilustraciones/e065.svg",
+      "figure": "figures/spain/bh-e065.svg"
+    },
+    {
+      "source": "ilustraciones/e067.svg",
+      "figure": "figures/spain/bh-e067.svg"
+    },
+    {
+      "source": "ilustraciones/e068.svg",
+      "figure": "figures/spain/bh-e068.svg"
+    },
+    {
+      "source": "ilustraciones/e079.svg",
+      "figure": "figures/spain/bh-e079.svg"
+    },
+    {
+      "source": "ilustraciones/e084.svg",
+      "figure": "figures/spain/bh-e084.svg"
+    },
+    {
+      "source": "ilustraciones/e109.svg",
+      "figure": "figures/spain/bh-e109.svg"
+    },
+    {
+      "source": "ilustraciones/e111.svg",
+      "figure": "figures/spain/bh-e111.svg"
+    },
+    {
+      "source": "ilustraciones/e116.svg",
+      "figure": "figures/spain/bh-e116.svg"
+    },
+    {
+      "source": "ilustraciones/e124.svg",
+      "figure": "figures/spain/bh-e124.svg"
+    },
+    {
+      "source": "ilustraciones/e132.svg",
+      "figure": "figures/spain/bh-e132.svg"
+    },
+    {
+      "source": "ilustraciones/e135.svg",
+      "figure": "figures/spain/bh-e135.svg"
+    },
+    {
+      "source": "ilustraciones/e143.svg",
+      "figure": "figures/spain/bh-e143.svg"
+    },
+    {
+      "source": "ilustraciones/e158.svg",
+      "figure": "figures/spain/bh-e158.svg"
+    },
+    {
+      "source": "ilustraciones/e167.svg",
+      "figure": "figures/spain/bh-e167.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-014.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-014.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-024.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-024.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-025_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-025_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-025_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-025_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-025_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-025_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-025_D.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-025_D.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-aa-027.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-aa-027.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ab-037.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ab-037.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-004_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-004_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-004_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-004_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-004_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-004_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-005.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-005.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-009.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-009.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-011.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-011.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-013.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-013.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-014.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-014.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-016.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-016.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-020.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-020.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-024.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-024.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-ag-028.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-ag-028.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-007_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-007_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-007_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-007_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-007_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-007_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-007_D.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-007_D.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-014_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-014_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-014_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-014_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-014_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-014_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-i-014_D.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-i-014_D.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-o-009_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-o-009_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-o-009_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-o-009_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-o-009_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-o-009_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-o-009_D.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-o-009_D.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-o-020.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-o-020.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-s-017_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-s-017_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-s-017_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-s-017_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-s-017_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-s-017_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-s-017_D.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-s-017_D.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-s-018.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-s-018.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-w-024.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-w-024.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-w-030_A.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-w-030_A.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-w-030_B.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-w-030_B.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-w-030_C.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-w-030_C.svg"
+    },
+    {
+      "source": "ilustraciones/fedi-ea/fedi-w-030_D.svg",
+      "figure": "figures/spain/bh-fedi-ea-fedi-w-030_D.svg"
+    },
+    {
+      "source": "ilustraciones/ure/ure-0486.svg",
+      "figure": "figures/spain/bh-ure-ure-0486.svg"
+    }
+  ]
+}
