@@ -13,12 +13,16 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:public": "tsc -b && vite build --mode public",
     "lint": "oxlint",
     "preview": "vite preview",
     "test": "vitest run",
     "import-pools": "node scripts/import-pools.mjs",
     "import-bricohams": "node scripts/import-bricohams.mjs",
     "android:sync": "npm run build && cap sync android",
+    "android:sync:public": "npm run build:public && cap sync android",
+    "android:apk": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\build-apk.ps1",
+    "load:test": "node scripts/load-test.mjs",
     "android:open": "cap open android",
     "android:run": "npm run build && cap run android",
     "import-glaarg": "node scripts/import-glaarg.mjs"

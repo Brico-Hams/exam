@@ -1,0 +1,50 @@
+name: Android debug APK
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.3'
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Check preinstalled Android SDK and accepted licenses
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "$env:ANDROID_HOME\licenses\android-sdk-license")) {
+            throw 'SDK license is not already accepted on this runner. No automatic acceptance.'
+          }
+          & "$env:ANDROID_HOME\cmdline-tools\latest\bin\sdkmanager.bat" "platforms;android-36" "build-tools;35.0.0" "platform-tools"
+          if ($LASTEXITCODE -ne 0) { throw 'Android SDK package installation failed.' }
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - name: Build and verify debug APK
+        shell: pwsh
+        run: .\scripts\build-apk.ps1
+      - name: Archive APK, checksum, provenance and web bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: EA5KAO-Android-debug-${{ github.sha }}
+          path: |
+            artifacts/android/
+            dist/
+          if-no-files-found: error
+          retention-days: 30

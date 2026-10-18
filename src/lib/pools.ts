@@ -19,7 +19,7 @@ const translations: Record<LevelId, Record<string, Translation>> = {
 }
 
 // Spanish banks from GLAARG PR, generated locally by `npm run import-glaarg` (optional, not committed).
-const glaargLoaders = import.meta.glob<Record<string, Translation>>('../data/i18n/es-glaarg/*.json', {
+const glaargLoaders = import.meta.env.MODE === 'public' ? {} : import.meta.glob<Record<string, Translation>>('../data/i18n/es-glaarg/*.json', {
   import: 'default',
   eager: true,
 })

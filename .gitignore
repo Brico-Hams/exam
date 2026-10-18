@@ -25,3 +25,9 @@ dist-ssr
 
 # Spanish banks from GLAARG PR (generated locally with npm run import-glaarg)
 src/data/i18n/es-glaarg/
+
+# Generated delivery files and private signing material
+artifacts/
+*.jks
+*.keystore
+keystore.properties
