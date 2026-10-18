@@ -2,7 +2,6 @@ import { shuffle, type Rng } from './exam'
 
 export type SpainPart = 'technical' | 'regulations'
 export type SpainMode = 'practice' | 'flashcards' | 'exam'
-export interface SpainFigure { figure: string; figureAlt: string }
 
 export interface SpainQuestion {
   id: string
@@ -12,10 +11,8 @@ export interface SpainQuestion {
   answers: string[]
   correct: number
   source: string
-  historical?: boolean
   figure?: string
   figureAlt?: string
-  answerFigures?: (SpainFigure | null)[]
   explanation?: { es: string; en: string }
 }
 
@@ -25,9 +22,6 @@ export const SPAIN_PARTS: SpainPart[] = ['technical', 'regulations']
 
 const normalized = (text: string) => text.normalize('NFC').toLocaleLowerCase('es')
   .trim().replace(/\s+/g, ' ')
-
-export const spainAnswerIdentity = (q: SpainQuestion, index: number) =>
-  JSON.stringify([normalized(q.answers[index]), q.answerFigures?.[index]?.figure ?? ''])
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
@@ -48,9 +42,6 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
       return value
     }
     const { part, correct } = row
-    if (row.historical !== undefined && typeof row.historical !== 'boolean') {
-      error('historical debe ser un booleano.')
-    }
     if (part !== 'technical' && part !== 'regulations') throw new Error(`Pregunta ${index + 1}: parte incorrecta.`)
     if (!Array.isArray(row.answers) || row.answers.length !== 4) {
       throw new Error(`Pregunta ${index + 1}: se necesitan cuatro respuestas.`)
@@ -58,24 +49,13 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
     const answers = row.answers.map((answer: unknown) => text(answer, 'respuesta'))
     if (typeof correct !== 'number' || !Number.isInteger(correct) ||
       correct < 0 || correct > 3) throw new Error(`Pregunta ${index + 1}: correct debe ser un índice de 0 a 3.`)
-    const parseFigure = (value: Record<string, unknown>): SpainFigure => {
-      if (typeof value.figure !== 'string' ||
-        !/^figures\/spain\/[a-zA-Z0-9_-]+\.(svg|png|webp)$/.test(value.figure)) {
-        error('figure debe apuntar a una ilustración local en figures/spain/.')
-      }
-      return { figure: text(value.figure, 'figure'), figureAlt: text(value.figureAlt, 'figureAlt') }
+    if (new Set(answers.map(normalized)).size !== 4) error('las cuatro opciones deben ser distintas.')
+    if (row.figure !== undefined && (typeof row.figure !== 'string' ||
+      !/^figures\/spain\/[a-zA-Z0-9_-]+\.(svg|png|webp)$/.test(row.figure))) {
+      error('figure debe apuntar a una ilustración local en figures/spain/.')
     }
-    let answerFigures: SpainQuestion['answerFigures']
-    if (row.answerFigures !== undefined) {
-      const values = row.answerFigures
-      if (!Array.isArray(values) || values.length !== 4) {
-        return error('answerFigures debe tener cuatro posiciones: ilustración o null.')
-      }
-      answerFigures = values.map((value: unknown) => {
-        if (value === null) return null
-        if (!isRecord(value)) return error('ilustración de respuesta incorrecta.')
-        return parseFigure(value)
-      })
+    if (row.figure !== undefined && (typeof row.figureAlt !== 'string' || !row.figureAlt.trim())) {
+      error('la ilustración necesita figureAlt.')
     }
     let explanation: SpainQuestion['explanation']
     if (row.explanation !== undefined) {
@@ -89,20 +69,16 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
       id: text(row.id, 'id'), part, topic: text(row.topic, 'topic'),
       question: text(row.question, 'question'), answers, correct,
       source: text(row.source, 'source'),
-      ...(typeof row.historical === 'boolean' ? { historical: row.historical } : {}),
-      ...(answerFigures ? { answerFigures } : {}),
       ...(explanation ? { explanation } : {}),
-      ...(row.figure !== undefined ? parseFigure(row) : {}),
+      ...(row.figure !== undefined ? {
+        figure: text(row.figure, 'figure'), figureAlt: text(row.figureAlt, 'figureAlt'),
+      } : {}),
     }
-    if (new Set(q.answers.map((_, i) => spainAnswerIdentity(q, i))).size !== 4) {
-      error('las cuatro opciones deben ser distintas.')
-    }
-    const stem = JSON.stringify([q.part, normalized(q.question), q.figure ?? ''])
-    const answer = spainAnswerIdentity(q, q.correct)
-    const variant = JSON.stringify([stem, q.answers.map((_, i) => spainAnswerIdentity(q, i)).sort()])
-    const previous = correctByQuestion.get(variant)
+    const stem = JSON.stringify([q.part, normalized(q.question)])
+    const answer = normalized(q.answers[q.correct])
+    const previous = correctByQuestion.get(stem)
     if (previous !== undefined && previous !== answer) error('respuesta correcta contradictoria para el mismo enunciado.')
-    correctByQuestion.set(variant, answer)
+    correctByQuestion.set(stem, answer)
     const key = JSON.stringify([stem, answer])
     if (seen.has(key)) {
       duplicates++
@@ -114,12 +90,6 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
     questions.push(q)
   }
   return { questions, duplicates }
-}
-
-export function mergeSpainQuestions(bundled: unknown, saved: unknown): SpainQuestion[] {
-  const base = parseSpainQuestions(bundled).questions
-  const local = parseSpainQuestions(saved).questions
-  return parseSpainQuestions([...base, ...local]).questions
 }
 
 export function generateSpainExam(questions: SpainQuestion[], part: SpainPart, rng?: Rng): SpainQuestion[] {

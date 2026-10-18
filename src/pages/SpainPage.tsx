@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import bundledQuestions from '../data/spain.json'
-import importReport from '../data/spain-import-report.json'
 import { useApp } from '../lib/app'
 import { LETTERS } from '../lib/exam'
 import {
-  generateSpainExam, mergeSpainQuestions, parseSpainQuestions, scoreSpainExam, SPAIN_PARTS,
+  generateSpainExam, parseSpainQuestions, scoreSpainExam, SPAIN_PARTS,
   SPAIN_RULES, SPAIN_STORAGE_KEY,
   type SpainMode, type SpainPart, type SpainQuestion,
 } from '../lib/spain'
@@ -21,20 +20,6 @@ interface Session {
   questions: SpainQuestion[][]
 }
 
-function SpainFigure({ figure, alt }: { figure: string; alt: string }) {
-  return <a href={`./${figure}`} target="_blank" rel="noreferrer" title="Abrir ilustración a tamaño completo">
-    <img className="spain-figure" src={`./${figure}`} alt={alt} />
-  </a>
-}
-
-function SpainAnswer({ q, index, zoom = false }: { q: SpainQuestion; index: number; zoom?: boolean }) {
-  const image = q.answerFigures?.[index]
-  return <>{LETTERS[index]}. {q.answers[index]}
-    {image && (zoom ? <SpainFigure figure={image.figure} alt={image.figureAlt} />
-      : <img className="spain-figure" src={`./${image.figure}`} alt={image.figureAlt} />)}
-  </>
-}
-
 function SpainExplanation({ q }: { q: SpainQuestion }) {
   return <details className="explanation" key={q.id}>
     <summary>Explicación / Explanation · ES / EN</summary>
@@ -42,8 +27,8 @@ function SpainExplanation({ q }: { q: SpainQuestion }) {
       <p lang="es">{q.explanation.es}</p>
       <p lang="en">{q.explanation.en}</p>
     </> : <>
-      <p lang="es">Este archivo contiene la clave de respuesta, pero no una explicación individual. Pendiente de elaboración y revisión.</p>
-      <p lang="en">This file provides the answer key, not an individual explanation. Authoring and review are pending.</p>
+      <p lang="es">Explicación pendiente de incorporar con el banco autorizado.</p>
+      <p lang="en">Explanation pending inclusion with the authorized question bank.</p>
     </>}
     <p>Fuente / Source: {q.source}</p>
   </details>
@@ -108,12 +93,8 @@ function SpainRound({ mode, part, questions, onFinish, onExit }: {
       <details><summary>Revisar respuestas</summary>
         {questions.map((item) => <div key={item.id}>
           <p><strong>{item.question}</strong></p>
-          {item.figure && <SpainFigure figure={item.figure} alt={item.figureAlt ?? ''} />}
-          <p>Tu respuesta: {answers[item.id] === undefined ? 'Sin responder' : LETTERS[answers[item.id]]}</p>
-          <p>Correcta: {LETTERS[item.correct]}</p>
-          {item.answers.map((_, i) => <div className={i === item.correct ? 'ok' : ''} key={i}>
-            <SpainAnswer q={item} index={i} zoom />
-          </div>)}
+          <p>Tu respuesta: {item.answers[answers[item.id]] ?? 'Sin responder'}</p>
+          <p>Correcta: {item.answers[item.correct]}</p>
           <SpainExplanation q={item} />
         </div>)}
       </details>
@@ -126,24 +107,20 @@ function SpainRound({ mode, part, questions, onFinish, onExit }: {
     {mode === 'exam' && <p role="timer">Tiempo: {Math.floor(seconds / 60)}:{String(seconds % 60).padStart(2, '0')} · Respondidas: {Object.keys(answers).length}/30</p>}
     <p className="muted">{q.topic} · {q.id}</p>
     <h3>{q.question}</h3>
-    {q.historical && <p className="historical-notice">Pregunta histórica: la clave original puede no reflejar la normativa o los criterios actuales.</p>}
-    {q.figure && <SpainFigure figure={q.figure} alt={q.figureAlt ?? ''} />}
+    {q.figure && <img className="spain-figure" src={`./${q.figure}`} alt={q.figureAlt} />}
     {mode === 'flashcards' ? <>
       <button className="btn" onClick={() => setRevealed((v) => !v)}>{revealed ? 'Ocultar respuesta' : 'Mostrar respuesta'}</button>
-      {revealed && <div className="ok"><SpainAnswer q={q} index={q.correct} zoom /></div>}
+      {revealed && <p className="ok">{LETTERS[q.correct]}. {q.answers[q.correct]}</p>}
     </> : <div className="spain-answers">
-      {q.answers.map((_, i) => <div key={i}><button className={`btn ${selected === i ? 'primary' : ''}`}
+      {q.answers.map((answer, i) => <button key={i} className={`btn ${selected === i ? 'primary' : ''}`}
         aria-pressed={selected === i} disabled={mode === 'practice' && selected !== undefined}
         onClick={() => {
           if (mode === 'exam' && Date.now() >= deadline) { setSeconds(0); return }
           setAnswers((s) => ({ ...s, [q.id]: i }))
-        }}><SpainAnswer q={q} index={i} /></button>
-        {q.answerFigures?.[i] && <a className="small" href={`./${q.answerFigures[i].figure}`}
-          target="_blank" rel="noreferrer">Ampliar figura {LETTERS[i]}</a>}
-      </div>)}
+        }}>{LETTERS[i]}. {answer}</button>)}
     </div>}
     {showAnswer && mode === 'practice' && <p role="status" className={selected === q.correct ? 'ok' : 'bad'}>
-      {selected === q.correct ? 'Correcto.' : 'Incorrecto.'} Respuesta: {LETTERS[q.correct]}. {q.answers[q.correct]}
+      {selected === q.correct ? 'Correcto.' : 'Incorrecto.'} Respuesta: {q.answers[q.correct]}
     </p>}
     {showAnswer && <SpainExplanation q={q} />}
     <p className="muted">Fuente: {q.source}</p>
@@ -165,7 +142,7 @@ export function SpainPage() {
   const [initial] = useState(() => {
     try {
       const saved = localStorage.getItem(SPAIN_STORAGE_KEY)
-      return { questions: mergeSpainQuestions(bundledQuestions, saved === null ? [] : JSON.parse(saved)), error: '' }
+      return { questions: parseSpainQuestions(saved === null ? bundledQuestions : JSON.parse(saved)).questions, error: '' }
     } catch (error) {
       return { questions: [], error: `No se pudo cargar el banco: ${error instanceof Error ? error.message : String(error)}` }
     }
@@ -177,16 +154,11 @@ export function SpainPage() {
   const [topics, setTopics] = useState<string[]>([])
   const [confirmedRights, setConfirmedRights] = useState(false)
   const [importing, setImporting] = useState(false)
-  const [historicalAcknowledged, setHistoricalAcknowledged] = useState(false)
-  const hasHistorical = questions.some((q) => q.historical)
   const allTopics = [...new Set(questions.map((q) => q.topic))].sort()
   const scope = questions.filter((q) => topics.length === 0 || topics.includes(q.topic))
   const start = (mode: SpainMode, parts: SpainPart[]) => {
     setError('')
     try {
-      if (mode === 'exam' && hasHistorical && !historicalAcknowledged) {
-        throw new Error('Confirma primero que entiendes las limitaciones del banco histórico.')
-      }
       const lists = parts.map((part) => mode === 'exam'
         ? generateSpainExam(questions, part)
         : scope.filter((q) => q.part === part))
@@ -201,26 +173,12 @@ export function SpainPage() {
     <p>Dos partes independientes · 30 preguntas y 45 minutos por parte · Apto con 15 aciertos en cada parte · Los errores no restan.</p>
     <p className="muted">Material de preparación, no banco oficial. Preguntas en español. Las simulaciones usan todo el banco de cada parte, sin filtros temáticos.</p>
     <p><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6461" target="_blank" rel="noreferrer">Procedimiento y criterios oficiales (BOE)</a></p>
-    {hasHistorical && <aside className="historical-notice">
-      <strong>Banco histórico FEDI-EA, no oficial vigente.</strong>
-      <p>Convocatorias de 2007–2011 y bloques antiguos sin fecha. Se conservan las claves del archivo aportado, no se certifica su corrección actual. Reglamentación, potencias, tasas y procedimientos pueden haber cambiado. No uses este material como única preparación ni como instrucciones de seguridad.</p>
-      {!session && <label><input type="checkbox" checked={historicalAcknowledged}
-        onChange={(e) => setHistoricalAcknowledged(e.target.checked)} /> Entiendo que las simulaciones usan material histórico no validado como vigente.</label>}
-    </aside>}
     {error && <p role="alert" className="bad">{error}</p>}
     {session ? <SpainSession session={session} onExit={() => setSession(null)} /> : <>
       {questions.length === 0 && <section className="card">
         <h2>Banco pendiente de incorporación</h2>
         <p>El módulo está preparado. Importa tus preguntas autorizadas para activar práctica y flashcards. Cada parte necesita al menos 30 preguntas distintas para simular el examen.</p>
       </section>}
-      <section className="card">
-        <h2>Banco incorporado</h2>
-        <p>{importReport.inputCount} registros aportados · {importReport.importedCount} preguntas incorporadas · {importReport.duplicateCount} duplicadas omitidas · {importReport.excludedCount} pendientes de revisión.</p>
-        <p>{importReport.originalFigures} ilustraciones SVG propias. No se incluyen los JPG de terceros.</p>
-        <details><summary>Entradas pendientes y motivos ({importReport.excludedCount})</summary>
-          <ul>{importReport.excluded.map((entry) => <li key={entry.id}><strong>{entry.id}</strong>: {entry.reason}</li>)}</ul>
-        </details>
-      </section>
       <section className="card">
         <h2>Temas de estudio</h2>
         <p>Sin temas marcados se estudia todo el banco. Este filtro solo afecta a práctica y flashcards.</p>
@@ -240,12 +198,12 @@ export function SpainPage() {
             <div className="toolbar">
               <button className="btn" disabled={!studyCount} onClick={() => start('practice', [part])}>Práctica</button>
               <button className="btn" disabled={!studyCount} onClick={() => start('flashcards', [part])}>Flashcards</button>
-              <button className="btn primary" disabled={count < 30 || (hasHistorical && !historicalAcknowledged)} onClick={() => start('exam', [part])}>Simular parte</button>
+              <button className="btn primary" disabled={count < 30} onClick={() => start('exam', [part])}>Simular parte</button>
             </div>
           </section>
         })}
       </div>
-      <button className="btn primary" disabled={(hasHistorical && !historicalAcknowledged) || SPAIN_PARTS.some((part) => questions.filter((q) => q.part === part).length < 30)}
+      <button className="btn primary" disabled={SPAIN_PARTS.some((part) => questions.filter((q) => q.part === part).length < 30)}
         onClick={() => start('exam', [...SPAIN_PARTS])}>Simular examen completo (dos partes)</button>
       <section className="card">
         <h2>Importar preguntas (JSON)</h2>
@@ -270,7 +228,7 @@ export function SpainPage() {
           }} /></p>
         {importing && <p role="status">Importando preguntas…</p>}
         {notice && <p role="status">{notice}</p>}
-        <p>Formato e instrucciones de ilustraciones en el README del proyecto. La importación de archivos es local: no descarga contenido de otros sitios.</p>
+        <p>Formato e instrucciones de ilustraciones en el README del proyecto. No se descarga ni se copia contenido de terceros.</p>
       </section>
     </>}
   </main>

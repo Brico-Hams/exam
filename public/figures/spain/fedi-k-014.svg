@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" role="img">
-<title>Esquema educativo original EA5KAO</title>
-<rect width="1000" height="340" fill="white"/>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#24639c"/></marker></defs>
-<g fill="none" stroke="#24639c" stroke-width="2.5" font-family="sans-serif"><path d="M90 270L920 270" /><path d="M90 270L90 25" /><path d="M220 270Q500 -180 780 270" stroke-dasharray="10 6"/><path d="M400 270Q500 -180 600 270" stroke-width="4"/><text x="580" y="145" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">A</text><text x="750" y="180" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">B</text><text x="500" y="300" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">455 kHz</text><text x="860" y="305" font-size="17" text-anchor="middle" fill="#142b45" stroke="none">Frecuencia</text></g>
-<text x="870" y="325" font-size="13" text-anchor="middle" fill="#142b45" stroke="none">EA5KAO · esquema propio</text></svg>

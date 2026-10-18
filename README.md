@@ -4,7 +4,7 @@
 
 Aplicación multiplataforma (**Web + Android**) para preparar los tres exámenes de licencia de
 radioaficionado de EE. UU., en **español e inglés**, y el examen de España
-(con material histórico FEDI-EA aportado por el usuario, en español).
+(módulo preparado, pendiente de incorporar las preguntas autorizadas).
 
 | Nivel | Elemento | Vigencia del banco | Preguntas | Aprueba con |
 |---|---|---|---|---|
@@ -108,47 +108,13 @@ Acceso desde la portada o `/#/spain`. Módulo independiente de los niveles FCC:
 - Práctica con corrección inmediata y flashcards, filtrables por temas.
 - Las simulaciones toman 30 preguntas aleatorias distintas de todo el banco de
   cada parte; los filtros de estudio no afectan al examen.
-- Incluye el archivo histórico FEDI-EA aportado por el usuario, deduplicado y con
-  procedencia por pregunta. Las convocatorias fechadas son de **2007–2011**; los
-  bloques A–D no indican fecha y mezclan materias, por lo que se clasifican por
-  pregunta. **La fecha del nombre de la carpeta no acredita vigencia normativa.**
-- De los **1.078 registros**, se incorporan **1.048 preguntas**: **613 técnicas**
-  y **435 de reglamentación**. Se omiten **27 duplicadas** y se apartan **3 entradas
-  malformadas** (`fedi-d-404`, `fedi-d-450`, `fedi-c-374`: opciones repetidas o vacías).
-- Las **69 imágenes originales** quedan representadas mediante **59 SVG propios**
-  y la transcripción textual de las fórmulas de tres preguntas. Los esquemas
-  equivalentes comparten ilustración; las seis preguntas con alternativas gráficas
-  conservan sus cuatro opciones y el orden original. Las figuras pueden ampliarse.
-- Se conservan las claves suministradas, sin presentarlas como respuestas
-  contrastadas con la legislación actual. El aviso aparece también al estudiar;
-  antes de simular se exige reconocer esta limitación. No debe utilizarse como
-  única preparación actual ni como instrucciones de seguridad.
-- Las ilustraciones distribuidas son SVG de nueva elaboración, no copias de los
-  JPG aportados. Las entradas incompletas o con figuras aún no verificadas quedan
-  fuera del estudio y de las simulaciones, con motivo explícito en pantalla y su
-  registro original conservado en
-  [`src/data/spain-import-report.json`](src/data/spain-import-report.json).
-- El informe registra el total aportado, preguntas incorporadas por parte,
-  duplicadas y entradas pendientes. Cada duplicada apunta al identificador
-  conservado. Ningún registro desaparece sin contabilizar.
+- El banco se entrega vacío: **pendiente de las preguntas autorizadas del autor**.
+  No contiene preguntas copiadas de asociaciones ni un supuesto banco oficial.
 - Importación JSON desde la pantalla de España, con confirmación de permiso,
   validación y almacenamiento local. Los datos se añaden al banco existente;
   una importación inválida no modifica el banco. No se envían a ningún servidor.
   El almacenamiento local puede perderse al borrar los datos del navegador:
   conserva tus archivos originales.
-- Al iniciar se combina el banco incluido con el guardado local: una importación
-  antigua (incluso vacía) ya no oculta las preguntas que incorpora la aplicación.
-
-Para repetir la conversión del archivo FEDI-EA suministrado, sin modificar el original:
-
-```powershell
-npm run import-spain -- "C:\ruta\FEDI-EA_preguntas_2026-10-18\preguntas.json"
-```
-
-El conversor genera el banco, el informe y los SVG originales de forma reproducible.
-No descarga preguntas ni imágenes de Internet. La atribución FEDI-EA identifica
-la procedencia del material aportado, no atribuye sus preguntas al autor de la
-aplicación ni afirma que sean un banco oficial vigente.
 
 El archivo debe ser una lista de objetos con estos campos:
 
@@ -163,19 +129,13 @@ El archivo debe ser una lista de objetos con estos campos:
 | `source` | Procedencia y referencia del contenido autorizado |
 | `figure` | Opcional: `figures/spain/nombre.svg` (también PNG o WebP) |
 | `figureAlt` | Descripción accesible, obligatoria si hay figura |
-| `answerFigures` | Opcional: cuatro posiciones, cada una `null` o `{ "figure": "figures/spain/opcion.svg", "figureAlt": "Descripción" }` |
-| `historical` | Opcional: `true` para material histórico no validado como vigente |
 | `explanation` | Opcional: objeto con textos propios `es` y `en`; ambos obligatorios si se incluye |
 
-Se omiten duplicadas por **parte + enunciado + figura del enunciado + respuesta correcta**,
-incluida la identidad de la figura de respuesta si existe, normalizando mayúsculas
-y espacios, aunque las opciones estén reordenadas.
+Se omiten duplicadas por **parte + enunciado + texto de respuesta correcta**,
+normalizando mayúsculas y espacios, aunque las opciones estén reordenadas.
 No se borran acentos, cifras ni unidades para evitar fusionar preguntas diferentes.
-El mismo enunciado con las mismas alternativas y claves correctas distintas es
-una contradicción: el importador local la rechaza y el conversor FEDI-EA aparta
-todas sus versiones para revisión. Un enunciado genérico con alternativas distintas
-puede tener otra respuesta correcta sin constituir una contradicción.
-Los identificadores reutilizados para preguntas distintas generan un error explícito.
+Las respuestas correctas contradictorias y los identificadores reutilizados para
+preguntas distintas generan un error explícito.
 Las explicaciones de España se mostrarán al corregir o revelar la respuesta,
 no durante la prueba. Si no vienen en el banco se indica que están pendientes;
 no se aplican automáticamente normas FCC a las preguntas españolas.
@@ -184,9 +144,8 @@ Para distribuir el banco en web y Android, incorpora los objetos autorizados a
 [`src/data/spain.json`](src/data/spain.json), coloca las ilustraciones propias en
 `public/figures/spain/` y vuelve a compilar/sincronizar. La importación del navegador
 solo carga texto y referencias: **no sube imágenes**. Las imágenes deben estar ya
-incluidas en la aplicación. Las figuras de enunciado y de alternativas se muestran
-en práctica, flashcards y revisión posterior; no se incluyen dibujos de relleno
-ni se inventan los valores de figuras aún no verificadas.
+incluidas en la aplicación. No se incluyen ilustraciones de terceros ni dibujos
+de relleno mientras se desconozcan las preguntas.
 
 Reglas de referencia: [Resolución de 3 de junio de 2014, BOE-A-2014-6461](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6461).
 La simulación es una ayuda educativa, no certifica la vigencia de las preguntas ni
