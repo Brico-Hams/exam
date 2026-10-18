@@ -15,6 +15,7 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 - [Índice bilingüe: arquitectura, requisitos, procesos, despliegue y carga](docs/README.md)
 - [Guía completa en español](docs/GUIA-TECNICA.es.md)
 - [Complete English guide](docs/TECHNICAL-GUIDE.en.md)
+- [Paquete web e instalación en WordPress / Web package and WordPress installation](docs/WORDPRESS.md)
 - [Compilación APK y resultados ES](docs/VALIDACION.es.md) /
   [APK build and results EN](docs/VALIDATION.en.md)
 
