@@ -1,4 +1,6 @@
 import type { Lang, Question } from './types'
+import { topicForGroup } from './explanation-topics'
+import { calculationExplanation } from './calculation-explanations'
 
 type Bilingual = Record<Lang, string>
 interface Principle {
@@ -243,6 +245,7 @@ export function regulationLinks(refs: string): { section: string; url: string }[
 }
 
 export function explanationFor(q: Question) {
-  const principle = principles.find((item) => item.match.test(`${q.question} ${q.answers[q.correct]}`))
-  return { specific: specific[q.id], principle, regulations: regulationLinks(q.refs) }
+  const principle = topicForGroup(q.id.slice(0, 3)) ??
+    principles.find((item) => item.match.test(q.question))
+  return { specific: specific[q.id] ?? calculationExplanation(q.id), principle, regulations: regulationLinks(q.refs) }
 }

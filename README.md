@@ -30,11 +30,15 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 - **Explicación y fundamentos ES/EN**: aparece después de responder en práctica,
   al revelar una flashcard, en la lista de respuestas correctas y tras entregar
   el examen (incluidas las preguntas acertadas). No revela respuestas durante el examen.
-  Incluye enlaces a las secciones del eCFR citadas en cada pregunta y guías originales
-  de principios físicos/técnicos. Las guías temáticas no sustituyen una explicación
-  individual: la interfaz identifica explícitamente los razonamientos individuales
-  pendientes. Hay ejemplos desarrollados de ley de Ohm, potencia, dB, valores RMS,
-  ancho de banda y normativa; no se afirma disponer de 1.431 soluciones redactadas.
+  Incluye enlaces a las secciones del eCFR citadas en cada pregunta y fundamentos
+  bilingües para **los 120 grupos y las 1.431 preguntas**. La asignación usa el grupo
+  del banco, no coincidencias ambiguas de palabras en las opciones de respuesta.
+  La interfaz distingue el fundamento compartido del grupo de una solución individual.
+  Hay además razonamientos desarrollados de ley de Ohm, potencia, dB, valores RMS,
+  unidades, transformadores, asociaciones de componentes, resonancia y fase.
+  Los cálculos nuevos se recalculan en las pruebas con la tolerancia del redondeo
+  de la opción. No se afirma disponer de 1.431 soluciones individuales paso a paso:
+  la cobertura completa se refiere a los fundamentos, no a esos desarrollos.
 - Progreso por subelemento: una pregunta cuenta como dominada tras 2 aciertos seguidos.
 - Interfaz en español/inglés y contenido en modo **inglés**, **español** o **bilingüe**.
 - Página de **referencias**: FCC, NCVEC, ARRL, KP4ARA, HamStudy, HamExam, K8DAA y GLAARG.

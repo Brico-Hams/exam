@@ -16,7 +16,7 @@ export function Explanation({ q }: { q: Question }) {
         <h4>{info.principle.title.es} — guía del tema</h4>
         <p>{info.principle.text.es}</p>
       </>}
-      {!info.specific && <p className="hint">La explicación individual de esta pregunta está pendiente de revisión. La respuesta y las referencias proceden del banco; la guía del tema no es una resolución paso a paso.</p>}
+      {!info.specific && <p className="hint">Fundamento compartido del grupo {q.id.slice(0, 3)}. Explica los conceptos aplicables, no es una resolución individual paso a paso. La respuesta y las referencias proceden del banco.</p>}
     </section>
     <section lang="en">
       <h3>English</h3>
@@ -26,7 +26,7 @@ export function Explanation({ q }: { q: Question }) {
         <h4>{info.principle.title.en} — topic guide</h4>
         <p>{info.principle.text.en}</p>
       </>}
-      {!info.specific && <p className="hint">The individual explanation for this question is pending review. The answer and references come from the pool; the topic guide is not a step-by-step solution.</p>}
+      {!info.specific && <p className="hint">Shared foundation for group {q.id.slice(0, 3)}. This explains the applicable concepts, not an individual step-by-step solution. The answer and references come from the pool.</p>}
     </section>
     {info.regulations.length > 0 && <div>
       <h3>{es ? 'Normativa federal citada por el banco' : 'Federal rules cited by the pool'}</h3>
