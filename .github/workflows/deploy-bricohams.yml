@@ -1,16 +1,15 @@
 name: Deploy to bricohams.org and bricohams.com
 
 # On every push to main that touches the app: test, build the public web and upload it to both
-# WordPress sites of the hosting account (see docs/WORDPRESS.md):
+# WordPress sites of the 1984 Hosting account over SFTP (see docs/WORDPRESS.md):
 #   https://bricohams.org/radio-examenes/             ← htdocs/radio-examenes
 #   https://bricohams.com/wp-content/radio-examenes/  ← bricohams.com/htdocs/wp-content/radio-examenes
 # Credentials live only in repository secrets (Settings → Secrets and variables → Actions):
-#   BRICOHAMS_FTP_HOST, BRICOHAMS_FTP_USER, BRICOHAMS_FTP_PASSWORD
-#   BRICOHAMS_FTP_PROTOCOL     sftp or ftps (default ftps)
-#   BRICOHAMS_SSH_KNOWN_HOSTS  sftp only: `ssh-keyscan HOST`, checked against the hosting panel
-# Without them the deploy is skipped with a warning. Each upload stops unless its WordPress root holds
-# wp-includes/, writes only inside the app folder, deletes nothing, and sends index.html last so it never
-# points at missing assets. Afterwards the live index.html must match the build.
+#   BRICOHAMS_SFTP_USER, BRICOHAMS_SFTP_PASSWORD
+# Without them the deploy is skipped with a warning. The server's public host key is pinned below, so a
+# different server is refused. Each upload stops unless its WordPress root holds wp-includes/, writes only
+# inside the app folder, deletes nothing, and sends index.html last so it never points at missing assets.
+# Afterwards the live index.html must match the build.
 
 on:
   push:
@@ -30,6 +29,10 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       SRC: dist
+      SFTP_HOST: ernie.shared.1984.is
+      SFTP_PORT: '2222'
+      # ssh-keyscan -p 2222 ernie.shared.1984.is (RSA SHA256:dOwYtoYzRLbe1khWJIRME3JuJj84I8G2ZdEnKvyXXco)
+      SFTP_KNOWN_HOST: '[ernie.shared.1984.is]:2222 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCQR32Xt/h8HrZqrVCCKSUH9MbCeGd1pMfttAnwf1wh5kstGrATh/XptqIGBwFFj2BE1aLAuJ46BSIq9ZddHcsiMflpHqsfLonRZXfJZeN5lOyWDj9Xz3ZVr9P3XRFgCCVtKfqcxzblXBPgTFO5RCtTvoApNB3FoX2AhaUJwkiqyuNTaUhUhaCOY14BaGP5VN4F9BY1KRuZYuXadRSjzFG1BdirmxTvJewmvC1pQhGlTmLtPqggAsDXqkWDIfpOVWPWmDoxZohD+JtlUl5azpAt1f0A31nxIE3Y/1eh0Hq30UZdafT0uo/Ms8tjOD8XSYkuyzdsHw3TaxP+Jcu/B40m+TxCRoSEB6o3bEGyPhk4TearhTJJeW3X3jzXw1NwsIMLgh8RJTZWENnmroV/bxt+FJJgwUewcv1IR308Lmrzx865kSRigXiu7wVkba5aSzytQesuhZcLjjA1iij+LvpNgs45KDHp4TYk+kpeS14068Gq6ON9Zo8Ojaj21Ff/FSk='
       # WordPress root | folder inside it | public URL of that folder
       TARGETS: |
         htdocs|radio-examenes|https://bricohams.org/radio-examenes
@@ -46,33 +49,23 @@ jobs:
       - run: npm run build:public
       - name: Upload and check each site
         env:
-          FTP_HOST: ${{ secrets.BRICOHAMS_FTP_HOST }}
-          FTP_USER: ${{ secrets.BRICOHAMS_FTP_USER }}
-          LFTP_PASSWORD: ${{ secrets.BRICOHAMS_FTP_PASSWORD }}
-          FTP_PROTOCOL: ${{ secrets.BRICOHAMS_FTP_PROTOCOL }}
-          KNOWN_HOSTS: ${{ secrets.BRICOHAMS_SSH_KNOWN_HOSTS }}
+          SFTP_USER: ${{ secrets.BRICOHAMS_SFTP_USER }}
+          LFTP_PASSWORD: ${{ secrets.BRICOHAMS_SFTP_PASSWORD }}
         run: |
           set -euo pipefail
-          if [ -z "$FTP_HOST" ] || [ -z "$FTP_USER" ] || [ -z "$LFTP_PASSWORD" ]; then
-            echo "::warning::Deploy skipped: add the BRICOHAMS_FTP_* repository secrets to publish on bricohams.org/.com"
+          if [ -z "$SFTP_USER" ] || [ -z "$LFTP_PASSWORD" ]; then
+            echo "::warning::Deploy skipped: add the BRICOHAMS_SFTP_USER and BRICOHAMS_SFTP_PASSWORD repository secrets"
             exit 0
           fi
           sudo apt-get -qq update && sudo apt-get -qq install -y lftp
-          case "${FTP_PROTOCOL:-ftps}" in
-            ftps) URL="ftp://$FTP_HOST"
-                  OPTS="set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate true;" ;;
-            sftp) [ -n "$KNOWN_HOSTS" ] || { echo "::error::sftp needs BRICOHAMS_SSH_KNOWN_HOSTS"; exit 1; }
-                  mkdir -p ~/.ssh && printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
-                  URL="sftp://$FTP_HOST"
-                  OPTS="set sftp:connect-program 'ssh -a -x -o StrictHostKeyChecking=yes';" ;;
-            *) echo "::error::BRICOHAMS_FTP_PROTOCOL must be ftps or sftp"; exit 1 ;;
-          esac
+          mkdir -p ~/.ssh && printf '%s\n' "$SFTP_KNOWN_HOST" > ~/.ssh/known_hosts
           want=$(sha256sum "$SRC/index.html" | cut -d' ' -f1)
           while IFS='|' read -r root dir live; do
             [ -n "$root" ] || continue
             echo "::group::$live"
-            lftp -c "set cmd:fail-exit yes; set net:max-retries 2; set net:timeout 30; $OPTS
-              open --env-password -u '$FTP_USER' '$URL';
+            lftp -c "set cmd:fail-exit yes; set net:max-retries 2; set net:timeout 30;
+              set sftp:connect-program 'ssh -a -x -o StrictHostKeyChecking=yes';
+              open --env-password -u '$SFTP_USER' 'sftp://$SFTP_HOST:$SFTP_PORT';
               cls -d '$root/wp-includes';
               mkdir -pf '$root/$dir';
               mirror --reverse --verbose --no-perms --exclude-glob index.html '$SRC' '$root/$dir';

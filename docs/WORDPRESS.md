@@ -47,13 +47,13 @@ Solo escribe dentro de esas carpetas, comprueba antes que la raíz es un
 WordPress (`wp-includes/`), no borra nada, sube `index.html` el último y
 termina comprobando que la página publicada coincide con el build.
 
-Credenciales: solo como *secrets* del repositorio (Settings → Secrets and
-variables → Actions), nunca en el código: `BRICOHAMS_FTP_HOST`,
-`BRICOHAMS_FTP_USER`, `BRICOHAMS_FTP_PASSWORD`, `BRICOHAMS_FTP_PROTOCOL`
-(`sftp` o `ftps`) y, con SFTP, `BRICOHAMS_SSH_KNOWN_HOSTS` (salida de
-`ssh-keyscan HOST`, comprobada con la huella del panel del hosting). Sin ellos el
-workflow avisa y no despliega. Los mismos secrets sirven para
-`bricohams-web-tools` (Misión Zorro).
+Conexión: SFTP de 1984 Hosting en `ernie.shared.1984.is`, puerto 2222. La clave
+pública del servidor va fijada en el workflow (RSA
+`SHA256:dOwYtoYzRLbe1khWJIRME3JuJj84I8G2ZdEnKvyXXco`), así que rechaza cualquier
+otro servidor. Credenciales: solo como *secrets* del repositorio (Settings →
+Secrets and variables → Actions), nunca en el código: `BRICOHAMS_SFTP_USER` y
+`BRICOHAMS_SFTP_PASSWORD`. Sin ellos el workflow avisa y no despliega. Los
+mismos secrets sirven para `bricohams-web-tools` (Misión Zorro).
 
 ### Instalar desde el panel del hosting o SFTP
 
