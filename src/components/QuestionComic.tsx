@@ -8,28 +8,67 @@ import { COMIC_TITLES, comicScene, FRANCHISE } from '../lib/comic-stories'
 const INK = '#27364b'
 type Scene = ReturnType<typeof comicScene>['id']
 
-// Shared beaver silhouette (400×520 design grid, see the DamWatts character sheets).
-function BeaverBody() {
+// Shared beaver (400×520 design grid, see the DamWatts character sheets). Accessories rely on these
+// anchors: head (200,175) r95, eyes y≈157, muzzle (200,217), neck y≈262–326, cheeks (125|275, 218).
+function BeaverBody({ arms = true }: { arms?: boolean }) {
   return <>
-    <ellipse cx="300" cy="410" rx="60" ry="100" transform="rotate(-30 300 410)" fill="#4a3020" />
-    <path d="M265 360L335 460M285 345L350 440" stroke="#3a2418" />
-    <ellipse cx="200" cy="360" rx="110" ry="125" fill="#8b5a2b" />
-    <ellipse cx="200" cy="385" rx="70" ry="88" fill="#c99a6b" />
-    <ellipse cx="150" cy="482" rx="40" ry="18" fill="#4a3020" />
-    <ellipse cx="250" cy="482" rx="40" ry="18" fill="#4a3020" />
-    <circle cx="125" cy="100" r="24" fill="#6b4420" /><circle cx="275" cy="100" r="24" fill="#6b4420" />
-    <circle cx="200" cy="175" r="95" fill="#8b5a2b" />
-    <ellipse cx="200" cy="217" rx="55" ry="40" fill="#c99a6b" />
+    <g transform="rotate(-30 300 410)">
+      <ellipse cx="300" cy="410" rx="60" ry="100" fill="#5a3520" />
+      <path d="M252 350H348M243 380H357M244 410H356M243 440H357M252 470H348M270 330V490M300 316V504M330 330V490" stroke="#3f2416" strokeWidth="4" />
+    </g>
+    <ellipse cx="200" cy="360" rx="110" ry="125" fill="#a5652e" />
+    <path d="M248 262Q312 300 306 380Q298 440 236 474Q284 420 284 368Q282 300 248 262Z" fill="#8a5224" stroke="none" />
+    <ellipse cx="200" cy="385" rx="70" ry="88" fill="#f4c98f" />
+    <ellipse cx="178" cy="350" rx="26" ry="40" fill="white" fillOpacity=".25" stroke="none" />
+    <path d="M168 330Q200 318 232 330M160 370Q200 356 240 370M164 410Q200 398 236 410" fill="none" stroke="#d9a669" strokeWidth="4" />
+    {arms && <BeaverArms />}
+    <Sneaker x={0} /><Sneaker x={100} />
+    <circle cx="125" cy="100" r="24" fill="#7d4a1f" /><circle cx="275" cy="100" r="24" fill="#7d4a1f" />
+    <circle cx="121" cy="95" r="10" fill="#f6a7a0" stroke="none" /><circle cx="279" cy="95" r="10" fill="#f6a7a0" stroke="none" />
+    <path d="M112 196L96 206L110 212L94 222L112 226M288 196L304 206L290 212L306 222L288 226" fill="#a5652e" />
+    <circle cx="200" cy="175" r="95" fill="#a5652e" />
+    <path d="M150 98Q200 78 250 98Q212 92 200 108Q188 92 150 98Z" fill="#bf7a3c" stroke="none" />
+    <ellipse cx="160" cy="118" rx="30" ry="15" transform="rotate(-25 160 118)" fill="white" fillOpacity=".22" stroke="none" />
+    <ellipse cx="200" cy="217" rx="55" ry="40" fill="#f4c98f" />
+    <ellipse cx="152" cy="214" rx="15" ry="9" fill="#ff8a8a" fillOpacity=".55" stroke="none" />
+    <ellipse cx="248" cy="214" rx="15" ry="9" fill="#ff8a8a" fillOpacity=".55" stroke="none" />
+    <path d="M168 214H140M170 224L142 232M232 214H260M230 224L258 232" strokeWidth="3" />
     <ellipse cx="200" cy="195" rx="18" ry="12" fill={INK} />
-    <rect x="186" y="227" width="28" height="30" rx="4" fill="white" />
-    <path d="M200 227V257" />
+    <ellipse cx="194" cy="191" rx="6" ry="3" fill="white" stroke="none" />
+    <path d="M200 207V218M180 220Q190 228 200 218Q210 228 220 220" fill="none" strokeWidth="5" />
+    <path d="M186 226H214V252Q214 258 208 258H192Q186 258 186 252Z" fill="#fffaf0" />
+    <path d="M200 226V258" strokeWidth="4" />
   </>
 }
 
+// Orange high-tops with a white sole and laces (left shoe; x shifts it to the right foot).
+function Sneaker({ x }: { x: number }) {
+  return <g transform={`translate(${x} 0)`}>
+    <path d="M108 488Q104 448 138 446H160Q196 450 198 488Z" fill="#f26b1d" />
+    <path d="M170 488Q172 466 196 470Q200 480 198 488Z" fill="white" />
+    <path d="M128 478Q150 466 174 474" fill="none" stroke="white" strokeWidth="6" />
+    <path d="M136 456H156M138 464H154" strokeWidth="3" />
+    <rect x="100" y="484" width="102" height="16" rx="8" fill="white" />
+  </g>
+}
+
+// Front paws with claws; TRANSI draws its own folded arms instead.
+function BeaverArms() {
+  return <>
+    <ellipse cx="112" cy="345" rx="26" ry="50" transform="rotate(18 112 345)" fill="#8a5224" />
+    <ellipse cx="288" cy="345" rx="26" ry="50" transform="rotate(-18 288 345)" fill="#8a5224" />
+    {[[86, 390], [96, 396], [106, 390], [294, 390], [304, 396], [314, 390]].map(([x, y]) =>
+      <circle key={x} cx={x} cy={y} r="7" fill="#8a5224" strokeWidth="4" />)}
+  </>
+}
+
+// Big glossy cartoon eyes: dark iris, a large and a small catchlight.
 function Eyes({ y = 157 }: { y?: number }) {
   return <>
-    <circle cx="165" cy={y} r="13" fill={INK} /><circle cx="235" cy={y} r="13" fill={INK} />
-    <circle cx="169" cy={y - 4} r="4" fill="white" stroke="none" /><circle cx="239" cy={y - 4} r="4" fill="white" stroke="none" />
+    <ellipse cx="165" cy={y} rx="20" ry="24" fill="white" /><ellipse cx="235" cy={y} rx="20" ry="24" fill="white" />
+    <circle cx="168" cy={y + 3} r="15" fill="#2a1a10" stroke="none" /><circle cx="232" cy={y + 3} r="15" fill="#2a1a10" stroke="none" />
+    <circle cx="173" cy={y - 3} r="6" fill="white" stroke="none" /><circle cx="237" cy={y - 3} r="6" fill="white" stroke="none" />
+    <circle cx="163" cy={y + 10} r="3" fill="white" stroke="none" /><circle cx="227" cy={y + 10} r="3" fill="white" stroke="none" />
   </>
 }
 
@@ -88,11 +127,11 @@ function Condi() {
 // Transistor: sunglasses, C-B-E badge and a tail raised like a gate barrier.
 function Transi() {
   return <>
-    <path d="M300 420L338 160" stroke="#4a3020" strokeWidth="40" />
-    <BeaverBody />
+    <path d="M300 420L338 160" stroke="#5a3520" strokeWidth="40" />
+    <BeaverBody arms={false} />
     <rect x="160" y="380" width="80" height="44" rx="8" fill="#fbf6ee" />
     <text x="200" y="411" textAnchor="middle" fontSize="24" fontWeight="700" fill={INK} stroke="none">C B E</text>
-    <rect x="80" y="300" width="240" height="56" rx="28" fill="#8b5a2b" />
+    <rect x="80" y="300" width="240" height="56" rx="28" fill="#a5652e" />
     <rect x="122" y="132" width="66" height="40" rx="14" fill={INK} /><rect x="212" y="132" width="66" height="40" rx="14" fill={INK} />
     <path d="M188 146H212" />
   </>

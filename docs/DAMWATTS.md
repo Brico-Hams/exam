@@ -43,6 +43,26 @@ Todos son dibujos vectoriales originales, sin recursos de terceros.
   así que el dibujo no debe sugerirlo.
 - Las patillas de Chip se dibujan sin relleno (antes podían verse triángulos negros).
 
+### Estilo de los castores (octubre de 2026)
+
+Rediseño más detallado y pensado para un público joven, igual en la aplicación
+(`BeaverBody`, `BeaverArms`, `Sneaker` y `Eyes` en `QuestionComic.tsx`) y en
+la historieta «¡Misión Zorro!» (`#beaver`, `#paws`, `#sneaker` y `#eyes` en
+`bricohams-web-tools/mision-zorro/index.html`):
+
+- ojos grandes y brillantes con dos reflejos, colorete en las mejillas e interior
+  de las orejas rosa;
+- zapatillas deportivas naranjas con puntera blanca, franja y cordones;
+- pelaje más cálido con brillo en la cabeza y la barriga, sombreado lateral,
+  mechón en la frente, bigotes, hocico con boca y dientes con forma;
+- patas delanteras con deditos (TRANSI conserva sus brazos cruzados) y cola con
+  su trama de escamas.
+
+Se mantienen las coordenadas de anclaje de la cuadrícula de 400×520 (cabeza,
+ojos, hocico, cuello y mejillas), así que el pañuelo de Chomp, el casco y las
+gafas de RESI, las mejillas y la mochila de CONDI y las gafas de TRANSI encajan
+igual que antes.
+
 ## Lectura y alcance / Reading and scope
 
 - Práctica: responde y abre «Leer cómic». Flashcards: revela la respuesta primero.

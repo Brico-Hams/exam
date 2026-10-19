@@ -48,6 +48,6 @@ describe('DamWatts character artwork', () => {
   it('draws Chip as an integrated circuit and no guest in regulation scenes', () => {
     const html = renderToStaticMarkup(<ComicArt chip regulations scene="regulations" />)
     expect(html).toContain('#64d8ca')
-    expect(html).not.toContain('#8b5a2b')
+    expect(html).not.toContain('#a5652e')
   })
 })
