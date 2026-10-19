@@ -31,6 +31,30 @@ con commit y hashes de cada archivo, y copia de esta guía. El script verifica
 todos los archivos dentro del ZIP. No sobrescribe un paquete existente del mismo
 commit; consérvalo y usa otro nombre si necesitas archivarlo antes de recompilar.
 
+### Despliegue automático en cada push
+
+El workflow `.github/workflows/deploy-bricohams.yml` publica la app sin pasos
+manuales cada vez que se hace push a `main` con cambios en la aplicación (o al
+lanzarlo a mano desde Actions). Ejecuta tests, lint y el build público, y sube
+`dist/` a los dos WordPress del hosting:
+
+| Sitio | Carpeta en el hosting | URL |
+|---|---|---|
+| bricohams.org | `htdocs/radio-examenes` | https://bricohams.org/radio-examenes/ |
+| bricohams.com | `bricohams.com/htdocs/wp-content/radio-examenes` | https://bricohams.com/wp-content/radio-examenes/ |
+
+Solo escribe dentro de esas carpetas, comprueba antes que la raíz es un
+WordPress (`wp-includes/`), no borra nada, sube `index.html` el último y
+termina comprobando que la página publicada coincide con el build.
+
+Credenciales: solo como *secrets* del repositorio (Settings → Secrets and
+variables → Actions), nunca en el código: `BRICOHAMS_FTP_HOST`,
+`BRICOHAMS_FTP_USER`, `BRICOHAMS_FTP_PASSWORD`, `BRICOHAMS_FTP_PROTOCOL`
+(`sftp` o `ftps`) y, con SFTP, `BRICOHAMS_SSH_KNOWN_HOSTS` (salida de
+`ssh-keyscan HOST`, comprobada con la huella del panel del hosting). Sin ellos el
+workflow avisa y no despliega. Los mismos secrets sirven para
+`bricohams-web-tools` (Misión Zorro).
+
 ### Instalar desde el panel del hosting o SFTP
 
 1. Haz una copia de seguridad del sitio y anota la ruta pública real del dominio.
