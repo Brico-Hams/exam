@@ -1,6 +1,6 @@
 # 📻 EA5KAO Ham Exam Prep — España y EE. UU.
 
-**Autor: Anatol EA5KAO** · [github.com/anatolbricoham/exam](https://github.com/anatolbricoham/exam)
+**Autor: Anatol EA5KAO** · [github.com/Brico-Hams/exam](https://github.com/Brico-Hams/exam)
 
 Aplicación multiplataforma (**Web + Android**) para preparar los tres exámenes de licencia de
 radioaficionado de EE. UU., en **español e inglés**, y el examen de España
@@ -8,7 +8,7 @@ radioaficionado de EE. UU., en **español e inglés**, y el examen de España
 
 ## Documentación técnica / Technical documentation
 
-- [Descargar APK de pruebas / Download testing APK](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018)
+- [Descargar APK de pruebas / Download testing APK](https://github.com/Brico-Hams/exam/releases/tag/v1.0.0-debug.20261018)
   — debug, Android 7+, no probada en dispositivo / not device-tested.
   Esta APK corresponde al build `0b43ec7`, anterior al cómic /
   this APK is build `0b43ec7`, predating the comic.

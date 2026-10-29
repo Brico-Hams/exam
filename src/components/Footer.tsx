@@ -1,7 +1,7 @@
 import { useApp } from '../lib/app'
 
 export const AUTHOR = 'Anatol EA5KAO'
-export const REPO_URL = 'https://github.com/anatolbricoham/exam'
+export const REPO_URL = 'https://github.com/Brico-Hams/exam'
 const YEAR = new Date().getFullYear()
 
 export function Footer() {

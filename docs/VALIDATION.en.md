@@ -7,7 +7,7 @@
 ## 1. Provenance
 
 - Android build source: `0b43ec7025b6dc325588e02f6f933927776273ef`.
-- [Android GitHub Actions run](https://github.com/anatolbricoham/exam/actions/runs/39112076520).
+- [Android GitHub Actions run](https://github.com/Brico-Hams/exam/actions/runs/39112076520).
 - Public mode excludes optional GLAARG translations and uses application-owned ones.
 - Spanish review decisions from the previous commit are preserved.
 - [Complete HTTP measurements](results/load-local.json) include asset hashes,
@@ -91,8 +91,8 @@ assets; they do not mean the APK was installed or executed on a device.
 
 **Result: successful build and published prerelease.**
 
-- [Download debug APK](https://github.com/anatolbricoham/exam/releases/download/v1.0.0-debug.20261018/EA5KAO-Ham-Exam-1.0.0-debug.apk).
-- [Prerelease with checksum and provenance](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018).
+- [Download debug APK](https://github.com/Brico-Hams/exam/releases/download/v1.0.0-debug.20261018/EA5KAO-Ham-Exam-1.0.0-debug.apk).
+- [Prerelease with checksum and provenance](https://github.com/Brico-Hams/exam/releases/tag/v1.0.0-debug.20261018).
 - Size: **5,769,967 bytes**; Android 7+ (`minSdk=24`, `targetSdk=36`).
 - Package `com.hamexamprep.app`, Android version `1.0`, `versionCode=1`.
 - Built: `2026-10-18T08:46:16.7613489Z`.

@@ -15,11 +15,11 @@
   "localBuildLineEndingOnlyDifferences": ["index.html", "manifest.webmanifest"],
   "deviceTested": false,
   "releaseSigned": false,
-  "workflowRun": "https://github.com/anatolbricoham/exam/actions/runs/39112076520",
+  "workflowRun": "https://github.com/Brico-Hams/exam/actions/runs/39112076520",
   "workflowConclusion": "success",
   "actionsArtifactId": 12131220839,
-  "release": "https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018",
-  "download": "https://github.com/anatolbricoham/exam/releases/download/v1.0.0-debug.20261018/EA5KAO-Ham-Exam-1.0.0-debug.apk",
+  "release": "https://github.com/Brico-Hams/exam/releases/tag/v1.0.0-debug.20261018",
+  "download": "https://github.com/Brico-Hams/exam/releases/download/v1.0.0-debug.20261018/EA5KAO-Ham-Exam-1.0.0-debug.apk",
   "releaseAssetDigestVerified": true,
   "distribution": "Testing only. Debug-signed; not a Google Play release."
 }

@@ -151,7 +151,7 @@ verification on every Android version.
 ## 4. Initial setup
 
 ```powershell
-git clone https://github.com/anatolbricoham/exam.git
+git clone https://github.com/Brico-Hams/exam.git
 Set-Location exam
 node --version
 npm --version
@@ -199,7 +199,7 @@ npm run preview -- --host 127.0.0.1 --port 4183 --strictPort
 5. Only the deployment job receives `pages:write` and `id-token:write`.
 6. Approve the `github-pages` environment if protection rules require it.
 7. Use the actual workflow output URL, normally
-   `https://anatolbricoham.github.io/exam/`; do not assume it is live before checking.
+   `https://brico-hams.github.io/exam/`; do not assume it is live before checking.
 8. Open `/`, `/#/usa`, `/#/spain`, General and Extra; load a figure and a mock exam.
 9. Record deployed commit, URL, date and acceptance-test evidence.
 
@@ -250,7 +250,7 @@ Test scripts, styles and links before enforcing CSP; do not copy an untested pol
     the build recipe and documentation are versioned.
 
 For this delivery, the verified APK, checksum and `build-info.json` are also
-published in the [testing prerelease](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018),
+published in the [testing prerelease](https://github.com/Brico-Hams/exam/releases/tag/v1.0.0-debug.20261018),
 without the Actions 30-day expiry. Future builds only create the artifact;
 publishing another prerelease is a separate step. Private-repository access is
 required. See the [validation report](VALIDATION.en.md).

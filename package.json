@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "description": "FCC amateur radio exam prep (Technician, General, Extra) in Spanish and English — web + Android",
   "author": "Anatol EA5KAO",
-  "homepage": "https://github.com/anatolbricoham/exam",
+  "homepage": "https://github.com/Brico-Hams/exam",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anatolbricoham/exam.git"
+    "url": "https://github.com/Brico-Hams/exam.git"
   },
   "type": "module",
   "scripts": {

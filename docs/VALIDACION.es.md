@@ -7,7 +7,7 @@
 ## 1. Trazabilidad
 
 - Código de la compilación Android: `0b43ec7025b6dc325588e02f6f933927776273ef`.
-- [Ejecución Android en GitHub Actions](https://github.com/anatolbricoham/exam/actions/runs/39112076520).
+- [Ejecución Android en GitHub Actions](https://github.com/Brico-Hams/exam/actions/runs/39112076520).
 - Modo público: excluye traducciones GLAARG opcionales y usa las propias.
 - Las decisiones de revisión de España del commit anterior se conservan.
 - [Mediciones HTTP completas](results/load-local.json): incluyen huellas de los
@@ -92,8 +92,8 @@ manifest y assets; no equivale a instalar/ejecutar en un dispositivo.
 
 **Resultado: compilación correcta y prerelease publicada.**
 
-- [Descargar APK debug](https://github.com/anatolbricoham/exam/releases/download/v1.0.0-debug.20261018/EA5KAO-Ham-Exam-1.0.0-debug.apk).
-- [Prerelease con checksum y procedencia](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018).
+- [Descargar APK debug](https://github.com/Brico-Hams/exam/releases/download/v1.0.0-debug.20261018/EA5KAO-Ham-Exam-1.0.0-debug.apk).
+- [Prerelease con checksum y procedencia](https://github.com/Brico-Hams/exam/releases/tag/v1.0.0-debug.20261018).
 - Tamaño: **5.769.967 bytes**; Android 7+ (`minSdk=24`, `targetSdk=36`).
 - Paquete `com.hamexamprep.app`, versión Android `1.0`, `versionCode=1`.
 - Compilada: `2026-10-18T08:46:16.7613489Z`.

@@ -148,7 +148,7 @@ Compatibilidad declarada no equivale a prueba física en todas las versiones.
 ## 4. Preparación desde cero
 
 ```powershell
-git clone https://github.com/anatolbricoham/exam.git
+git clone https://github.com/Brico-Hams/exam.git
 Set-Location exam
 node --version
 npm --version
@@ -197,7 +197,7 @@ npm run preview -- --host 127.0.0.1 --port 4183 --strictPort
 5. Solo el job de despliegue tiene `pages:write` e `id-token:write`.
 6. Aprobar el entorno `github-pages` si tiene protección.
 7. Usar la URL real que devuelve el workflow; normalmente
-   `https://anatolbricoham.github.io/exam/`, pero no darla por activa antes de comprobarlo.
+   `https://brico-hams.github.io/exam/`, pero no darla por activa antes de comprobarlo.
 8. Abrir `/`, `/#/usa`, `/#/spain`, General y Extra; cargar una figura y un simulacro.
 9. Registrar commit desplegado, URL, fecha y prueba de aceptación.
 
@@ -248,7 +248,7 @@ scripts, estilos y enlaces antes de imponerla. No copiar una CSP sin validarla.
     Los APK no se versionan en Git; la receta y los documentos sí.
 
 Para esta entrega, la APK verificada, el checksum y `build-info.json` están además
-en la [prerelease de pruebas](https://github.com/anatolbricoham/exam/releases/tag/v1.0.0-debug.20261018),
+en la [prerelease de pruebas](https://github.com/Brico-Hams/exam/releases/tag/v1.0.0-debug.20261018),
 sin la caducidad de 30 días de Actions. Las compilaciones futuras solo generan
 el artefacto; publicar una nueva prerelease es un paso independiente. Hace falta
 acceso al repositorio privado. Véase el [informe de validación](VALIDACION.es.md).
