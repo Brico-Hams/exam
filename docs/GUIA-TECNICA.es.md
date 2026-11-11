@@ -41,7 +41,7 @@ flowchart TD
 | `src/App.tsx` | Contexto de estado y rutas `HashRouter`; un mismo árbol React en web y Android |
 | `src/pages/HomePage.tsx` | Selector de país y entrada USA |
 | `src/pages/LevelPage.tsx`, `StudyPage.tsx`, `PracticePage.tsx`, `ExamPage.tsx` | Selección y modos USA |
-| `src/pages/SpainPage.tsx` | Importación local, estudio y dos pruebas españolas independientes |
+| `src/pages/SpainPage.tsx` | Estudio y dos pruebas españolas independientes |
 | `src/lib/pools.ts` | Bancos USA y traducciones cargados de forma anticipada; caché de mezcla |
 | `src/lib/exam.ts`, `selection.ts` | Aleatoriedad, selección por grupo y calificación USA |
 | `src/lib/spain.ts` | Esquema, validación, deduplicación, mezcla por ID, opciones y exámenes España |
@@ -96,8 +96,7 @@ los últimos 50 exámenes USA.
 - `localStorage` es local al origen (esquema, host y puerto), perfil y dispositivo.
 - Web y Android no comparten automáticamente datos, ni tampoco dos dominios web.
 - Borrar datos del navegador, desinstalar o cambiar origen puede perder progreso.
-- El JSON importado español se guarda localmente; no carga imágenes nuevas.
-- Los errores de importación se muestran y una importación inválida no se guarda.
+- El banco español va incluido en la compilación; la interfaz no importa ni exporta preguntas.
 - Limitación existente: la persistencia de progreso USA captura errores de almacenamiento
   sin informar al alumno; no prometer que siempre se guardará ni un backup integrado.
 - No hay cifrado propio, autenticación ni almacenamiento apto para secretos.
@@ -352,9 +351,8 @@ La existencia de un keystore debug no autoriza a tratarlo como clave de producci
    claves contradictorias y IDs reutilizados provocan error.
 7. Revisar recuentos, pruebas, licencias y sincronización Android.
 
-Importación desde la pantalla española: confirmar derechos, seleccionar JSON,
-validar y guardar localmente. No es una subida al repositorio ni despliegue a
-otros alumnos. El esquema completo se documenta en el README raíz.
+La aplicación no permite importar preguntas: cualquier cambio del banco pasa por
+`src/data/spain.json` y una nueva compilación. El esquema se documenta en el README raíz.
 
 ## 8. Simulación de cargas de trabajo
 
@@ -452,7 +450,7 @@ Los resultados localhost no certifican número máximo de alumnos ni SLA.
 | Texto GLAARG aparece en entrega pública | Recompilar con `build:public`, revisar el artefacto; no publicar build local |
 | Progreso desaparece | Verificar mismo origen/perfil, permisos y cuota; no borrar datos como primera solución |
 | `INSTALL_FAILED_UPDATE_INCOMPATIBLE` | Certificado distinto; no desinstalar sin consentimiento y respaldo |
-| Importación española falla | Revisar cuatro opciones, clave 0..3, IDs, duplicadas y rutas locales permitidas |
+| `import-bricohams` falla | Revisar cuatro opciones, clave 0..3, IDs, duplicadas y rutas locales permitidas |
 | Prueba de carga falla con HTTP 200 | Comparar hash: puede ser fallback HTML o despliegue distinto |
 | Actions no publica artefacto | Ver paso fallido; un build web exitoso no implica una APK compilada |
 

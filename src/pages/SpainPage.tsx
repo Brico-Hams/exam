@@ -6,8 +6,7 @@ import bankInfo from '../data/spain-import-report.json'
 import { useApp } from '../lib/app'
 import { LETTERS } from '../lib/exam'
 import {
-  generateSpainExam, mergeSpainQuestions, parseSpainQuestions, scoreSpainExam, shuffleSpainAnswers, SPAIN_PARTS,
-  SPAIN_RULES, SPAIN_STORAGE_KEY,
+  generateSpainExam, parseSpainQuestions, scoreSpainExam, shuffleSpainAnswers, SPAIN_PARTS, SPAIN_RULES,
   type SpainMode, type SpainPart, type SpainQuestion,
 } from '../lib/spain'
 
@@ -186,19 +185,15 @@ export function SpainPage() {
   const { state } = useApp()
   const [initial] = useState(() => {
     try {
-      const saved = localStorage.getItem(SPAIN_STORAGE_KEY)
-      return { questions: mergeSpainQuestions(bundledQuestions, saved === null ? [] : JSON.parse(saved)), error: '' }
+      return { questions: parseSpainQuestions(bundledQuestions).questions, error: '' }
     } catch (error) {
       return { questions: [], error: `No se pudo cargar el banco: ${error instanceof Error ? error.message : String(error)}` }
     }
   })
-  const [questions, setQuestions] = useState<SpainQuestion[]>(initial.questions)
+  const questions = initial.questions
   const [error, setError] = useState(initial.error)
-  const [notice, setNotice] = useState('')
   const [session, setSession] = useState<Session | null>(null)
   const [topics, setTopics] = useState<string[]>([])
-  const [confirmedRights, setConfirmedRights] = useState(false)
-  const [importing, setImporting] = useState(false)
   const allTopics = [...new Set(questions.map((q) => q.topic))].sort()
   const scope = questions.filter((q) => topics.length === 0 || topics.includes(q.topic))
   const start = (mode: SpainMode, parts: SpainPart[]) => {
@@ -223,7 +218,7 @@ export function SpainPage() {
     {session ? <SpainSession session={session} onExit={() => setSession(null)} /> : <>
       {questions.length === 0 && <section className="card">
         <h2>Banco pendiente de incorporación</h2>
-        <p>El módulo está preparado. Importa tus preguntas autorizadas para activar práctica y flashcards. Cada parte necesita al menos 30 preguntas distintas para simular el examen.</p>
+        <p>No se pudo cargar el banco incluido en la aplicación. Cada parte necesita al menos 30 preguntas distintas para simular el examen.</p>
       </section>}
       <section className="card">
         <h2>Banco BricoHams</h2>
@@ -260,31 +255,6 @@ export function SpainPage() {
       </div>
       <button className="btn primary" disabled={SPAIN_PARTS.some((part) => questions.filter((q) => q.part === part && !q.reviewReason).length < 30)}
         onClick={() => start('exam', [...SPAIN_PARTS])}>Simular examen completo (dos partes)</button>
-      <section className="card">
-        <h2>Importar preguntas (JSON)</h2>
-        <p>La importación añade preguntas al banco local de este dispositivo. Elimina duplicadas por parte, enunciado y respuesta correcta, aunque cambie el orden de las opciones. Rechaza respuestas contradictorias e identificadores repetidos.</p>
-        <label><input type="checkbox" checked={confirmedRights} onChange={(e) => setConfirmedRights(e.target.checked)} /> Confirmo que tengo permiso para utilizar estas preguntas e ilustraciones.</label>
-        <p><input aria-label="Archivo de preguntas de España" type="file" accept=".json,application/json" disabled={!confirmedRights || importing}
-          onChange={async (e) => {
-            const file = e.target.files?.[0]
-            if (!file) return
-            e.target.value = ''
-            setImporting(true)
-            setError(''); setNotice('')
-            try {
-              const incoming = JSON.parse(await file.text())
-              if (!Array.isArray(incoming)) throw new Error('El archivo debe contener una lista JSON.')
-              const result = parseSpainQuestions([...questions, ...incoming])
-              localStorage.setItem(SPAIN_STORAGE_KEY, JSON.stringify(result.questions))
-              setQuestions(result.questions)
-              setNotice(`Banco guardado: ${result.questions.length} preguntas. Duplicadas omitidas: ${result.duplicates}.`)
-            } catch (err) { setError(`No se importó el archivo: ${err instanceof Error ? err.message : String(err)}`) }
-            finally { setImporting(false) }
-          }} /></p>
-        {importing && <p role="status">Importando preguntas…</p>}
-        {notice && <p role="status">{notice}</p>}
-        <p>Formato e instrucciones de ilustraciones en el README del proyecto. La importación es local y no descarga archivos de otros sitios.</p>
-      </section>
     </>}
   </main>
 }

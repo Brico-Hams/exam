@@ -42,7 +42,7 @@ flowchart TD
 | `src/App.tsx` | State context and `HashRouter`; the same React tree on web and Android |
 | `src/pages/HomePage.tsx` | Country selection and US entry |
 | `src/pages/LevelPage.tsx`, `StudyPage.tsx`, `PracticePage.tsx`, `ExamPage.tsx` | US selection and study modes |
-| `src/pages/SpainPage.tsx` | Local import, study and independent Spanish exam parts |
+| `src/pages/SpainPage.tsx` | Study and independent Spanish exam parts |
 | `src/lib/pools.ts` | Eagerly bundled US banks/translations and merged-pool cache |
 | `src/lib/exam.ts`, `selection.ts` | Randomization, group selection and US scoring |
 | `src/lib/spain.ts` | Schema, validation, deduplication, ID-based merge, choices and Spanish exams |
@@ -98,8 +98,7 @@ The **implemented** mastery rule is: last attempt correct and cumulative accurac
 - `localStorage` belongs to an origin (scheme, host, port), browser profile and device.
 - Web and Android, or two web domains, do not automatically share data.
 - Clearing browser data, uninstalling or changing origin can lose progress.
-- Imported Spanish JSON is stored locally; imports do not upload new images.
-- Import errors are displayed and invalid imports are not saved.
+- The Spanish bank is bundled at build time; the UI does not import or export questions.
 - Existing limitation: US progress persistence catches storage errors without
   notifying the learner. Do not promise guaranteed saving or integrated backup.
 - There is no application-level encryption or authentication; storage is not
@@ -353,9 +352,8 @@ An existing debug keystore is not an authorized production signing key.
    Contradictory keys and reused IDs raise explicit errors.
 7. Review counts, tests, licenses and Android synchronization.
 
-In-app Spanish import: confirm rights, choose JSON, validate and save locally.
-This does not upload to Git or deploy to other learners. The root README
-documents the complete import schema.
+The app has no in-app import: any bank change goes through `src/data/spain.json`
+and a new build. The root README documents the schema.
 
 ## 8. Workload simulation
 
@@ -453,7 +451,7 @@ certify maximum learners or an SLA.
 | GLAARG wording in public build | Rebuild with `build:public`; do not publish a local build |
 | Lost progress | Check origin/profile, permissions and storage quota; do not clear data first |
 | `INSTALL_FAILED_UPDATE_INCOMPATIBLE` | Certificate mismatch; no uninstall without consent and preservation |
-| Spanish import error | Check four choices, 0..3 key, IDs, duplicates and allowed local image paths |
+| `import-bricohams` error | Check four choices, 0..3 key, IDs, duplicates and allowed local image paths |
 | Load test fails despite HTTP 200 | Compare hashes: HTML fallback or different deployment |
 | No Actions artifact | Inspect failed step; successful web compilation alone is not a compiled APK |
 

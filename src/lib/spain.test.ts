@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { seededRng } from './exam'
-import { generateSpainExam, mergeSpainQuestions, parseSpainQuestions, scoreSpainExam, shuffleSpainAnswers, SPAIN_RULES, type SpainQuestion } from './spain'
+import { generateSpainExam, parseSpainQuestions, scoreSpainExam, shuffleSpainAnswers, SPAIN_RULES, type SpainQuestion } from './spain'
 
 const question = (i: number, part: SpainQuestion['part'] = 'technical'): SpainQuestion => ({
   id: `ES-${part}-${i}`, part, topic: 'Prueba de software',
@@ -100,20 +100,6 @@ describe('Banco de España', () => {
     const reordered = { ...q, id: 'another', answers: ['Dos', 'Uno', 'Tres', 'Cuatro'], correct: 1,
       answerFigures: [answerFigures[1], answerFigures[0], answerFigures[2], answerFigures[3]] }
     expect(parseSpainQuestions([q, reordered]).duplicates).toBe(1)
-  })
-  it('combina el banco incluido con importaciones previas sin ocultarlo con una lista vacía', () => {
-    expect(mergeSpainQuestions([question(0)], [])).toEqual([question(0)])
-    expect(mergeSpainQuestions([question(0)], [question(1)])).toHaveLength(2)
-    expect(mergeSpainQuestions([question(0)], [question(0)])).toEqual([question(0)])
-    expect(() => mergeSpainQuestions([question(0)], {})).toThrow()
-  })
-  it('da prioridad a la versión incluida por ID y preserva las preguntas locales ajenas', () => {
-    const current = { ...question(0), question: 'Enunciado corregido', correct: 2 }
-    const old = { ...question(0), correct: 1, reviewReason: 'Aviso antiguo' }
-    const addition = question(1)
-    expect(mergeSpainQuestions([current], [old, addition])).toEqual([current, addition])
-    expect(() => mergeSpainQuestions([current], [null])).toThrow()
-    expect(() => mergeSpainQuestions([current], [{ ...addition, correct: 4 }])).toThrow()
   })
   it('mezcla las opciones de texto sin alterar la clave ni el banco original', () => {
     const q = question(0)

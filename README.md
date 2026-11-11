@@ -191,16 +191,8 @@ Acceso desde la portada o `/#/spain`. Módulo independiente de los niveles FCC:
   distribuyen las adaptaciones de ese material bajo la misma licencia.
   [Aviso y enlaces al texto legal](public/figures/spain/LICENSE-BricoHams.txt).
   La autoría de la aplicación sigue siendo **Anatol EA5KAO**.
-- Importación JSON desde la pantalla de España, con confirmación de permiso,
-  validación y almacenamiento local. Los datos se añaden al banco existente;
-  una importación inválida no modifica el banco. No se envían a ningún servidor.
-  El almacenamiento local puede perderse al borrar los datos del navegador:
-  conserva tus archivos originales.
-- Al arrancar se combina el banco incluido con las preguntas guardadas localmente:
-  una importación anterior vacía no oculta las preguntas recién incorporadas.
-  Para IDs del paquete prevalece la versión incluida, evitando que una copia
-  antigua restaure claves o avisos ya corregidos; las preguntas locales con otros
-  IDs se conservan y validan normalmente.
+- El banco español va incluido en la aplicación; no se pueden importar ni
+  exportar preguntas desde la interfaz.
 
 ### Reimportar el paquete BricoHams
 
@@ -220,9 +212,9 @@ La huella SHA-256 del JSON original impide aplicar estas decisiones automáticam
 a otro paquete: una versión diferente obliga a revisar y actualizar las decisiones.
 No sustituye una revisión completa del material ni una certificación oficial.
 
-### Importación local en la aplicación
+### Formato del banco español
 
-El archivo debe ser una lista de objetos con estos campos:
+[`src/data/spain.json`](src/data/spain.json) debe ser una lista de objetos con estos campos:
 
 | Campo | Contenido |
 |---|---|
@@ -258,9 +250,7 @@ no se aplican automáticamente normas FCC a las preguntas españolas.
 
 Para distribuir el banco en web y Android, incorpora los objetos autorizados a
 [`src/data/spain.json`](src/data/spain.json), coloca las ilustraciones propias en
-`public/figures/spain/` y vuelve a compilar/sincronizar. La importación del navegador
-solo carga texto y referencias: **no sube imágenes**. Las imágenes deben estar ya
-incluidas en la aplicación. Las ilustraciones BricoHams incluidas conservan la
+`public/figures/spain/` y vuelve a compilar/sincronizar. Las ilustraciones BricoHams incluidas conservan la
 atribución y licencia del paquete suministrado.
 
 Reglas de referencia: [Resolución de 3 de junio de 2014, BOE-A-2014-6461](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6461).

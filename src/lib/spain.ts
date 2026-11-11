@@ -29,7 +29,6 @@ export interface SpainQuestion {
 }
 
 export const SPAIN_RULES = { questions: 30, passing: 15, seconds: 45 * 60 }
-export const SPAIN_STORAGE_KEY = 'hamprep.spain.questions.v1'
 export const SPAIN_PARTS: SpainPart[] = ['technical', 'regulations']
 
 const normalized = (text: string) => text.normalize('NFC').toLocaleLowerCase('es')
@@ -144,18 +143,6 @@ export function parseSpainQuestions(input: unknown): { questions: SpainQuestion[
     questions.push(q)
   }
   return { questions, duplicates }
-}
-
-export function mergeSpainQuestions(bundled: unknown, saved: unknown): SpainQuestion[] {
-  const current = parseSpainQuestions(bundled).questions
-  const ids = new Set(current.map((q) => q.id))
-  if (!Array.isArray(saved)) throw new Error('El banco guardado debe ser una lista JSON de preguntas.')
-  // El ID del paquete identifica su revisión vigente, no una copia local antigua.
-  const additions = saved.filter((row: unknown) => !isRecord(row) || typeof row.id !== 'string' || !ids.has(row.id))
-  return parseSpainQuestions([
-    ...current,
-    ...parseSpainQuestions(additions).questions,
-  ]).questions
 }
 
 export function shuffleSpainAnswers(q: SpainQuestion, rng?: Rng): SpainQuestion {

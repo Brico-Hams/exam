@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest'
 import bank from '../data/spain.json'
 import info from '../data/spain-import-report.json'
 import { seededRng } from './exam'
-import { generateSpainExam, mergeSpainQuestions, parseSpainQuestions, SPAIN_PARTS } from './spain'
+import { generateSpainExam, parseSpainQuestions, SPAIN_PARTS } from './spain'
 
 const parsed = parseSpainQuestions(bank)
 
@@ -108,12 +108,6 @@ describe('Banco BricoHams suministrado', () => {
       expect(get('bh-r507').question).toContain('sin cambiar su ubicación')
       expect(get('bh-r444').answers[get('bh-r444').correct]).toContain('licencia de estación fija')
       expect(get('bh-r444').answers[get('bh-r444').correct]).not.toContain('autorización')
-    })
-    it('actualiza copias locales antiguas sin resucitar avisos o claves desfasadas', () => {
-      const old = info.validation.decisions.map((decision) => decision.original)
-      const merged = mergeSpainQuestions(bank, old)
-      expect(merged).toEqual(parsed.questions)
-      expect(merged.filter((q) => q.reviewReason)).toHaveLength(46)
     })
   it('conserva los 73 SVG suministrados como archivos locales estáticos sin referencias perdidas', () => {
     const references = new Set(parsed.questions.flatMap((q) => [
