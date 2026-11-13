@@ -14,7 +14,7 @@ export const OFFICIAL_REFS: RefLink[] = [
   },
   {
     label: 'ARRL Question Pools',
-    url: 'http://www.arrl.org/question-pools',
+    url: 'https://www.arrl.org/question-pools',
     note: { es: 'Archivos oficiales vigentes con erratas.', en: 'Current official files including errata.' },
   },
   {
