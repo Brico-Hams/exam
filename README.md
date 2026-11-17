@@ -1,3 +1,7 @@
+<p align="center"><img src="branding/bricohams_horizontal.svg" alt="BricoHams · Radioafición · Hazlo tú mismo" width="420"></p>
+
+<p align="center"><a href="https://bricohams.org">bricohams.org</a> · Anatol EA5KAO · Diego EA5JEF · Pedro Roca Molina</p>
+
 # 📻 EA5KAO Ham Exam Prep — España y EE. UU.
 
 **Autor: Anatol EA5KAO** · [github.com/Brico-Hams/exam](https://github.com/Brico-Hams/exam)
